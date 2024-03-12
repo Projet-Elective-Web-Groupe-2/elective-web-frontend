@@ -1,3 +1,3 @@
-# elective-web-backend
+# elective-web-frontend
 
-salut ^^
+Ce dépôt GitHub correspond à la partie frontend du projet "Élective Web".
