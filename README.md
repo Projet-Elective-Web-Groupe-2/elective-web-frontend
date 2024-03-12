@@ -1,5 +1,11 @@
 # elective-web-frontend
 
 Ce dépôt GitHub correspond à la partie frontend du projet "Élective Web".
+Dernier projet A4.
 
-Dev Front End c'est pas un métier Yanis
+Membres du groupe :
+- AMARA Ahmed
+- BOSACKI Paul
+- JOURNEL Nicolas
+- GAURE Warren
+- GRENOUILLET Théo
