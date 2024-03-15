@@ -1,7 +1,0 @@
-#name: clean image
-
-#on:
-  #pull_request:
-    #types: [ closed ]
-
-#jobs:
