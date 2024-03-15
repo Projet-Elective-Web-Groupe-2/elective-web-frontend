@@ -5,6 +5,7 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    name: 🐋 ☁️ Build Application
     steps:
       -
         name: Set up QEMU
@@ -23,8 +24,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: user/app:1.0.0-SNAPSHOT
-          
+          tags: user/app:latest          
 #jobs:
 #  build:
 #    runs-on: ubuntu-latest    
