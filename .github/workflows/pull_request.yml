@@ -21,4 +21,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -  
         name: Remove Docker Image
-        run: docker rmi "${{ secrets.DOCKERHUB_USERNAME }}"/app:latest
+        run: docker rmi ${{ secrets.DOCKERHUB_USERNAME }}/app:latest
