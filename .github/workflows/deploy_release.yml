@@ -8,6 +8,7 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    name: 🐋 ☁️ Build Application
     steps:
       -
         name: Set up QEMU
@@ -26,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: user/image:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/appprod:latest
