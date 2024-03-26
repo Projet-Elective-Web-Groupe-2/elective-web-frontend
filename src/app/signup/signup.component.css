@@ -37,13 +37,14 @@
     font-weight: bold;
     font-style: italic;
     margin-bottom: 0px;
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .line-title {
     height: 0px;
     width: 490px;
     border: 1px solid #426b1f;
+    margin-bottom: 30px;
 }
 
 .login--fields {
@@ -129,7 +130,7 @@
     text-align: center;
     /* bottom: 50px; */
     position: relative;
-    margin-top: 10px;
+    margin-top: 20px;
     align-self: center;
 }
 
