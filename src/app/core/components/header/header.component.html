@@ -10,7 +10,7 @@
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
-        <button (click)="clickOnButton()" class="cartbutton">Panier</button>
+        <button (click)="clickOnButton()" class="header-button">Panier</button>
     </div>
 
     <div class="options" *ngIf="type=='restaurant'">
@@ -26,25 +26,26 @@
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
-        <button (click)="clickOnButton()" class="cartbutton">Liste des commandes</button>
+        <button (click)="clickOnButton()" class="header-button">Liste des commandes</button>
     </div>
 
     <div class="options" *ngIf="type=='delivery'">
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
-        <button (click)="clickOnButton()" class="cartbutton">Liste des commandes</button>
+        <button (click)="clickOnButton()" class="header-button">Liste des commandes</button>
     </div>
     <div class="options" *ngIf="type=='developer'">
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
-        <button (click)="clickOnButton()" class="cartbutton">Liste des composants</button>
+        <button (click)="clickOnButton()" class="header-button">Liste des composants</button>
     </div>
 
     <div class="options" *ngIf="type=='sales'">
         <div class="value">
             <a [routerLink]="['/', type]"> Tableaux de bords</a>
-        <button (click)="clickOnButton()" class="cartbutton">Gestions des comptes</button>
+        </div>
+        <button (click)="clickOnButton()" class="header-button">Gestions des comptes</button>
     </div>
 </div>
