@@ -15,6 +15,7 @@ import { DeveloperComponent } from './developer/developer.component';
 import { SalesComponent } from './sales/sales.component';
 import { CoreModule } from './core/core.module';
 import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
+import { PanierComponent } from './client/widget/panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { StatisticComponent } from './restaurant/widget/statistic/statistic.comp
     DeveloperComponent,
     SalesComponent,
     StatisticComponent,
+    PanierComponent
   ],
   imports: [
     CoreModule,
