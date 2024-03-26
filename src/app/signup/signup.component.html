@@ -13,7 +13,7 @@
                 <p class="text-input-name">Qui suis-je ?</p>
                 <select class="text-input" formControlName="type" [ngModel]="selectedValue"
                     (ngModelChange)="onOptionChange($event)">
-                    <option value="client" class="text-option" selected="Client">Client</option>
+                    <option value="client" class="text-option" selected="client">Client</option>
                     <option value="restaurateur" class="text-option">Restaurateur</option>
                     <option value="livreur" class="text-option">Livreur</option>
                     <option value="developpeur" class="text-option">Développeur Tier</option>
@@ -22,6 +22,89 @@
 
             <div *ngIf="selectedValue=='client'">
 
+                <div class="input-double">
+                    <div class="double-1">
+                        <p class="text-input-name">Prénom</p>
+                        <input class="text-input-double-1" type="text" required autocomplete="off"
+                            formControlName="surname" />
+                    </div>
+
+                    <div class="double-2">
+                        <p class="text-input-name">Nom</p>
+                        <input class="text-input-double-2" type="text" required autocomplete="off"
+                            formControlName="name" />
+                    </div>
+                </div>
+
+                <div class="input--field">
+                    <p class="text-input-name">Adresse</p>
+                    <input class="text-input" type="text" formControlName="address">
+                </div>
+
+                <div class="input--field">
+                    <p class="text-input-name">Adresse mail</p>
+                    <input class="text-input" type="text" formControlName="mail">
+                </div>
+
+                <div class="input--field">
+                    <p class="text-input-name">Numéro de Téléphone</p>
+                    <input class="text-input" type="text" formControlName="phone">
+                </div>
+
+                <div class="input-double">
+                    <div class="double-1">
+                        <p class="text-input-name">Mot de Passe</p>
+                        <input class="text-input-double-1" type="password" required autocomplete="off"
+                            formControlName="password" />
+                    </div>
+
+                    <div class="double-2">
+                        <p class="text-input-name">Confirmer Mdp</p>
+                        <input class="text-input-double-2" type="password" required autocomplete="off"
+                            formControlName="repassword" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div *ngIf="selectedValue=='restaurateur'">
+
+                <div class="input--field">
+                    <p class="text-input-name">Nom du Restaurant</p>
+                    <input class="text-input" type="text" formControlName="restName">
+                </div>
+
+                <div class="input--field">
+                    <p class="text-input-name">Adresse du Restaurant</p>
+                    <input class="text-input" type="text" formControlName="mail">
+                </div>
+
+                <div class="input--field">
+                    <p class="text-input-name">Adresse mail</p>
+                    <input class="text-input" type="text" formControlName="mail">
+                </div>
+
+                <div class="input--field">
+                    <p class="text-input-name">Numéro de Téléphone</p>
+                    <input class="text-input" type="text" formControlName="mail">
+                </div>
+
+                <div class="input-double">
+                    <div class="double-1">
+                        <p class="text-input-name">Mot de Passe</p>
+                        <input class="text-input-double-1" type="password" required autocomplete="off"
+                            formControlName="password" />
+                    </div>
+
+                    <div class="double-2">
+                        <p class="text-input-name">Confirmer Mdp</p>
+                        <input class="text-input-double-2" type="password" required autocomplete="off"
+                            formControlName="repassword" />
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="selectedValue=='livreur'">
                 <div class="input-double">
                     <div class="double-1">
                         <p class="text-input-name">Prénom</p>
@@ -64,7 +147,38 @@
                             formControlName="repassword" />
                     </div>
                 </div>
+            </div>
 
+            <div *ngIf="selectedValue=='developpeur'">
+
+                <div class="input--field">
+                    <p class="text-input-name">Adresse mail</p>
+                    <input class="text-input" type="text" formControlName="mail">
+                </div>
+
+                <div class="input--field">
+                    <p class="text-input-name">Clé de Sécurité</p>
+                    <input class="text-input" type="text" formControlName="key">
+                </div>
+
+                <div class="input--field">
+                    <p class="text-input-name">Numéro de Téléphone</p>
+                    <input class="text-input" type="text" formControlName="phone">
+                </div>
+
+                <div class="input-double">
+                    <div class="double-1">
+                        <p class="text-input-name">Mot de Passe</p>
+                        <input class="text-input-double-1" type="password" required autocomplete="off"
+                            formControlName="password" />
+                    </div>
+
+                    <div class="double-2">
+                        <p class="text-input-name">Confirmer Mdp</p>
+                        <input class="text-input-double-2" type="password" required autocomplete="off"
+                            formControlName="repassword" />
+                    </div>
+                </div>
             </div>
 
             <div class="button">
