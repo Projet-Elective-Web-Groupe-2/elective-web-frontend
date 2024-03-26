@@ -3,23 +3,23 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { ProfilPageComponent } from './components/profil-page/profil-page.component';
-import { HomepageComponent } from './components/homepage/homepage.component';
 import { HistoricComponent } from './components/historic/historic.component';
 import { CardComponent } from './components/card/card.component';
+import { OrderListComponent } from './components/order-list/order-list.component';
 
 @NgModule({
   declarations: [
       HeaderComponent,
       ProfilPageComponent,
-      HomepageComponent,
       HistoricComponent,
-      CardComponent
+      CardComponent,
+      OrderListComponent
     ],
   imports: [
       RouterModule,
       CommonModule,
     ],  
-  exports: [HeaderComponent,HomepageComponent,HistoricComponent],
+  exports: [HeaderComponent,HistoricComponent,CardComponent],
   providers: [],
 
 })

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,26 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
   @Input() type: string = '';
   
+  constructor(private router: Router, private route: ActivatedRoute) {}
+  
   clickOnButton(){
-    console.log("CLICK ON THE BUTTON")
+    switch(this.type){
+      case 'client':
+        this.router.navigate([`../${this.type}/panier`], { relativeTo: this.route });
+        break;
+      case 'restaurant':
+        this.router.navigate([`../${this.type}/order-list`], { relativeTo: this.route });
+        break;
+      case 'delivery':
+        this.router.navigate([`../${this.type}/order-list`], { relativeTo: this.route });
+        break;
+      case 'developer':
+        this.router.navigate([`../${this.type}/component-list`], { relativeTo: this.route });
+        break;
+      case 'sales':
+        this.router.navigate([`../${this.type}/users-info`], { relativeTo: this.route });
+        break;                    
+    }
   }
   
 

@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-profil-page',
-  templateUrl: './profil-page.component.html',
-  styleUrls: ['./profil-page.component.css']
+  selector: 'app-order-list',
+  templateUrl: './order-list.component.html',
+  styleUrls: ['./order-list.component.css']
 })
-export class ProfilPageComponent implements OnInit {
+export class OrderListComponent {
   userType!: string;
   
   constructor(private route: ActivatedRoute) { }

@@ -43,7 +43,8 @@
     </div>
 
     <div class="options" *ngIf="type=='sales'">
-        <div>Tableaux de bords</div>
+        <div class="value">
+            <a [routerLink]="['/', type]"> Tableaux de bords</a>
         <button (click)="clickOnButton()" class="cartbutton">Gestions des comptes</button>
     </div>
 </div>
