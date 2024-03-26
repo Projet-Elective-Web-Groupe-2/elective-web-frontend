@@ -4,12 +4,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { ProfilPageComponent } from './components/profil-page/profil-page.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
       HeaderComponent,
       ProfilPageComponent,
-      HomepageComponent
+      HomepageComponent,
+      CardComponent
     ],
   imports: [
       RouterModule,
