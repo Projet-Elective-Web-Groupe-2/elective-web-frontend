@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @Input() type: string = '';
+  
+  goToHomePage(){
+    console.log("GO TO HOMEPAGE")
+  }
+
+  goToHistoricPage(){
+    console.log("GO TO HISTORIC PAGE")
+  }
+  
+  goToStatistic(){
+    console.log("GO TO STATISTIC")
+  }
+
+  clickOnButton(){
+    console.log("CLICK ON THE BUTTON")
+  }
+  
 
 }

@@ -7,6 +7,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { SalesComponent } from './sales/sales.component';
+import { ProfilPageComponent } from './core/components/profil-page/profil-page.component';
 
 
 const routes: Routes = [{
@@ -19,6 +20,9 @@ const routes: Routes = [{
 {path: 'delivery', component: DeliveryComponent},
 {path: 'developer', component: DeveloperComponent},
 {path: 'sales', component: SalesComponent},
+
+{path: ':type/profil', component: ProfilPageComponent},
+
 ]
 
 @NgModule({

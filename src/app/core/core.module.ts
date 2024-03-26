@@ -2,16 +2,20 @@ import { APP_INITIALIZER, LOCALE_ID, ModuleWithProviders, NgModule } from '@angu
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+import { ProfilPageComponent } from './components/profil-page/profil-page.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
-      HeaderComponent
+      HeaderComponent,
+      ProfilPageComponent,
+      HomepageComponent
     ],
   imports: [
       RouterModule,
       CommonModule,
     ],  
-  exports: [HeaderComponent],
+  exports: [HeaderComponent,HomepageComponent],
   providers: [],
 
 })
