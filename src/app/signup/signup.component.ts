@@ -21,6 +21,7 @@ export class SignupComponent {
     phone : new FormControl(""),
     password : new FormControl(""),
     repassword : new FormControl(""),
+    key : new FormControl("")
   });
   onSubmit(){
     console.log(this.signupForm.value);
