@@ -14,7 +14,16 @@ import { DeliveryComponent } from './delivery/delivery.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { SalesComponent } from './sales/sales.component';
 import { CoreModule } from './core/core.module';
+import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
 import { PanierComponent } from './client/widget/panier/panier.component';
+import { ComponentListComponent } from './developer/widget/component-list/component-list.component';
+import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
+import { DashboardComponent } from './sales/widget/dashboard/dashboard.component';
+import { HomepageClientComponent } from './client/widget/homepage-client/homepage-client.component';
+import { HomepageRestaurantComponent } from './restaurant/widget/homepage-restaurant/homepage-restaurant.component';
+import { HomepageDeliveryComponent } from './delivery/widget/homepage-delivery/homepage-delivery.component';
+import { HomepageDeveloperComponent } from './developer/widget/homepage-developer/homepage-developer.component';
+import { HomepageSalesComponent } from './sales/widget/homepage-sales/homepage-sales.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +35,16 @@ import { PanierComponent } from './client/widget/panier/panier.component';
     DeliveryComponent,
     DeveloperComponent,
     SalesComponent,
+    StatisticComponent,
     PanierComponent,
+    ComponentListComponent,
+    UsersInfoComponent,
+    DashboardComponent,
+    HomepageClientComponent,
+    HomepageRestaurantComponent,
+    HomepageDeliveryComponent,
+    HomepageDeveloperComponent,
+    HomepageSalesComponent
   ],
   imports: [
     CoreModule,
@@ -39,6 +57,7 @@ import { PanierComponent } from './client/widget/panier/panier.component';
     UpperCasePipe
   ],
   providers: [],
+  exports:[DashboardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

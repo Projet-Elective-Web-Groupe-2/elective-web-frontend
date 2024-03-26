@@ -4,29 +4,31 @@
         <div class="value">
             <a [routerLink]="['/', type]"> Restaurants</a>
         </div>
-        <div (click)="goToHistoricPage()" class="value">
-            Historique de commandes
+        <div class="value">
+            <a [routerLink]="['/', type, 'historic']"> Historique de commandes </a>
         </div>
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
         <button (click)="clickOnButton()" class="cartbutton">Panier</button>
     </div>
+
     <div class="options" *ngIf="type=='restaurant'">
         <div class="value">
             <a [routerLink]="['/', type]"> Accueil</a>
         </div>
-        <div (click)="goToHistoricPage()" class="value">
-            Historique de commandes
+        <div class="value">
+            <a [routerLink]="['/', type, 'historic']"> Historique de commandes </a>
         </div>
-        <div (click)="goToStatistic()" class="value">
-            Statistiques
+        <div class="value">
+            <a [routerLink]="['/', type, 'statistic']"> Statistiques </a>
         </div>
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
         <button (click)="clickOnButton()" class="cartbutton">Liste des commandes</button>
     </div>
+
     <div class="options" *ngIf="type=='delivery'">
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
@@ -39,8 +41,10 @@
         </div>
         <button (click)="clickOnButton()" class="cartbutton">Liste des composants</button>
     </div>
+
     <div class="options" *ngIf="type=='sales'">
-        <div>Tableaux de bords</div>
+        <div class="value">
+            <a [routerLink]="['/', type]"> Tableaux de bords</a>
         <button (click)="clickOnButton()" class="cartbutton">Gestions des comptes</button>
     </div>
 </div>
