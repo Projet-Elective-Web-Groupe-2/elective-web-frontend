@@ -8,6 +8,12 @@ import { DeliveryComponent } from './delivery/delivery.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { SalesComponent } from './sales/sales.component';
 import { ProfilPageComponent } from './core/components/profil-page/profil-page.component';
+import { HistoricComponent } from './core/components/historic/historic.component';
+import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
+import { PanierComponent } from './client/widget/panier/panier.component';
+import { OrderListComponent } from './core/components/order-list/order-list.component';
+import { ComponentListComponent } from './developer/widget/component-list/component-list.component';
+import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
 
 
 const routes: Routes = [{
@@ -21,7 +27,17 @@ const routes: Routes = [{
 {path: 'developer', component: DeveloperComponent},
 {path: 'sales', component: SalesComponent},
 
+
+
 {path: ':type/profil', component: ProfilPageComponent},
+{path: ':type/historic', component: HistoricComponent},
+{path: ':type/statistic', component: StatisticComponent},
+
+{path: ':type/panier', component: PanierComponent},
+{path: ':type/order-list', component: OrderListComponent},
+{path: ':type/component-list', component: ComponentListComponent},
+{path: ':type/users-info', component: UsersInfoComponent},
+
 
 ]
 
