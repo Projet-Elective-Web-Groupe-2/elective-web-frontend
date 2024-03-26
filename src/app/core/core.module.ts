@@ -17,7 +17,7 @@ import { CardComponent } from './components/card/card.component';
       RouterModule,
       CommonModule,
     ],  
-  exports: [HeaderComponent,HomepageComponent],
+  exports: [HeaderComponent,HomepageComponent,CardComponent],
   providers: [],
 
 })
