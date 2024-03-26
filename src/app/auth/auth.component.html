@@ -1,1 +1,28 @@
-<p>auth works!</p>
+<div class="pagedeconnexion">
+    <img src="https://fr.ooni.com/cdn/shop/articles/Margherita-9920.jpg?crop=center&height=800&v=1644590066&width=800" class="img-half-screen"/>
+
+    <form class="login--form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="title--signin--signup--pages">
+          <p class="text-title">Connexion</p>
+          <div class="line-title" ></div>
+        </div>
+        <div class="login--fields">
+          <div class="input--field">
+            <p class="text-input-name">Adresse mail</p>
+            <input class="text-input" type="text" formControlName="mail">
+          </div>
+          <div class="input--field">
+            <p class="text-input-name">Mot de passe</p>
+            <input class="text-input" type="password" formControlName="password">
+          </div>
+        </div>
+        <div class="button">
+            <input type="submit" class="text-4 form-input-button" value="Connexion">
+        </div>
+        <div class="text-link">
+            <a href="/signup" class="text-link">
+                Pas de compte ? Inscrivez vous
+            </a>
+        </div>
+    </form>
+</div>
