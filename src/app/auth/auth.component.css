@@ -2,149 +2,169 @@
     background-color: #ffffff;
     font-family: Inter;
     font-weight: 600;
-    font-style:  bold italic;
+    font-style: bold italic;
     display: flex;
     justify-content: center;
-    }
-    .login--form {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 102px;
-      font-optical-sizing: auto;
-      font-weight: 600;
-      font-style: normal;
-      font-variation-settings:
+}
+
+.login--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* gap: 102px; */
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
         "slnt" 0;
-        flex-grow: 1;
-    }
-    .title--signin--signup--pages {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    .text-title {
-      text-align: left;
-      vertical-align: bottom;
-      font-size: 40px;
-      line-height: auto;
-      color: #000000;
-      font-weight: bold;
-      font-style: italic;
-    }
-    .line-title {
-      height: 0px;
-      width: 490px;
-      border: 1px solid #426b1f;
-    }
-    .login--fields {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      /* gap: 29px; */
-    }
-    .input--field {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 11px;
-    }
-    .rectangle-1-0 {
-      border-radius: 14px;
-      height: 56px;
-      width: 530px;
-      background-color: #ffffff;
-      border: 1px solid #000000;
-    }
-    .input--field {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 11px;
-    }
-    .text-input-name {
-      text-align: left;
-      vertical-align: top;
-      font-size: 24px;
-      line-height: auto;
-      color: #a2a2a2;
-    }
-    .rectangle-1-0 {
-      border-radius: 14px;
-      height: 56px;
-      width: 530px;
-      background-color: #ffffff;
-      border: 1px solid #000000;
-    }
-    .sign--insign--up--buttons {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 12px;
-    }
-    .component-1 {
-      border-radius: 57px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 114px;
-      gap: 10px;
-      background-color: #426b1f;
-    }
-    .text-4 {
-      text-align: center;
-      vertical-align: top;
-      font-size: 32px;
-      line-height: auto;
-      color: #ffffff;
-      font-style: italic;
-      font-weight: bold;
-    }
-    .text-5 {
-      text-align: left;
-      vertical-align: top;
-      font-size: 20px;
-      line-height: auto;
-    }
-    .button {
-      text-align: center;
-      bottom: 50px;
-      position: relative;
-    }
-    .text-link{
-      text-align: center;
-      position: relative;
-      bottom: 50px;
-      color: #426b1f;
-    }
-    .text-input{
-      width: 100%;
-      border-radius: 10px;
-      text-align: left;
-      vertical-align: top;
-      font-size: 40px;
-      line-height: auto;
-    }
-    .img-half-screen {
-      border-radius: 10px;
-      flex-grow: 1;
-      align-self: left;
-      width: 40%;
-      height: auto;
-      box-shadow: 3px 0px 10px black;
-      object-fit: fill;
-    }
-    .form-input-button {
-      border-radius: 57px;
-      height: 83px;
-      width: 463px;
-      background-color: #426b1f;
-      align-self: center;
-    }
+    flex-grow: 1;
+}
+
+.title--signin--signup--pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.text-title {
+    text-align: left;
+    vertical-align: bottom;
+    font-size: 40px;
+    line-height: auto;
+    color: #000000;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.line-title {
+    height: 0px;
+    width: 490px;
+    border: 1px solid #426b1f;
+}
+
+.login--fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* gap: 29px; */
+}
+
+.input--field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.rectangle-1-0 {
+    border-radius: 14px;
+    height: 56px;
+    width: 530px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.input--field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.text-input-name {
+    text-align: left;
+    vertical-align: top;
+    font-size: 24px;
+    line-height: auto;
+    color: #a2a2a2;
+}
+
+.rectangle-1-0 {
+    border-radius: 14px;
+    height: 56px;
+    width: 530px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.sign--insign--up--buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.component-1 {
+    border-radius: 57px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 114px;
+    gap: 10px;
+    background-color: #426b1f;
+}
+
+.text-4 {
+    text-align: center;
+    vertical-align: top;
+    font-size: 32px;
+    line-height: auto;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-5 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    line-height: auto;
+}
+
+.button {
+    text-align: center;
+    /* bottom: 50px; */
+    position: relative;
+    margin-top: 10px;
+}
+
+.text-link {
+    text-align: center;
+    position: relative;
+    /* bottom: 50px; */
+    color: #426b1f;
+}
+
+.text-input {
+    width: 100%;
+    border-radius: 10px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 40px;
+    line-height: auto;
+}
+
+.img-half-screen {
+    border-radius: 10px;
+    flex-grow: 1;
+    align-self: left;
+    width: 30%;
+    height: 100vh;
+    box-shadow: 3px 0px 10px black;
+    object-fit: fill;
+}
+
+.form-input-button {
+    border-radius: 57px;
+    height: 83px;
+    width: 463px;
+    background-color: #426b1f;
+    align-self: center;
+}

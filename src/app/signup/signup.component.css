@@ -130,6 +130,7 @@
     /* bottom: 50px; */
     position: relative;
     margin-top: 10px;
+    align-self: center;
 }
 
 .text-link {
@@ -137,6 +138,7 @@
     position: relative;
     /* bottom: 50px; */
     color: #426b1f;
+    align-self: center;
 }
 
 .text-input {
@@ -146,6 +148,10 @@
     vertical-align: top;
     font-size: 40px;
     line-height: auto;
+    text-indent: 5px;
+    height: 46px;
+    font-size: 16px;
+    width: 494.4px;
 }
 
 .img-half-screen {
@@ -170,17 +176,38 @@
     font-size: 20px;
 }
 
-.text-input-double {
+.text-input-double-1 {
     flex-flow: row wrap;
-    width: 40%;
+    width: 80%;
     border-radius: 10px;
     text-align: left;
     vertical-align: top;
     font-size: 40px;
     line-height: auto;
+    text-indent: 5px;
+    height: 46px;
+    font-size: 16px;
+}
+.text-input-double-2 {
+    flex-flow: row wrap;
+    width: 224.4px;
+    border-radius: 10px;
+    text-align: left;
+    vertical-align: top;
+    line-height: auto;
+    text-indent: 5px;
+    height: 46px;
+    font-size: 16px;
 }
 
 .input-double {
-    flex-flow: column wrap;
+    flex-direction: row ;
     display: inline-flex;
+    --double : 270px;
+}
+.double-1{
+    width: var(--double);
+}
+.double-2{
+    width: calc(var(--double)*0.8);
 }
