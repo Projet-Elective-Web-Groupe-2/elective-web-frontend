@@ -4,18 +4,20 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { ProfilPageComponent } from './components/profil-page/profil-page.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { HistoricComponent } from './components/historic/historic.component';
 
 @NgModule({
   declarations: [
       HeaderComponent,
       ProfilPageComponent,
-      HomepageComponent
+      HomepageComponent,
+      HistoricComponent
     ],
   imports: [
       RouterModule,
       CommonModule,
     ],  
-  exports: [HeaderComponent,HomepageComponent],
+  exports: [HeaderComponent,HomepageComponent,HistoricComponent],
   providers: [],
 
 })

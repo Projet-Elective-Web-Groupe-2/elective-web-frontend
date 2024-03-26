@@ -8,6 +8,8 @@ import { DeliveryComponent } from './delivery/delivery.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { SalesComponent } from './sales/sales.component';
 import { ProfilPageComponent } from './core/components/profil-page/profil-page.component';
+import { HistoricComponent } from './core/components/historic/historic.component';
+import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
 
 
 const routes: Routes = [{
@@ -21,7 +23,13 @@ const routes: Routes = [{
 {path: 'developer', component: DeveloperComponent},
 {path: 'sales', component: SalesComponent},
 
+
+
 {path: ':type/profil', component: ProfilPageComponent},
+{path: ':type/historic', component: HistoricComponent},
+{path: ':type/statistic', component: StatisticComponent},
+
+
 
 ]
 

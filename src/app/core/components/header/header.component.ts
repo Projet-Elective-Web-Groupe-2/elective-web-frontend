@@ -8,18 +8,6 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
   @Input() type: string = '';
   
-  goToHomePage(){
-    console.log("GO TO HOMEPAGE")
-  }
-
-  goToHistoricPage(){
-    console.log("GO TO HISTORIC PAGE")
-  }
-  
-  goToStatistic(){
-    console.log("GO TO STATISTIC")
-  }
-
   clickOnButton(){
     console.log("CLICK ON THE BUTTON")
   }
