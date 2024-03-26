@@ -1,5 +1,16 @@
-<div class="card--client">
-    <img src="https://images.bfmtv.com/NUJHUYUkXAYVPZAR888_w9rjrNc=/0x0:1196x1192/1196x0/images/-458880.jpg" class="image-card"/>
-    <p class="text-2">Mcgronald’s</p>
-    <p class="text-3">243 rue de la Republique , 95239</p>
-  </div>
+<div *ngIf="!isResto">
+    <div class="card--client">
+        <img src="{{menu.img}}" class="image-card"/>
+        <p class="text-2">{{menu.name}}</p>
+        <p class="text-3">{{menu.description}}</p>
+        <h1>{{menu.price}}</h1>
+    </div>
+</div>
+
+<div *ngIf="isResto">
+    <div class="card--client">
+        <img src="{{restaurant.img}}" class="image-card"/>
+        <p class="text-2">{{restaurant.name}}</p>
+        <p class="text-3">{{restaurant.address}}</p>
+    </div>
+</div>
