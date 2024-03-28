@@ -1,3 +1,81 @@
 <app-header [type]="userType"></app-header>
-<p>profil-page works!</p>
-<p>{{userType}}</p>
+<div class="pageheading">
+    <div class="profil">Profil</div>
+    <div class="name">{{name}}</div>
+    <div class="frame-2-3">
+        <div class="frame-1-9">
+            <div class="edit-button">
+                <div class="edit">Modifier</div>
+            </div>
+            <div class="delete-button">
+                <div class="delete">Supprimer</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-profile">
+    <div class="left-profile">
+        <form class="login--form"><!-- [formGroup]="signupForm" (ngSubmit)="onSubmit()"-->
+            <div class="input-double">
+                <div class="double-1">
+                    <p class="text-input-name">Prénom</p>
+                    <input class="text-input-double-1" type="text" required autocomplete="off"
+                        formControlName="surname" />
+                </div>
+
+                <div class="double-2">
+                    <p class="text-input-name">Nom</p>
+                    <input class="text-input-double-2" type="text" required autocomplete="off" formControlName="name" />
+                </div>
+            </div>
+
+            <div class="input--field">
+                <p class="text-input-name">Adresse</p>
+                <input class="text-input" type="text" formControlName="address">
+            </div>
+
+            <div class="input--field">
+                <p class="text-input-name">Adresse mail</p>
+                <input class="text-input" type="text" formControlName="mail">
+            </div>
+
+            <div class="input--field">
+                <p class="text-input-name">Numéro de Téléphone</p>
+                <input class="text-input" type="text" formControlName="phone">
+            </div>
+
+            <div class="input-double">
+                <div class="double-1">
+                    <p class="text-input-name">Mot de Passe</p>
+                    <input class="text-input-double-1" type="password" required autocomplete="off"
+                        formControlName="password" />
+                </div>
+
+                <div class="double-2">
+                    <p class="text-input-name">Confirmer Mdp</p>
+                    <input class="text-input-double-2" type="password" required autocomplete="off"
+                        formControlName="repassword" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="transition"></div>
+    <div class="right-profile">
+        <div class="sponsorship">
+            <div class="sponsorship-label">Votre code de parrainage</div>
+            <div class="our-sponsorship-frame">
+                <div class="our-sponsorship-label ">3BEZADGE54TEfdrR </div>
+                <img src="./images/copy.png" alt="copy">
+            </div>
+        </div>
+        <div class="sponsorship">
+            <div class="sponsorship-label">Rentrer un code de parrainage</div>
+            <input class="text-input" type="text" formControlName="sponsorship">
+        </div>
+        <div class="validate-div">
+        <button class="validate-button">
+            <div class="validate-label">Valider</div>
+        </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,251 @@
+.pageheading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+
+  border-bottom: 2px solid #e6e6e6;
+  padding: 0px 50px 20px 100px;
+}
+
+.profil {
+  font-size: 64px;
+  font-family: Newsreader;
+  color: #000000;
+}
+
+.name {
+  font-size: 64px;
+  font-family: Newsreader;
+  letter-spacing: 5%;
+  color: #000000;
+}
+
+.frame-2-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.frame-1-9 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.edit-button {
+  border-radius: 57px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 15px;
+  background-color: #426b1f;
+}
+
+.edit {
+  text-align: left;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: auto;
+  color: #ffffff;
+}
+
+.delete-button {
+  border-radius: 57px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 10px;
+  background-color: #ff0000;
+}
+
+.delete {
+  text-align: left;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: auto;
+  color: #ffffff;
+}
+
+.main-profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login--form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  flex-grow: 1;
+}
+
+.left-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-top: 50px;
+  flex-direction: column; 
+}
+
+.right-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-top: 50px;
+  flex-direction: column; 
+}
+
+.text-input-name {
+  text-align: left;
+  vertical-align: bottom;
+  font-size: 24px;
+  /* line-height: auto; */
+  color: #a2a2a2;
+  bottom: 10px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+.text-input {
+  border-radius: 10px;
+  text-align: left;
+  vertical-align: top;
+  text-indent: 5px;
+  height: 46px;
+  font-size: 16px;
+  width: 494.4px;
+}
+
+.text-input-double-1 {
+  flex-flow: row wrap;
+  width: 80%;
+  border-radius: 10px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 40px;
+  line-height: auto;
+  text-indent: 5px;
+  height: 46px;
+  font-size: 16px;
+}
+
+.text-input-double-2 {
+  flex-flow: row wrap;
+  width: 224.4px;
+  border-radius: 10px;
+  text-align: left;
+  vertical-align: top;
+  line-height: auto;
+  text-indent: 5px;
+  height: 46px;
+  font-size: 16px;
+}
+
+.input-double {
+  flex-direction: row;
+  display: inline-flex;
+  --double: 270px;
+}
+
+.double-1 {
+  width: var(--double);
+}
+
+.double-2 {
+  width: calc(var(--double)*0.8);
+}
+
+.transition {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 1px;
+  border-left: 2px solid #000000;
+}
+
+
+
+.sponsorship{
+  margin-top: 50px;
+}
+
+.input--field {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.our-sponsorship-label {
+  font-size: 30px;
+  font-family: Inter,sans-serif;
+  font-weight: 700;
+  color: #000000;
+
+}
+
+.our-sponsorship-frame {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  text-indent: 5px;
+  height: 46px;
+  width: 494.4px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.sponsorship-label {
+  text-align: left;
+  vertical-align: top;
+  font-size: 30px;
+  font-family: Inter,sans-serif;
+  font-weight: 700;
+  line-height: auto;
+  color: #626262;
+  padding-bottom: 5px;
+}
+
+.validate-div{
+  display: flex;
+  justify-content: center;
+}
+
+.validate-button {
+  margin-top: 50px;
+  border-radius: 57px;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  align-items: center;
+  padding: 11px 74px;
+  background-color: #426b1f;
+}
+
+.validate-label {
+  text-align: left;
+  vertical-align: top;
+  font-size: 32px;
+  font-family: Inter,sans-serif;
+  line-height: auto;
+  color: #ffffff;
+}

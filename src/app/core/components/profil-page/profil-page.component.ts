@@ -8,10 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProfilPageComponent implements OnInit {
   userType!: string;
+  name!:string;
   
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.name = "Amara Ahmed"
     this.route.params.subscribe(params => {
       this.userType = params['type'];
     });
