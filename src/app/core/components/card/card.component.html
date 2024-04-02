@@ -3,7 +3,15 @@
         <img src="{{menu.img}}" class="image-card"/>
         <p class="text-2">{{menu.name}}</p>
         <p class="text-3">{{menu.description}}</p>
-        <h1>{{menu.price}}</h1>
+        <div>
+            <h1>{{menu.price}}</h1>
+            <div class="box">
+                <button class="decrease" (click)="onChangeMinus()">-</button>
+                <div><span class="text-quantity">0</span></div>
+                <button class="increase" (click)="onChangePlus()">+</button>
+            </div>
+        </div>
+
     </div>
 </div>
 
