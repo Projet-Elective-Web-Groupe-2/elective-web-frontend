@@ -24,6 +24,8 @@ import { HomepageRestaurantComponent } from './restaurant/widget/homepage-restau
 import { HomepageDeliveryComponent } from './delivery/widget/homepage-delivery/homepage-delivery.component';
 import { HomepageDeveloperComponent } from './developer/widget/homepage-developer/homepage-developer.component';
 import { HomepageSalesComponent } from './sales/widget/homepage-sales/homepage-sales.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { HomepageSalesComponent } from './sales/widget/homepage-sales/homepage-s
     ReactiveFormsModule,
     NgFor,
     NgIf,
-    UpperCasePipe
+    UpperCasePipe,
+    NoopAnimationsModule
   ],
   providers: [],
   exports:[DashboardComponent],
