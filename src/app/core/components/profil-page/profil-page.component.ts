@@ -84,5 +84,10 @@ export class ProfilPageComponent implements OnInit {
       height: '186px',
       width: '659px',
     });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        console.log('Le profil sera supprimé.');
+      }
+    });
   }
 }

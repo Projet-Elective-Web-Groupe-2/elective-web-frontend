@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal',
@@ -7,7 +7,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {content: string,title:string}) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {content: string,title:string},public dialogRef: MatDialogRef<ModalComponent>) { }
 
   content!:string;
   title!:string;
@@ -15,5 +15,13 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     this.title = this.data.title;
     this.content = this.data.content;
+  }
+
+  confirm() {
+    this.dialogRef.close(true); 
+  }
+
+  cancel() {
+    this.dialogRef.close(false); 
   }
 }

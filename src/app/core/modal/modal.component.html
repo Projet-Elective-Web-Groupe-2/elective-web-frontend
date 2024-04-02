@@ -4,11 +4,11 @@
     <div class="content">{{content}}</div>
 
     <div class="buttons">
-    <button class="confirm-button">
+    <button (click)="confirm()" class="confirm-button">
         <div class="confirm-label">Confirmer</div>
     </button>
 
-    <button class="cancel-button">
+    <button (click)="cancel()" class="cancel-button">
         <div class="cancel-label">Annuler</div>
     </button>
     </div>
