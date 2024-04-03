@@ -1,3 +1,90 @@
 <app-header [type]="userType"></app-header>
-<p>profil-page works!</p>
-<p>{{userType}}</p>
+<div class="pageheading">
+    <div class="profil">Profil</div>
+    <div class="name">{{name}} {{firstname}}</div>
+    <div class="frame-2-3">
+        <div class="frame-1-9">
+            <button class="edit-button" id="edit-button" (click)="editProfil(false)">
+                <div class="edit">Modifier</div>
+            </button>
+            <button class="delete-button" (click)="deleteProfil()">
+                <div class="delete">Supprimer</div>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="main-profile">
+    <div class="left-profile">
+        <form class="login--form" (ngSubmit)="submitProfil()" [formGroup]="editForm"> 
+            <div class="input-double">
+                <div class="double-1">
+                    <div class="text-input-label">Prénom</div> <!--autocomplete="off"-->
+                    <input class="text-input-double-left" type="text" formControlName="firstName" required 
+                        id="firstnameInput" />
+                </div>
+
+                <div class="double-2">
+                    <div class="text-input-label">Nom</div>
+                    <input class="text-input-double-right" type="text" formControlName="name" required id="nameInput"  />
+                </div>
+            </div>
+
+            <div class="input--field">
+                <div class="text-input-label">Adresse</div>
+                <input class="text-input" type="text" formControlName="address" required id="addressInput">
+            </div>
+
+            <div class="input--field">
+                <div class="text-input-label">Adresse mail</div>
+                <input class="text-input" type="text" formControlName="mail" required id="mailInput">
+            </div>
+
+            <div class="input--field">
+                <div class="text-input-label">Numéro de Téléphone</div>
+                <input class="text-input" type="text" formControlName="phone" required id="phoneInput">
+            </div>
+
+            <div class="input-double">
+                <div class="double-1">
+                    <div class="text-input-label">Mot de Passe</div>
+                    <input class="text-input-double-left" formControlName="password" type="password" required
+                        id="passwordInput" autocomplete="off" />
+                </div>
+
+                <div class="double-2">
+                    <div class="text-input-label">Confirmer Mdp</div>
+                    <input class="text-input-double-right" formControlName="confirmPassword" type="password" required
+                        id="confirmPasswordInput" autocomplete="off" />
+                </div>
+            </div>
+            <div *ngIf="edit" class="submit-buttons">
+                <button type="submit" class="validate-button">
+                    <div class="validate-label">Enregistrer</div>
+                </button>
+                <button (click)="editProfil(false)" class="cancel-button">
+                    <div class="cancel-label">Annuler</div>
+                </button>
+            </div>
+        </form>
+
+    </div>
+    <div class="transition"></div>
+    <div class="right-profile">
+        <div class="sponsorship">
+            <div class="sponsorship-label">Votre code de parrainage</div>
+            <div class="our-sponsorship-frame">
+                <div class="our-sponsorship-label ">{{sponsoring}}</div>
+                <img src="./images/copy.png" alt="copy">
+            </div>
+        </div>
+        <form (ngSubmit)="submitSponsorship()" [formGroup]="sponsorshipForm" class="sponsorship">
+            <div class="sponsorship-label">Rentrer un code de parrainage</div>
+            <input class="text-input" type="text" formControlName="sponsorship">
+            <div class="validate-div">
+                <button type="submit" class="validate-button">
+                    <div class="validate-label">Valider</div>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

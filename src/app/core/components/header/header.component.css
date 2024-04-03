@@ -8,8 +8,6 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
-
 }
 
 .logo {
@@ -22,7 +20,7 @@ a {
     color: #426b1f;
     display: flex;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 100px;
 }
 
 
@@ -46,7 +44,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 50px;
+    padding-right: 100px;
 }
 
 .value {
