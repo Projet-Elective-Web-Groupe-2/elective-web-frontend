@@ -1,3 +1,15 @@
+## [1.1.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.0.0...v1.1.0) (2024-04-03)
+
+
+### Features
+
+* **profil:** advancement profil page + modal ([c7db609](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/c7db6099ac8024a2b629c79dbd2a8225928fc935))
+
+
+### Bug Fixes
+
+* **profil:** finish profil page front ([aab7ab7](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/aab7ab72e1a2219cb6958421a344115b7f9573eb))
+
 ## 1.0.0 (2024-03-26)
 
 
