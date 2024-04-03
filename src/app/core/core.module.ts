@@ -6,6 +6,8 @@ import { ProfilPageComponent } from './components/profil-page/profil-page.compon
 import { HistoricComponent } from './components/historic/historic.component';
 import { CardComponent } from './components/card/card.component';
 import { OrderListComponent } from './components/order-list/order-list.component';
+import { CardPanierComponent } from './components/card-panier/card-panier.component';
+import { CardHistoricComponent } from './components/card-historic/card-historic.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -17,7 +19,9 @@ import { MatDialogModule } from '@angular/material/dialog';
       HistoricComponent,
       CardComponent,
       OrderListComponent,
-      ModalComponent
+      CardPanierComponent,
+      CardHistoricComponent,
+      ModalComponent,
     ],
   imports: [
       RouterModule,
@@ -26,7 +30,7 @@ import { MatDialogModule } from '@angular/material/dialog';
       MatDialogModule,
       ReactiveFormsModule,
     ],  
-  exports: [HeaderComponent,HistoricComponent,CardComponent],
+  exports: [HeaderComponent,HistoricComponent,CardComponent,CardPanierComponent],
   providers: [],
 
 })

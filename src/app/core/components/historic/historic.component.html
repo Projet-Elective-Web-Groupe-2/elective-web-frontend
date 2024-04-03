@@ -1,2 +1,18 @@
-<app-header [type]="userType"></app-header>
-<p>historic works!</p>
+<app-header [type]="'client'"></app-header>
+<div class="historic">
+    <div class="div-title">
+        <label class="text-title">
+            Historique des commandes
+        </label>
+        <div class="text-commande-histo">
+            {{historics.length}} commande(s)
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <div *ngFor="let histo of historics" >
+        <app-card-historic [historic]="histo"></app-card-historic>
+    </div>
+
+
+</div>
