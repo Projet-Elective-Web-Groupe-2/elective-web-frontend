@@ -1,3 +1,19 @@
+## [1.2.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.1.0...v1.2.0) (2024-04-03)
+
+
+### Features
+
+* **card+histo:** add historic data flex and client change ([1770451](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/177045125396b84476d29a45e545ae7fb05a0204))
+* **card:** add card component for historic and basket ([f9e748a](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/f9e748a91dc30f0d2b6fa4c3b61243368c58e049))
+* **card:** create model and 1st look ([3274777](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3274777bb7e06426e4a5cb910bd492c23b2b122d))
+* **historic:** addinput parameter for historic card ([53d9e1d](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/53d9e1d6e38aac1c1358f6ef9c6d9ec638801336))
+* **panier:** add card for panier ([ecd88fb](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/ecd88fbb75f7ea028f0a011e00c49ab6caf90f47))
+
+
+### Bug Fixes
+
+* **signup:** change connexion to inscription in signup ([ccb43b3](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/ccb43b396db5825984ec6ae792864f30e8d23a36))
+
 ## [1.1.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.0.0...v1.1.0) (2024-04-03)
 
 
