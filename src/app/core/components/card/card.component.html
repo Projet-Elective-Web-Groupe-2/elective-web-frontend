@@ -1,9 +1,9 @@
-<div *ngIf="!isResto">
+<div *ngIf="!isDetailResto">
     <div class="card--client">
         <img src="{{menu.img}}" class="image-card"/>
         <p class="text-2">{{menu.name}}</p>
         <p class="text-3">{{menu.description}}</p>
-        <div>
+        <div *ngIf="isClient">
             <h1>{{menu.price}}</h1>
             <div class="box">
                 <button class="decrease" (click)="onChangeMinus()">-</button>
@@ -11,11 +11,15 @@
                 <button class="increase" (click)="onChangePlus()">+</button>
             </div>
         </div>
+        <div *ngIf="!isClient" class="forRestaurant">
+            <div class="price">{{menu.price}}</div>
+            <div class="edit">EDIT</div>
+        </div>
 
     </div>
 </div>
 
-<div *ngIf="isResto">
+<div *ngIf="isDetailResto">
     <div class="card--client">
         <img src="{{restaurant.img}}" class="image-card"/>
         <p class="text-2">{{restaurant.name}}</p>
