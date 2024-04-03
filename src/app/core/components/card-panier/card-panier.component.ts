@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class CardPanierComponent {
 
+
+  drinks:string[]=[];
+  ngOnInit():void{
+    this.drinks.push("Coca");
+    this.drinks.push("Fanta");
+    this.drinks.push("Ice-Tea");
+    this.drinks.push("Eau");
+    this.drinks.push("Perrier");
+  }
 }

@@ -1,1 +1,15 @@
-<p>card-panier works!</p>
+<div class="card-panier">
+    <div>
+        <img class="img-card-historic"
+            src="https://eu-images.contentstack.com/v3/assets/blt5004e64d3579c43f/blte345501c8bb2b551/649c47d5dfeeafb870a54af1/BO_MCFIRST.png?auto=webp">
+    </div>
+    <div class="histo-text">
+        <p class="text-1">b</p>
+        <p class="text-2">a</p>
+        <div>
+            <select >
+                <option *ngFor="let drink of drinks" value="{{drink}}">{{drink}}</option>
+            </select>
+        </div>
+    </div>
+</div>

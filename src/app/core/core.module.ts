@@ -23,7 +23,7 @@ import { CardHistoricComponent } from './components/card-historic/card-historic.
       RouterModule,
       CommonModule,
     ],  
-  exports: [HeaderComponent,HistoricComponent,CardComponent],
+  exports: [HeaderComponent,HistoricComponent,CardComponent,CardPanierComponent],
   providers: [],
 
 })
