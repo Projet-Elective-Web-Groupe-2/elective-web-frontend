@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Historic } from '../../models/historic.model';
 import { NgFor } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-historic',
@@ -8,6 +9,9 @@ import { NgFor } from '@angular/common';
   styleUrls: ['./historic.component.css']
 })
 export class HistoricComponent {
+  userType!: string;
+  
+  constructor(private route: ActivatedRoute) { }
 
   histoTest = new Historic();
   historics:Historic[] = [];
@@ -19,6 +23,9 @@ export class HistoricComponent {
     this.histoTest.statut="Terminé";
     this.histoTest.name="Pizza hut"
     console.log(this.historics);
+    this.route.params.subscribe(params => {
+      this.userType = params['type'];
+    });
 
   }
 }

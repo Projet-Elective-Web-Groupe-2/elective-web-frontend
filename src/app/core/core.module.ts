@@ -8,6 +8,9 @@ import { CardComponent } from './components/card/card.component';
 import { OrderListComponent } from './components/order-list/order-list.component';
 import { CardPanierComponent } from './components/card-panier/card-panier.component';
 import { CardHistoricComponent } from './components/card-historic/card-historic.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,15 @@ import { CardHistoricComponent } from './components/card-historic/card-historic.
       CardComponent,
       OrderListComponent,
       CardPanierComponent,
-      CardHistoricComponent
+      CardHistoricComponent,
+      ModalComponent,
     ],
   imports: [
       RouterModule,
       CommonModule,
+      FormsModule,
+      MatDialogModule,
+      ReactiveFormsModule,
     ],  
   exports: [HeaderComponent,HistoricComponent,CardComponent,CardPanierComponent],
   providers: [],
