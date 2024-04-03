@@ -10,7 +10,8 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./profil-page.component.css']
 })
 export class ProfilPageComponent implements OnInit {
-  edit: boolean = true;
+  edit: boolean = false;
+  editForm!: FormGroup;
   userType!: string;
 
   firstname!: string;
@@ -23,25 +24,27 @@ export class ProfilPageComponent implements OnInit {
   sponsoring!: string;
 
   constructor(private route: ActivatedRoute, public dialog: MatDialog) { }
-  editForm!: FormGroup;
- 
 
-  editFormFunction(){
+  initiateEditForm() {
     this.editForm = new FormGroup({
-      firstname: new FormControl(),
-      name: new FormControl(),
-      address: new FormControl(),
-      mail: new FormControl(),
-      phone: new FormControl(),
-      password: new FormControl(),
-      confirmPassword: new FormControl()
-    }); 
+      firstName: new FormControl({value:this.firstname,disabled:true}),
+      name: new FormControl({value:this.name,disabled:true}),
+      address: new FormControl({value:this.address,disabled:true}),
+      mail: new FormControl({value:this.mail,disabled:true}),
+      phone: new FormControl({value:this.phone,disabled:true}),
+      password: new FormControl({value:this.password,disabled:true}),
+      confirmPassword: new FormControl({value:'',disabled:true})
+    });
   }
 
+  sponsorshipForm = new FormGroup({
+    sponsorship: new FormControl(),
+  });
+
+
   ngOnInit(): void {
-    this.editFormFunction()
-    this.name = "Amara";
     this.firstname = "Ahmed";
+    this.name = "Amara";
     this.address = "211 rue de la Republique , 95239";
     this.mail = "amara.ahmed@gmail.com";
     this.phone = "+33542465791";
@@ -50,37 +53,45 @@ export class ProfilPageComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.userType = params['type'];
     });
-    this.editProfil();
+    this.initiateEditForm();
+    this.editProfil(true);
   }
 
-  onSubmit() {
+  submitProfil() {
     console.log(this.editForm.value);
   }
 
-  editProfil() {
-    this.edit = !this.edit;
-    var nameInput = document.getElementById('nameInput') as HTMLInputElement;
-    var firstnameInput = document.getElementById('firstnameInput') as HTMLInputElement;
-    var addressInput = document.getElementById('addressInput') as HTMLInputElement;
-    var mailInput = document.getElementById('mailInput') as HTMLInputElement;
-    var phoneInput = document.getElementById('phoneInput') as HTMLInputElement;
-    var passwordInput = document.getElementById('passwordInput') as HTMLInputElement;
-    var confirmPasswordInput = document.getElementById('confirmPasswordInput') as HTMLInputElement;
-    nameInput.disabled = !this.edit;
-    firstnameInput.disabled = !this.edit;
-    addressInput.disabled = !this.edit;
-    mailInput.disabled = !this.edit;
-    phoneInput.disabled = !this.edit;
-    passwordInput.disabled = !this.edit;
-    confirmPasswordInput.disabled = !this.edit;
-
-    var editButton = document.getElementById('edit-button') as HTMLButtonElement;
-    editButton.disabled = this.edit;
+  submitSponsorship() {
+    console.log(this.sponsorshipForm.value);
   }
 
-  deleteProfil(){
+
+  editProfil(init: boolean) {
+    if (init == false) {
+      this.edit = !this.edit;
+      var nameInput = document.getElementById('nameInput') as HTMLInputElement;
+      var firstnameInput = document.getElementById('firstnameInput') as HTMLInputElement;
+      var addressInput = document.getElementById('addressInput') as HTMLInputElement;
+      var mailInput = document.getElementById('mailInput') as HTMLInputElement;
+      var phoneInput = document.getElementById('phoneInput') as HTMLInputElement;
+      var passwordInput = document.getElementById('passwordInput') as HTMLInputElement;
+      var confirmPasswordInput = document.getElementById('confirmPasswordInput') as HTMLInputElement;
+      nameInput.disabled = !this.edit;
+      firstnameInput.disabled = !this.edit;
+      addressInput.disabled = !this.edit;
+      mailInput.disabled = !this.edit;
+      phoneInput.disabled = !this.edit;
+      passwordInput.disabled = !this.edit;
+      confirmPasswordInput.disabled = !this.edit;
+
+      var editButton = document.getElementById('edit-button') as HTMLButtonElement;
+      editButton.disabled = this.edit;
+    }
+  }
+
+  deleteProfil() {
     let dialogRef = this.dialog.open(ModalComponent, {
-      data: { content: 'Voulez-vous vraiment confirmer la suppression du profil ?',title:'Supprimer le compte ?' },
+      data: { content: 'Voulez-vous vraiment confirmer la suppression du profil ?', title: 'Supprimer le compte ?' },
       height: '186px',
       width: '659px',
     });
