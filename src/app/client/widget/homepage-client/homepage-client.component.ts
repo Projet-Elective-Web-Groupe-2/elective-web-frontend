@@ -10,6 +10,7 @@ import { Menu } from 'src/app/core/models/menu.model';
 export class HomepageClientComponent implements OnInit {
   restoTest = new Restaurant();
   menuTest = new Menu();
+  restaurantID:number = 21225;
 
   ngOnInit(): void {
     this.restoTest.img="https://images.bfmtv.com/NUJHUYUkXAYVPZAR888_w9rjrNc=/0x0:1196x1192/1196x0/images/-458880.jpg";
