@@ -25,6 +25,8 @@ import { HomepageDeliveryComponent } from './delivery/widget/homepage-delivery/h
 import { HomepageDeveloperComponent } from './developer/widget/homepage-developer/homepage-developer.component';
 import { HomepageSalesComponent } from './sales/widget/homepage-sales/homepage-sales.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
+import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     HomepageRestaurantComponent,
     HomepageDeliveryComponent,
     HomepageDeveloperComponent,
-    HomepageSalesComponent
+    HomepageSalesComponent,
+    AddMenuComponent,
+    AddArticleComponent
   ],
   imports: [
     CoreModule,

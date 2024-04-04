@@ -14,6 +14,8 @@ import { PanierComponent } from './client/widget/panier/panier.component';
 import { OrderListComponent } from './core/components/order-list/order-list.component';
 import { ComponentListComponent } from './developer/widget/component-list/component-list.component';
 import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
+import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
+import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
 
 
 const routes: Routes = [{
@@ -27,7 +29,8 @@ const routes: Routes = [{
 {path: 'developer', component: DeveloperComponent},
 {path: 'sales', component: SalesComponent},
 
-
+{path: 'restaurant/add-menu', component: AddMenuComponent},
+{path: 'restaurant/add-article', component: AddArticleComponent},
 
 {path: ':type/profil', component: ProfilPageComponent},
 {path: ':type/historic', component: HistoricComponent},

@@ -1,1 +1,35 @@
-<p>homepage-restaurant works!</p>
+<div class="pageheading">
+    <div class="summary">
+        <div class="name">{{restaurant}}</div>
+        <div class="address">{{address}}</div>
+    </div>
+    <div class="buttons">
+        <button [routerLink]="['/restaurant/add-article']" class="add-article">
+            <div class="add-article-label">Ajouter un article</div>
+        </button>
+        <button [routerLink]="['/restaurant/add-menu']" class="add-menu">
+            <div class="add-article-menu">Ajouter un menu</div>
+        </button>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="menu">
+    <div class="title">
+        <div class="title-label">Liste des menus :</div>
+    </div>
+    <div class="content">
+        <div *ngFor="let menu of menuList">
+            <app-card [isClient]="false" [isDetailResto]="false" [menu]="menu"></app-card>
+        </div>
+    </div>
+</div>
+<div class="article">
+    <div class="title">
+        <div class="title-label">Liste des articles :</div>
+    </div>
+    <div class="content">
+        <div *ngFor="let article of articleList">
+            <app-card [isClient]="false" [isDetailResto]="false" [menu]="article"></app-card>
+        </div>
+    </div>
+</div>
