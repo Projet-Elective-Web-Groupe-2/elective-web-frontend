@@ -29,6 +29,7 @@ import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.componen
 import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
 import { RestaurantClientComponent } from './client/widget/restaurant-client/restaurant-client.component';
 import { CardDeveloperComponent } from './developer/widget/card-developer/card-developer.component';
+import { HistoricRestaurantComponent } from './restaurant/widget/historic-restaurant/historic-restaurant.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { CardDeveloperComponent } from './developer/widget/card-developer/card-d
     AddMenuComponent,
     AddArticleComponent,
     RestaurantClientComponent,
-    CardDeveloperComponent
+    CardDeveloperComponent,
+    HistoricRestaurantComponent
   ],
   imports: [
     CoreModule,
