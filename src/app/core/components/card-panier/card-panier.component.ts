@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Panier } from '../../models/panier.model';
 
 @Component({
   selector: 'app-card-panier',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CardPanierComponent {
 
+  @Input() panier!:Panier;
 
   drinks:string[]=[];
   ngOnInit():void{
