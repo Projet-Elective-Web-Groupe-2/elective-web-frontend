@@ -6,11 +6,11 @@
 <form (ngSubmit)="submitMenu()" [formGroup]="menusForm">
     <div class="content">
         <div class="formValue">
-            <div class="name">
+            <div style="padding-bottom: 30px" class="name">
                 <div class="label">Nom du menu</div>
                 <input class="nameInput" formControlName="name" type="text" required>
             </div>
-            <div class="compo">
+            <div style="padding-bottom: 30px" class="compo">
                 <div class="label">Composition du menu</div>
                 <select formControlName="compo" type="select" class="selectArticle">
                     <option class="optionArticle" *ngFor="let article of articleList" value="{{article}}">{{article}}
@@ -18,20 +18,20 @@
                 </select>
                 <!--<input formControlName="compo" type="text" required>-->
             </div>
-            <div class="price">
+            <div style="padding-bottom: 30px" class="price">
                 <div class="labelPrice">Prix</div>
                 <input class="priceInput" formControlName="price" type="number" required>
             </div>
-            <div class="drink">
+            <div style="padding-bottom: 50px" class="drink ">
                 <div class="labelDrink">Boisson</div>
-                <!--<input class="drinkCheckbox" type="checkbox" formControlName="drink">-->
                 <label class="switch">
                     <input class="drinkCheckbox" formControlName="drink" type="checkbox">
                     <span class="slider"></span>
                 </label>
             </div>
-            <div class="pic">
+            <div class="pic padding">
                 <div class="label">Photo de l'article</div>
+                <div class="warning">DIMENSION MAX : 250x250</div>
                 <input formControlName="photo" required type="file" class="file-upload" (change)="onFileSelected($event)" accept=".jpg, .jpeg, .png"/>
             </div>
         </div>
@@ -50,14 +50,14 @@
                 <div>
                     <div class="summary-price">
                         <div class="summary-label">Prix :</div>
-                        <div class="summary-content">{{menusForm.get('price')?.value}}€</div>
+                        <div class="summary-content-price">{{menusForm.get('price')?.value}}€</div>
                     </div>
                     <div>
-                        <div class="summary-label"> Boisson :</div>
-                        <div class="summary-content">{{menusForm.get('drink')?.value}}</div>
+                        <div *ngIf="menusForm.get('drink')?.value" class="summary-label">Avec boisson</div>
+                        <div *ngIf="!(menusForm.get('drink')?.value)" class="summary-label">Sans boisson</div>
                     </div>
                 </div>
-                <button class="confirm-menu">
+                <button [disabled]="!menusForm.valid" class="confirm-menu">
                     <div class="confirm-menu-label">Ajouter l'article</div>
                     <div class="confirm-menu-logo">Logo</div>
                 </button>
