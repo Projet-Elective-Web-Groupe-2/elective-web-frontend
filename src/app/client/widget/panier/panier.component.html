@@ -1,2 +1,43 @@
 <app-header [type]="'client'"></app-header>
-<app-card-panier></app-card-panier>
+<div class="panier">
+    <div class="div-title">
+        <label class="text-title">
+            Panier
+        </label>
+        
+    </div>
+    <div class="divider"></div>
+    <div class="panier-body">
+        <div class="panier-article">
+            <app-card-panier [panier]="panierTest"></app-card-panier>
+            <app-card-panier [panier]="panierTest"></app-card-panier>
+        </div>
+        <div class="panier-recap">
+            <div class="summary">
+                <p class="text-recap-title">Resumé de la commande</p>
+                <div class="line-recap">
+                    <p class="text-recap-left">Frais de la commande</p>
+                    <p class="text-recap-right">$27.44</p>
+                </div>
+                <div class="line-recap">
+                    <p class="text-recap-left">Livraison</p>
+                    <p class="text-recap-right">$3.99</p>
+                </div>
+                <div class="line-recap">
+                    <p class="text-recap-left">Tax</p>
+                    <p class="text-recap-right">$2.00</p>
+                </div>
+                <div class="line-recap">
+                    <p class="text-recap-left">Totale</p>
+                    <p class="text-recap-right">$33.43</p>
+                </div>
+                <div class="recap-button">
+                    <button class="button-recap">
+                      <p class="text-recap-button">Passer au paiement</p>
+                      <img src="" />
+                    </button>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

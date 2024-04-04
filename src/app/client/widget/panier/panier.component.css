@@ -1,0 +1,121 @@
+.text-title {
+    text-align: left;
+    vertical-align: bottom;
+    font-size: 40px;
+    line-height: auto;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.div-title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.panier {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.divider {
+    height: 0px;
+    width: 87vw;
+    border: 2px solid #e6e6e6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.text-commande-histo {
+    margin-bottom: 0px;
+    margin-top: 40px;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.panier-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.panier-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary {
+    border-radius: 24px;
+    height: 318px;
+    width: 395px;
+    background-color: #fafaf5;
+    border: 2px solid #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.text-recap-title {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.text-recap-left {
+    text-align: left;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.text-recap-right {
+    text-align: right;
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.button-recap {
+    border-radius: 8px;
+    height: 48px;
+    width: 347px;
+    background-color: #426b1f;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.text-recap-button {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.img-1-1 {
+    height: 32px;
+    width: 32px;
+}
+
+.line-recap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.panier-recap{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.recap-button{
+    display: flex;
+    justify-content: center;
+}
