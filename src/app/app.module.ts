@@ -27,6 +27,7 @@ import { HomepageSalesComponent } from './sales/widget/homepage-sales/homepage-s
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
 import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
+import { RestaurantClientComponent } from './client/widget/restaurant-client/restaurant-client.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { AddArticleComponent } from './restaurant/widget/add-article/add-article
     HomepageDeveloperComponent,
     HomepageSalesComponent,
     AddMenuComponent,
-    AddArticleComponent
+    AddArticleComponent,
+    RestaurantClientComponent
   ],
   imports: [
     CoreModule,

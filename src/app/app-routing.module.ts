@@ -16,6 +16,7 @@ import { ComponentListComponent } from './developer/widget/component-list/compon
 import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
 import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
 import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
+import { RestaurantClientComponent } from './client/widget/restaurant-client/restaurant-client.component';
 
 
 const routes: Routes = [{
@@ -32,6 +33,9 @@ const routes: Routes = [{
 {path: 'restaurant/add-menu', component: AddMenuComponent},
 {path: 'restaurant/add-article', component: AddArticleComponent},
 
+{path: 'client/:id', component: RestaurantClientComponent},
+
+
 {path: ':type/profil', component: ProfilPageComponent},
 {path: ':type/historic', component: HistoricComponent},
 {path: ':type/statistic', component: StatisticComponent},
@@ -40,6 +44,7 @@ const routes: Routes = [{
 {path: ':type/order-list', component: OrderListComponent},
 {path: ':type/component-list', component: ComponentListComponent},
 {path: ':type/users-info', component: UsersInfoComponent},
+
 
 
 ]

@@ -1,0 +1,28 @@
+<app-header [type]="'client'"></app-header>
+<div class="div-title">
+    <label class="text-title">
+        <div class="name">{{restaurant}}</div>
+        <div class="address">{{address}}</div>
+    </label>
+</div>
+<div class="divider"></div>
+<div class="menu">
+    <div class="title">
+        <div class="title-label">Liste des menus :</div>
+    </div>
+    <div class="content">
+        <div *ngFor="let menu of menuList">
+            <app-card [isClient]="true" [isDetailResto]="false" [menu]="menu"></app-card>
+        </div>
+    </div>
+</div>
+<div class="article">
+    <div class="title">
+        <div class="title-label">Liste des articles :</div>
+    </div>
+    <div class="content">
+        <div *ngFor="let article of articleList">
+            <app-card [isClient]="true" [isDetailResto]="false" [menu]="article"></app-card>
+        </div>
+    </div>
+</div>
