@@ -1,3 +1,12 @@
+## [1.5.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.4.0...v1.5.0) (2024-04-04)
+
+
+### Features
+
+* **add-client:** Routing ([7d25b34](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/7d25b34d69410330cf966043af19407e70eed0a7))
+* **add:** add restau detail for client ([a2d6a4c](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a2d6a4c126eaa32bf26bf0d3f2c3277ceac5ff7a))
+* **restaurant:** add details of restaurant for client ([ce25f9f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/ce25f9fa53036f41047ce8afba489448acaab26f))
+
 ## [1.4.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.3.0...v1.4.0) (2024-04-04)
 
 
