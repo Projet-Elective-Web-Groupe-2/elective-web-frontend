@@ -1,54 +1,68 @@
 .card--client {
-    border-radius: 24px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 14px 19px;
-    gap: 15px;
-    background-color: #fafaf5;
-    border: 2px solid #e6e6e6;
-    width: calc(20vw - 40px);
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .img-1 {
-    height: 292px;
-    width: 352px;
-  }
-  .text-2 {
-    text-align: left;
-    vertical-align: top;
-    font-size: 20px;
-    font-family: Inter;
-    line-height: 129.99999523162842%;
-    color: #000000;
-  }
-  .text-3 {
-    text-align: left;
-    vertical-align: top;
-    font-size: 16px;
-    font-family: Inter;
-    line-height: 150%;
-    color: #6d6d6d;
-  }
-  .image-card{
-    height: 200px;
-    width: auto;
-    align-self: center;
-  }
+  border-radius: 24px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 14px 19px;
+  gap: 15px;
+  background-color: #fafaf5;
+  border: 2px solid #e6e6e6;
+  width: calc(20vw - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-  .forRestaurant{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
+.img-1 {
+  height: 292px;
+  width: 352px;
+}
 
-  .price{
-    text-align: left;
-    vertical-align: top;
-    font-size: 20px;
-    font-family: Inter;
-    line-height: 130%;
-    color: #426b1f;
-  }
+.text-2 {
+  text-align: left;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 129.99999523162842%;
+  color: #000000;
+}
+
+.text-3 {
+  text-align: left;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6d6d6d;
+}
+
+.image-card {
+  height: 200px;
+  width: auto;
+  align-self: center;
+}
+
+.forRestaurant {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.price {
+  text-align: left;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 130%;
+  color: #426b1f;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+}
+.add-panier{
+  margin-left: 30px;
+  background-color: #426b1f;
+  color: #e6e6e6;
+  border-radius: 20px;
+}
