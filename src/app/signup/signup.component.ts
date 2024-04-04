@@ -1,7 +1,7 @@
 import { Component, importProvidersFrom } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
-import { Signup } from '../core/models/signup.model';
-import { NgModel } from '@angular/forms';
+import { AuthService } from '../core/services/auth.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -10,21 +10,25 @@ import { NgModel } from '@angular/forms';
 })
 export class SignupComponent {
 
+  constructor(private authService: AuthService
+  ) {}
+
   selectedValue: string = '';
 
   signupForm = new FormGroup({
-    type : new FormControl(""),
-    surname : new FormControl(""),
-    name : new FormControl(""),
+    userType : new FormControl(""),
+    firstName : new FormControl(""),
+    lastName : new FormControl(""),
     address : new FormControl(""),
-    mail : new FormControl(""),
-    phone : new FormControl(""),
+    email : new FormControl(""),
+    phoneNumber : new FormControl(""),
     password : new FormControl(""),
     repassword : new FormControl(""),
     key : new FormControl("")
   });
   onSubmit(){
     console.log(this.signupForm.value);
+    this.authService.createAccount(this.signupForm.value).subscribe();
   }
   onOptionChange(newValue: string) {
     this.selectedValue=newValue;

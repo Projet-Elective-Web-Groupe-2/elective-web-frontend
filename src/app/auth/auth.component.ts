@@ -7,6 +7,9 @@ import { FormGroup,FormControl } from '@angular/forms';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent {
+
+
+  
   loginForm = new FormGroup({
     mail : new FormControl(""),
     password : new FormControl("")

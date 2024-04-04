@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, NgFor, NgIf, UpperCasePipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +28,16 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
 import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
 import { RestaurantClientComponent } from './client/widget/restaurant-client/restaurant-client.component';
+import { AuthService } from './core/services/auth.service';
+import { UserService } from './core/services/user.service';
+import { HttpClientModule } from '@angular/common/http';
+
+// tslint:disable-next-line:typedef
+function initializeApp(lus: UserService) {
+  return (): Promise<any> => {
+    return lus.loadUser();
+  };
+}
 
 
 @NgModule({
@@ -55,6 +65,7 @@ import { RestaurantClientComponent } from './client/widget/restaurant-client/res
     RestaurantClientComponent
   ],
   imports: [
+    HttpClientModule,
     CoreModule,
     BrowserModule,
     AppRoutingModule,
@@ -65,8 +76,17 @@ import { RestaurantClientComponent } from './client/widget/restaurant-client/res
     UpperCasePipe,
     NoopAnimationsModule
   ],
-  providers: [],
-  exports:[DashboardComponent],
+  providers: [
+    /*UserService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeApp,
+      deps: [UserService],
+      multi: true,
+    },*/
+  ],
+  exports: [DashboardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
