@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.6.0...v1.7.0) (2024-04-04)
+
+
+### Features
+
+* **restaurant:** create article ([37d7d6a](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/37d7d6ad85fa5699386a5741a3cafe1777e08fdb))
+
 ## [1.6.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.5.0...v1.6.0) (2024-04-04)
 
 
