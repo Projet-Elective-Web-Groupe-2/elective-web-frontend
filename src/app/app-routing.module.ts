@@ -42,6 +42,7 @@ const routes: Routes = [{
 {path: ':type/users-info', component: UsersInfoComponent},
 
 
+
 ]
 
 @NgModule({

@@ -1,0 +1,17 @@
+.text-title {
+    text-align: left;
+    vertical-align: bottom;
+    font-size: 40px;
+    line-height: auto;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.div-title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
