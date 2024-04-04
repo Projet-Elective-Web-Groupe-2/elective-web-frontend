@@ -1,3 +1,18 @@
+## [1.4.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.3.0...v1.4.0) (2024-04-04)
+
+
+### Features
+
+* **restaurant:** homepage + start create menu ([ce4baba](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/ce4baba7283b3e7bc8f2755d7f587c326255ed35))
+* **restaurant:** homepage restaurant + creation of add-menu and add-article ([c588a1b](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/c588a1b647a8d432b20d9a4dc61604ea1e204143))
+
+## [1.3.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.2.0...v1.3.0) (2024-04-04)
+
+
+### Features
+
+* **panier:** add panier ([5720573](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/572057334d9ea9be47e1b1f67b27e71c1b92d8bb))
+
 ## [1.2.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.1.0...v1.2.0) (2024-04-03)
 
 
