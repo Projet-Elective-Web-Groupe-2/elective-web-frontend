@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.5.0...v1.6.0) (2024-04-04)
+
+
+### Features
+
+* **menu:** create menu ([10c431e](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/10c431e2426301f500aad46102e65dfe33431821))
+
 ## [1.5.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.4.0...v1.5.0) (2024-04-04)
 
 
