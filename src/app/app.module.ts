@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, NgFor, NgIf, UpperCasePipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +28,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
 import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
 import { RestaurantClientComponent } from './client/widget/restaurant-client/restaurant-client.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 import { CardDeveloperComponent } from './developer/widget/card-developer/card-developer.component';
 import { HistoricRestaurantComponent } from './restaurant/widget/historic-restaurant/historic-restaurant.component';
 
@@ -59,6 +61,10 @@ import { HistoricRestaurantComponent } from './restaurant/widget/historic-restau
     HistoricRestaurantComponent
   ],
   imports: [
+    HttpClientModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right',
+    }), 
     CoreModule,
     BrowserModule,
     AppRoutingModule,
@@ -70,7 +76,7 @@ import { HistoricRestaurantComponent } from './restaurant/widget/historic-restau
     NoopAnimationsModule
   ],
   providers: [],
-  exports:[DashboardComponent],
+  exports: [DashboardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

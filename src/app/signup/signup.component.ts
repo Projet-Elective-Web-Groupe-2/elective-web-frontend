@@ -1,7 +1,10 @@
 import { Component, importProvidersFrom } from '@angular/core';
-import { FormControl,FormGroup } from '@angular/forms';
-import { Signup } from '../core/models/signup.model';
-import { NgModel } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from '../core/services/auth.service';
+import { HttpResponse } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signup',
@@ -10,24 +13,34 @@ import { NgModel } from '@angular/forms';
 })
 export class SignupComponent {
 
+  constructor(private authService: AuthService, private toastr: ToastrService, private router: Router, private route: ActivatedRoute) { }
+
   selectedValue: string = '';
 
   signupForm = new FormGroup({
-    type : new FormControl(""),
-    surname : new FormControl(""),
-    name : new FormControl(""),
-    address : new FormControl(""),
-    mail : new FormControl(""),
-    phone : new FormControl(""),
-    password : new FormControl(""),
-    repassword : new FormControl(""),
-    key : new FormControl("")
+    userType: new FormControl(""),
+    firstName: new FormControl(""),
+    lastName: new FormControl(""),
+    address: new FormControl(""),
+    email: new FormControl(""),
+    phoneNumber: new FormControl(""),
+    password: new FormControl(""),
+    repassword: new FormControl(""),
+    key: new FormControl("")
   });
-  onSubmit(){
-    console.log(this.signupForm.value);
+
+  onSubmit() {
+    this.authService.createAccount(this.signupForm.value).subscribe((response: HttpResponse<any>) => {
+      const responseBody: string = response.body;
+      this.toastr.success('Inscription réussi');
+      this.router.navigate([`/auth`], { relativeTo: this.route });
+    }, (error) => {
+      this.toastr.error("Erreur lors de l'inscription, Veuillez réessayer");
+      this.signupForm.reset()
+    });;
   }
+
   onOptionChange(newValue: string) {
-    this.selectedValue=newValue;
-    console.log(newValue);
+    this.selectedValue = newValue;
   }
 }

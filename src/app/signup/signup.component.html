@@ -11,28 +11,28 @@
 
             <div class="input--field">
                 <p class="text-input-name">Qui suis-je ?</p>
-                <select class="text-input" formControlName="type" [ngModel]="selectedValue"
+                <select class="text-input" formControlName="userType" [ngModel]="selectedValue"
                     (ngModelChange)="onOptionChange($event)">
-                    <option value="client" class="text-option" selected="client">Client</option>
-                    <option value="restaurateur" class="text-option">Restaurateur</option>
-                    <option value="livreur" class="text-option">Livreur</option>
-                    <option value="developpeur" class="text-option">Développeur Tier</option>
+                    <option value="CLIENT" class="text-option" selected="client">CLIENT</option>
+                    <option value="RESTAURATEUR" class="text-option">RESTAURATEUR</option>
+                    <option value="LIVREUR" class="text-option">LIVREUR</option>
+                    <option value="DEVELOPPEUR" class="text-option">DEVELOPPEUR TIER</option>
                 </select>
             </div>
 
-            <div *ngIf="selectedValue=='client'">
+            <div *ngIf="selectedValue=='CLIENT'">
 
                 <div class="input-double">
                     <div class="double-1">
                         <p class="text-input-name">Prénom</p>
                         <input class="text-input-double-1" type="text" required autocomplete="off"
-                            formControlName="surname" />
+                            formControlName="firstName" />
                     </div>
 
                     <div class="double-2">
                         <p class="text-input-name">Nom</p>
                         <input class="text-input-double-2" type="text" required autocomplete="off"
-                            formControlName="name" />
+                            formControlName="lastName" />
                     </div>
                 </div>
 
@@ -43,12 +43,12 @@
 
                 <div class="input--field">
                     <p class="text-input-name">Adresse mail</p>
-                    <input class="text-input" type="text" formControlName="mail">
+                    <input class="text-input" type="text" formControlName="email">
                 </div>
 
                 <div class="input--field">
                     <p class="text-input-name">Numéro de Téléphone</p>
-                    <input class="text-input" type="text" formControlName="phone">
+                    <input class="text-input" type="text" formControlName="phoneNumber">
                 </div>
 
                 <div class="input-double">
@@ -67,7 +67,7 @@
 
             </div>
 
-            <div *ngIf="selectedValue=='restaurateur'">
+            <div *ngIf="selectedValue=='RESTAURATEUR'">
 
                 <div class="input--field">
                     <p class="text-input-name">Nom du Restaurant</p>
@@ -76,17 +76,17 @@
 
                 <div class="input--field">
                     <p class="text-input-name">Adresse du Restaurant</p>
-                    <input class="text-input" type="text" formControlName="mail">
+                    <input class="text-input" type="text" formControlName="address">
                 </div>
 
                 <div class="input--field">
                     <p class="text-input-name">Adresse mail</p>
-                    <input class="text-input" type="text" formControlName="mail">
+                    <input class="text-input" type="text" formControlName="email">
                 </div>
 
                 <div class="input--field">
                     <p class="text-input-name">Numéro de Téléphone</p>
-                    <input class="text-input" type="text" formControlName="mail">
+                    <input class="text-input" type="text" formControlName="phoneNumber">
                 </div>
 
                 <div class="input-double">
@@ -104,34 +104,34 @@
                 </div>
             </div>
 
-            <div *ngIf="selectedValue=='livreur'">
+            <div *ngIf="selectedValue=='LIVREUR'">
                 <div class="input-double">
                     <div class="double-1">
                         <p class="text-input-name">Prénom</p>
                         <input class="text-input-double-1" type="text" required autocomplete="off"
-                            formControlName="surname" />
+                            formControlName="firstName" />
                     </div>
 
                     <div class="double-2">
                         <p class="text-input-name">Nom</p>
                         <input class="text-input-double-2" type="text" required autocomplete="off"
-                            formControlName="name" />
+                            formControlName="lastName" />
                     </div>
                 </div>
 
                 <div class="input--field">
                     <p class="text-input-name">Adresse</p>
-                    <input class="text-input" type="text" formControlName="mail">
+                    <input class="text-input" type="text" formControlName="address">
                 </div>
 
                 <div class="input--field">
                     <p class="text-input-name">Adresse mail</p>
-                    <input class="text-input" type="text" formControlName="mail">
+                    <input class="text-input" type="text" formControlName="email">
                 </div>
 
                 <div class="input--field">
                     <p class="text-input-name">Numéro de Téléphone</p>
-                    <input class="text-input" type="text" formControlName="mail">
+                    <input class="text-input" type="text" formControlName="phoneNumber">
                 </div>
 
                 <div class="input-double">
@@ -149,11 +149,11 @@
                 </div>
             </div>
 
-            <div *ngIf="selectedValue=='developpeur'">
+            <div *ngIf="selectedValue=='DEVELOPPEUR'">
 
                 <div class="input--field">
                     <p class="text-input-name">Adresse mail</p>
-                    <input class="text-input" type="text" formControlName="mail">
+                    <input class="text-input" type="text" formControlName="email">
                 </div>
 
                 <div class="input--field">
@@ -163,7 +163,7 @@
 
                 <div class="input--field">
                     <p class="text-input-name">Numéro de Téléphone</p>
-                    <input class="text-input" type="text" formControlName="phone">
+                    <input class="text-input" type="text" formControlName="phoneNumber">
                 </div>
 
                 <div class="input-double">
