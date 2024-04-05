@@ -15,7 +15,10 @@ export class OrderListComponent {
 
   ngOnInit() {
     this.type = this.sessionStorageService.getItem('type');
-    if(this.type != 'client' && this.type != 'restaurateur' && this.type != 'delivery' ){
+    if ((this.type == 'client' && this.userType == 'client') ||
+      (this.type == 'restaurateur' && this.userType == 'restaurant')) {
+    }
+    else {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
 
