@@ -33,7 +33,7 @@ const routes: Routes = [{
 {path: 'restaurant/add-menu', component: AddMenuComponent},
 {path: 'restaurant/add-article', component: AddArticleComponent},
 
-{path: 'client/:id', component: RestaurantClientComponent},
+{path: 'client/restaurant/:id', component: RestaurantClientComponent},
 
 
 {path: ':type/profil', component: ProfilPageComponent},
