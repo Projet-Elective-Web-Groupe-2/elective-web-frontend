@@ -16,7 +16,6 @@ import { SalesComponent } from './sales/sales.component';
 import { CoreModule } from './core/core.module';
 import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
 import { PanierComponent } from './client/widget/panier/panier.component';
-import { ComponentListComponent } from './developer/widget/component-list/component-list.component';
 import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
 import { DashboardComponent } from './sales/widget/dashboard/dashboard.component';
 import { HomepageClientComponent } from './client/widget/homepage-client/homepage-client.component';
@@ -46,7 +45,6 @@ import { HistoricRestaurantComponent } from './restaurant/widget/historic-restau
     SalesComponent,
     StatisticComponent,
     PanierComponent,
-    ComponentListComponent,
     UsersInfoComponent,
     DashboardComponent,
     HomepageClientComponent,

@@ -22,7 +22,6 @@ export class HistoricComponent {
     this.histoTest.desc="2 plats. 23.56 $ 30 Mars 2024.";
     this.histoTest.statut="Terminé";
     this.histoTest.name="Pizza hut"
-    console.log(this.historics);
     this.route.params.subscribe(params => {
       this.userType = params['type'];
     });

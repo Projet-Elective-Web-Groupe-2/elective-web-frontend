@@ -12,11 +12,11 @@ import { HistoricComponent } from './core/components/historic/historic.component
 import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
 import { PanierComponent } from './client/widget/panier/panier.component';
 import { OrderListComponent } from './core/components/order-list/order-list.component';
-import { ComponentListComponent } from './developer/widget/component-list/component-list.component';
 import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
 import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
 import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
 import { RestaurantClientComponent } from './client/widget/restaurant-client/restaurant-client.component';
+import { ErrorPageComponent } from './core/components/error-page/error-page.component';
 
 
 const routes: Routes = [{
@@ -30,6 +30,9 @@ const routes: Routes = [{
 {path: 'developer', component: DeveloperComponent},
 {path: 'sales', component: SalesComponent},
 
+{path: 'error-page', component: ErrorPageComponent},
+
+
 {path: 'restaurant/add-menu', component: AddMenuComponent},
 {path: 'restaurant/add-article', component: AddArticleComponent},
 
@@ -42,7 +45,6 @@ const routes: Routes = [{
 
 {path: ':type/panier', component: PanierComponent},
 {path: ':type/order-list', component: OrderListComponent},
-{path: ':type/component-list', component: ComponentListComponent},
 {path: ':type/users-info', component: UsersInfoComponent},
 
 
