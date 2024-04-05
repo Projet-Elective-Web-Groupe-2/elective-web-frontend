@@ -1,3 +1,16 @@
+## [1.9.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.8.0...v1.9.0) (2024-04-05)
+
+
+### Features
+
+* **auth:** create and auth connect to back ([729ef83](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/729ef83249a7495f2630fa82deff5cb3acb28598))
+* **connection:** start connection ton backend ([295eba0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/295eba055ffbec3e4a74b99f0d487e0198f57777))
+
+
+### Bug Fixes
+
+* change app.module ([a65f343](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a65f343e25ce3c878f415bc068741d56f704898a))
+
 ## [1.8.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.7.0...v1.8.0) (2024-04-05)
 
 
