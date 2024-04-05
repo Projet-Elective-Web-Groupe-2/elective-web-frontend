@@ -28,16 +28,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
 import { AddArticleComponent } from './restaurant/widget/add-article/add-article.component';
 import { RestaurantClientComponent } from './client/widget/restaurant-client/restaurant-client.component';
-import { AuthService } from './core/services/auth.service';
-import { UserService } from './core/services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
-// tslint:disable-next-line:typedef
-function initializeApp(lus: UserService) {
-  return (): Promise<any> => {
-    return lus.loadUser();
-  };
-}
 
 
 @NgModule({
@@ -66,6 +59,7 @@ function initializeApp(lus: UserService) {
   ],
   imports: [
     HttpClientModule,
+    ToastrModule.forRoot(), 
     CoreModule,
     BrowserModule,
     AppRoutingModule,
@@ -76,16 +70,7 @@ function initializeApp(lus: UserService) {
     UpperCasePipe,
     NoopAnimationsModule
   ],
-  providers: [
-    /*UserService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializeApp,
-      deps: [UserService],
-      multi: true,
-    },*/
-  ],
+  providers: [],
   exports: [DashboardComponent],
   bootstrap: [AppComponent]
 })
