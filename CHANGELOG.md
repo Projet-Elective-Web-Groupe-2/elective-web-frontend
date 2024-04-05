@@ -1,3 +1,12 @@
+## [1.8.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.7.0...v1.8.0) (2024-04-05)
+
+
+### Features
+
+* **card-developer:** add card for the list of component for developer ([fee58b9](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/fee58b90f4571d4e60bc770cfd45671184d4fdd4))
+* **component dl:** add page title for component dl ([553113b](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/553113b8ef13eb9310959f477b07ce94ef1bb90d))
+* **histo resto:** add historic for restaurant ([f9d5833](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/f9d5833f90ff570cd8e9dfacecbf890d450ee0a2))
+
 ## [1.7.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.6.0...v1.7.0) (2024-04-04)
 
 
