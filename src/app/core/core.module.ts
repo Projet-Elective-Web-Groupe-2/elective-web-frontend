@@ -30,7 +30,7 @@ import { MatDialogModule } from '@angular/material/dialog';
       MatDialogModule,
       ReactiveFormsModule,
     ],  
-  exports: [HeaderComponent,HistoricComponent,CardComponent,CardPanierComponent],
+  exports: [HeaderComponent,HistoricComponent,CardComponent,CardPanierComponent,CardHistoricComponent],
   providers: [],
 
 })

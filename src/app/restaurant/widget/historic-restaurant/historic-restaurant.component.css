@@ -1,4 +1,4 @@
-.text-title {
+.text-title{
     text-align: left;
     vertical-align: bottom;
     font-size: 40px;
@@ -8,12 +8,17 @@
     margin-bottom: 20px;
     margin-top: 40px;
 }
-
-.div-title {
+.div-title{
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-end;
     justify-content: space-between;
+}
+.historic{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 .divider {
     height: 0px;
@@ -23,6 +28,9 @@
     margin-bottom: 10px;
     align-self: center;
 }
-.componentDL{
-    margin-left: 100px;
+.text-commande-histo{
+    margin-bottom: 0px;
+    margin-top: 40px;
+    text-align: right;
+    vertical-align: bottom;
 }
