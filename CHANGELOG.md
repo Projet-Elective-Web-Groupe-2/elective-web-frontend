@@ -1,3 +1,11 @@
+## [1.10.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.9.1...v1.10.0) (2024-04-05)
+
+
+### Features
+
+* **access:** access for historic and order-list ([5260488](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/52604882cb9b7aece5d8afe14f325428b25eea54))
+* **access:** give acces to differents roles ([5801406](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/580140686ba900fb8ba8fd689779b1d83533a623))
+
 ## [1.9.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.9.0...v1.9.1) (2024-04-05)
 
 
