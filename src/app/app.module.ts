@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { CardDeveloperComponent } from './developer/widget/card-developer/card-developer.component';
 import { HistoricRestaurantComponent } from './restaurant/widget/historic-restaurant/historic-restaurant.component';
+import { CardCommandComponent } from './delivery/widget/card-command/card-command.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { HistoricRestaurantComponent } from './restaurant/widget/historic-restau
     AddArticleComponent,
     RestaurantClientComponent,
     CardDeveloperComponent,
-    HistoricRestaurantComponent
+    HistoricRestaurantComponent,
+    CardCommandComponent
   ],
   imports: [
     HttpClientModule,
