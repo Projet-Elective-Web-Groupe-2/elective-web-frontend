@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.9.0...v1.9.1) (2024-04-05)
+
+
+### Bug Fixes
+
+* **routing:** fix routing for detail restau in client ([152c581](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/152c5813680264ea7a748bd60c42666d5331c347))
+
 ## [1.9.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.8.0...v1.9.0) (2024-04-05)
 
 
