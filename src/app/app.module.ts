@@ -62,7 +62,9 @@ import { HistoricRestaurantComponent } from './restaurant/widget/historic-restau
   ],
   imports: [
     HttpClientModule,
-    ToastrModule.forRoot(), 
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right',
+    }), 
     CoreModule,
     BrowserModule,
     AppRoutingModule,

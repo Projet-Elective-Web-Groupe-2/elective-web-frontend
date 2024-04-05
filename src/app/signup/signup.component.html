@@ -13,14 +13,14 @@
                 <p class="text-input-name">Qui suis-je ?</p>
                 <select class="text-input" formControlName="userType" [ngModel]="selectedValue"
                     (ngModelChange)="onOptionChange($event)">
-                    <option value="client" class="text-option" selected="client">Client</option>
-                    <option value="restaurateur" class="text-option">Restaurateur</option>
-                    <option value="livreur" class="text-option">Livreur</option>
-                    <option value="developpeur" class="text-option">Développeur Tier</option>
+                    <option value="CLIENT" class="text-option" selected="client">CLIENT</option>
+                    <option value="RESTAURATEUR" class="text-option">RESTAURATEUR</option>
+                    <option value="LIVREUR" class="text-option">LIVREUR</option>
+                    <option value="DEVELOPPEUR" class="text-option">DEVELOPPEUR TIER</option>
                 </select>
             </div>
 
-            <div *ngIf="selectedValue=='client'">
+            <div *ngIf="selectedValue=='CLIENT'">
 
                 <div class="input-double">
                     <div class="double-1">
@@ -67,7 +67,7 @@
 
             </div>
 
-            <div *ngIf="selectedValue=='restaurateur'">
+            <div *ngIf="selectedValue=='RESTAURATEUR'">
 
                 <div class="input--field">
                     <p class="text-input-name">Nom du Restaurant</p>
@@ -104,7 +104,7 @@
                 </div>
             </div>
 
-            <div *ngIf="selectedValue=='livreur'">
+            <div *ngIf="selectedValue=='LIVREUR'">
                 <div class="input-double">
                     <div class="double-1">
                         <p class="text-input-name">Prénom</p>
@@ -149,7 +149,7 @@
                 </div>
             </div>
 
-            <div *ngIf="selectedValue=='developpeur'">
+            <div *ngIf="selectedValue=='DEVELOPPEUR'">
 
                 <div class="input--field">
                     <p class="text-input-name">Adresse mail</p>
