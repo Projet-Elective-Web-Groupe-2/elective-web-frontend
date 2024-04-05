@@ -28,7 +28,9 @@ export class AuthService {
             phoneNumber: signupForm.phoneNumber,
             firstName: signupForm.firstName,
             lastName: signupForm.lastName,
-            address: signupForm.address
+            address: signupForm.address,
+            restaurantName: signupForm.restaurantName,
+            restaurantAddress: signupForm.restaurantAddress,
         };
         return this.http.post(`${environment.baseUrl}${API.createAccount}`, body, { withCredentials: false, observe: 'response' });
     }

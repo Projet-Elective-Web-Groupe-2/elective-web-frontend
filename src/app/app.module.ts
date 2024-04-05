@@ -16,7 +16,6 @@ import { SalesComponent } from './sales/sales.component';
 import { CoreModule } from './core/core.module';
 import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
 import { PanierComponent } from './client/widget/panier/panier.component';
-import { ComponentListComponent } from './developer/widget/component-list/component-list.component';
 import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
 import { DashboardComponent } from './sales/widget/dashboard/dashboard.component';
 import { HomepageClientComponent } from './client/widget/homepage-client/homepage-client.component';
@@ -31,7 +30,6 @@ import { RestaurantClientComponent } from './client/widget/restaurant-client/res
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { CardDeveloperComponent } from './developer/widget/card-developer/card-developer.component';
-import { HistoricRestaurantComponent } from './restaurant/widget/historic-restaurant/historic-restaurant.component';
 
 
 @NgModule({
@@ -46,7 +44,6 @@ import { HistoricRestaurantComponent } from './restaurant/widget/historic-restau
     SalesComponent,
     StatisticComponent,
     PanierComponent,
-    ComponentListComponent,
     UsersInfoComponent,
     DashboardComponent,
     HomepageClientComponent,
@@ -58,7 +55,6 @@ import { HistoricRestaurantComponent } from './restaurant/widget/historic-restau
     AddArticleComponent,
     RestaurantClientComponent,
     CardDeveloperComponent,
-    HistoricRestaurantComponent
   ],
   imports: [
     HttpClientModule,

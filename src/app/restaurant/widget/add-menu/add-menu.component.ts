@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 
 @Component({
   selector: 'app-add-menu',
@@ -9,8 +11,10 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class AddMenuComponent implements OnInit {
   articleList:string[] = [];
   selectedImage: string | ArrayBuffer | null | undefined;
-  
-  constructor(private formBuilder: FormBuilder) {}
+  type!:string|null;
+
+  constructor(private formBuilder: FormBuilder,private sessionStorageService: SessionStorageService,private router: Router, private route: ActivatedRoute) { }
+
   
   menusForm = this.formBuilder.group({
     name: new FormControl(),
@@ -21,6 +25,8 @@ export class AddMenuComponent implements OnInit {
   });
 
   ngOnInit(): void {
+
+
     this.articleList.push('Big Muc');
     this.articleList.push('Sushi');
     this.articleList.push('Bucket');

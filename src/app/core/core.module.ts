@@ -11,6 +11,7 @@ import { CardHistoricComponent } from './components/card-historic/card-historic.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MatDialogModule } from '@angular/material/dialog';
       CardPanierComponent,
       CardHistoricComponent,
       ModalComponent,
+      ErrorPageComponent,
     ],
   imports: [
       RouterModule,

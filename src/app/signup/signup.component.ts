@@ -1,9 +1,10 @@
-import { Component, importProvidersFrom } from '@angular/core';
+import { Component, OnInit, importProvidersFrom } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from '../core/services/auth.service';
 import { HttpResponse } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SessionStorageService } from '../core/services/session-storage.service';
 
 
 @Component({
@@ -11,9 +12,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent {
+export class SignupComponent implements OnInit {
 
-  constructor(private authService: AuthService, private toastr: ToastrService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private authService: AuthService, private toastr: ToastrService, private router: Router, private route: ActivatedRoute, private sessionStorageService: SessionStorageService) { }
 
   selectedValue: string = '';
 
@@ -26,8 +27,14 @@ export class SignupComponent {
     phoneNumber: new FormControl(""),
     password: new FormControl(""),
     repassword: new FormControl(""),
+    restaurantName: new FormControl(""),
+    restaurantAddress: new FormControl(""),
     key: new FormControl("")
   });
+
+  ngOnInit() {
+    this.sessionStorageService.clear();
+  }
 
   onSubmit() {
     this.authService.createAccount(this.signupForm.value).subscribe((response: HttpResponse<any>) => {
