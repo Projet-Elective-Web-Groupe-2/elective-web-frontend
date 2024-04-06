@@ -4,13 +4,13 @@
 
 export const environment = {
     production: false,
-    urlAuth: 'http://authentication',
-    urlUser: 'http://users/',
-    urlRestaurant: 'http://restaurant/',
-    urlMenu: 'http://menu',
-    urlProduct: 'http://product',
-    urlOrder: 'http://order',
-    urlDelivery: 'http://delivery',
-    urlMonitoring: 'http://monitoring',
+    urlAuth: 'http://authentication.localhost',
+    urlUser: 'http://users.localhost',
+    urlRestaurant: 'http://restaurant.localhost',
+    urlMenu: 'http://menu.localhost',
+    urlProduct: 'http://product.localhost',
+    urlOrder: 'http://order.localhost',
+    urlDelivery: 'http://delivery.localhost',
+    urlMonitoring: 'http://monitoring.localhost',
 
   };
