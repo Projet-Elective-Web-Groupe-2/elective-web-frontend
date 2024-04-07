@@ -10,16 +10,6 @@ import { environment } from '../../../environments/environment';
 export class AuthService {
     constructor(private http: HttpClient) { }
 
-     /*const params = new HttpParams()
-        .set('email', signupForm.email)
-        .set('password', signupForm.password)
-        .set('userType', signupForm.userType)
-        .set('phoneNumber', signupForm.phoneNumber)
-        .set('firstName', signupForm.firstName)
-        .set('lastName', signupForm.lastName)
-        .set('address', signupForm.address)
-        return this.http.post(`${environment.baseUrl}${API.createAccount}`,{},{ withCredentials: false, params, observe: 'response'});*/
-      
     createAccount(signupForm: any): Observable<any> {
         const body = {
             email: signupForm.email,
@@ -32,7 +22,7 @@ export class AuthService {
             restaurantName: signupForm.restaurantName,
             restaurantAddress: signupForm.restaurantAddress,
         };
-        return this.http.post(`${environment.baseUrl}${API.createAccount}`, body, { withCredentials: false, observe: 'response' });
+        return this.http.post(`${environment.urlAuth}${API.createAccount}`, body, { withCredentials: false, observe: 'response' });
     }
 
     login(authForm: any): Observable<any> {
@@ -40,6 +30,6 @@ export class AuthService {
             email: authForm.email,
             password: authForm.password
         };
-        return this.http.post(`${environment.baseUrl}${API.login}`, body, { withCredentials: false, observe: 'response' });
+        return this.http.post(`${environment.urlAuth}${API.login}`, body, { withCredentials: false, observe: 'response' });
     }
 }
