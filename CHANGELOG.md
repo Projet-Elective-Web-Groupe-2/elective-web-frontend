@@ -1,3 +1,11 @@
+## [1.10.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.10.0...v1.10.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* my only commit here ([8a7e37f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/8a7e37f3a9700fb142ca51c8945a76b85bfb572a))
+* **urls:** change urls to backend ([1468ac2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/1468ac219e29e8d31657d02c81273badd80ac4d6))
+
 ## [1.10.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.9.1...v1.10.0) (2024-04-05)
 
 
