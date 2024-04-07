@@ -5,6 +5,7 @@ import { HttpResponse } from '@angular/common/http';
 import { jwtDecode } from "jwt-decode";
 import { Router, ActivatedRoute } from '@angular/router';
 import { SessionStorageService } from '../core/services/session-storage.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-auth',
@@ -13,7 +14,7 @@ import { SessionStorageService } from '../core/services/session-storage.service'
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private authService: AuthService,private router: Router, private route: ActivatedRoute,private sessionStorageService: SessionStorageService) { }
+  constructor(private authService: AuthService,private toastr: ToastrService,private router: Router, private route: ActivatedRoute,private sessionStorageService: SessionStorageService) { }
 
   loginForm = new FormGroup({
     email: new FormControl(""),
@@ -37,7 +38,8 @@ export class AuthComponent implements OnInit {
       }
       this.router.navigate([`/${route}`], { relativeTo: this.route });
     }, (error) => {
-      console.error('Error occurred:', error);
+      this.toastr.error("Erreur lors de la connection. Veuillez réessayer");
+      this.loginForm.reset();
     });;
   }
 
