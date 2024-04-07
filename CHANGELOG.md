@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.11.0...v1.11.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* add toastr if error during login ([a417817](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a417817c2d9813162eb7fcbfc414fad9ae266382))
+
 ## [1.11.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.10.1...v1.11.0) (2024-04-07)
 
 
