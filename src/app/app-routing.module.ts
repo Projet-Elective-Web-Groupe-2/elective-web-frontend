@@ -34,12 +34,12 @@ const routes: Routes = [{
 {path: 'restaurant/add-article', component: AddArticleComponent},
 
 {path: 'client/restaurant/:id', component: RestaurantClientComponent},
+{path: 'sales/:type/profil', component: ProfilPageComponent},
 
 
 {path: ':type/profil', component: ProfilPageComponent},
 {path: ':type/historic', component: HistoricComponent},
 {path: ':type/statistic', component: StatisticComponent},
-
 {path: ':type/panier', component: PanierComponent},
 {path: ':type/order-list', component: OrderListComponent},
 {path: ':type/component-list', component: ComponentListComponent},
