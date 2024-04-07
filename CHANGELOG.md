@@ -1,3 +1,17 @@
+## [1.11.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.10.1...v1.11.0) (2024-04-07)
+
+
+### Features
+
+* **sales:** connect to profil + finish cards ([cad9fa5](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/cad9fa50569d412772d6d684aa2bfce508889d78))
+* **sales:** Dashboard + start account ([1b1aa44](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/1b1aa44fc8b86c34ee6fad176a069a8c955bb11a))
+
+
+### Bug Fixes
+
+* comment sales.service for now ([a1786dd](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a1786dd9a0e0c425ff2783899d7c92b2b0b64ddd))
+* delete historic-restaurant in app.module ([b1b1e5b](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/b1b1e5bd26de435d5102c8be069e16ae694c94a4))
+
 ## [1.10.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.10.0...v1.10.1) (2024-04-07)
 
 
