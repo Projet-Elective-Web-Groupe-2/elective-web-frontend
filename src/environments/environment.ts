@@ -4,5 +4,13 @@
 
 export const environment = {
     production: false,
-    baseUrl: 'http://localhost:3000',
+    urlAuth: 'http://authentication.localhost',
+    urlUser: 'http://users.localhost',
+    urlRestaurant: 'http://restaurant.localhost',
+    urlMenu: 'http://menu.localhost',
+    urlProduct: 'http://product.localhost',
+    urlOrder: 'http://order.localhost',
+    urlDelivery: 'http://delivery.localhost',
+    urlMonitoring: 'http://monitoring.localhost',
+
   };

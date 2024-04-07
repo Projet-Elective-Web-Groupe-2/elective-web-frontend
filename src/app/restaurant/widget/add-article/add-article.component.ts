@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 
 @Component({
   selector: 'app-add-article',
@@ -8,9 +10,10 @@ import { FormBuilder, FormControl } from '@angular/forms';
 })
 export class AddArticleComponent {
   selectedImage: string | ArrayBuffer | null | undefined;
-  
-  constructor(private formBuilder: FormBuilder) {}
-  
+  type!:string|null;
+
+  constructor(private formBuilder: FormBuilder,private sessionStorageService: SessionStorageService,private router: Router, private route: ActivatedRoute) { }
+
   articleForm = this.formBuilder.group({
     name: new FormControl(),
     compo: new FormControl(),
@@ -19,6 +22,13 @@ export class AddArticleComponent {
   });
 
   ngOnInit(): void {
+    this.type = this.sessionStorageService.getItem('type');
+    if(this.type != 'restaurateur'){
+      this.router.navigate([`/error-page`], { relativeTo: this.route });
+    }
+    else{
+      this.type = "restaurant";
+    }
   }
 
   onFileSelected(event: any) {
