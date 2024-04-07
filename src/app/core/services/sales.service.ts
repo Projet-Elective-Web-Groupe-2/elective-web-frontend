@@ -10,9 +10,9 @@ import { environment } from '../../../environments/environment';
 export class SalesService {
     constructor(private http: HttpClient) { }
 
-    getInfoForSales(): Observable<any> {
+    /*getInfoForSales(): Observable<any> {
         const body = {};
         return this.http.post(`${environment.baseUrl}${API.createAccount}`, body, { withCredentials: false, observe: 'response' });
-    }
+    }*/
 
 }
