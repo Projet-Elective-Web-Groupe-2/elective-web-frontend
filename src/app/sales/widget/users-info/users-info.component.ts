@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { SessionStorageService } from 'src/app/core/services/session-storage.service';
+import { userSalesModel } from 'src/app/core/models/user-sales.model';
 
 @Component({
   selector: 'app-users-info',
@@ -8,13 +7,15 @@ import { SessionStorageService } from 'src/app/core/services/session-storage.ser
   styleUrls: ['./users-info.component.css']
 })
 export class UsersInfoComponent {
-  constructor(private sessionStorageService: SessionStorageService,private router: Router, private route: ActivatedRoute) { }
-  type!:string|null;
+  usersList:userSalesModel[] = [];
 
-  ngOnInit() {
-    this.type = this.sessionStorageService.getItem('type');
-    if(this.type != 'commercial'){
-      this.router.navigate([`/error-page`], { relativeTo: this.route });
-    }
+  ngOnInit(): void {
+    this.usersList.push(
+      { mail: "amara.ahmed@gmail.com", type: "client"},
+      { mail: "amara2.ahmed@gmail.com", type: "restaurant"},
+      { mail: "amara3.ahmed@gmail.com", type: "livreur"},
+      { mail: "amara4.ahmed@gmail.com", type: "Développeur Tiers"},
+      { mail: "amara5.ahmed@gmail.com", type: "client"},
+    );
   }
 }

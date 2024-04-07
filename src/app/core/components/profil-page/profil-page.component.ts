@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModalComponent } from '../../modal/modal.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -23,17 +23,19 @@ export class ProfilPageComponent implements OnInit {
 
   sponsoring!: string;
 
-  constructor(private route: ActivatedRoute, public dialog: MatDialog) { }
+  isSales: boolean = false;
+
+  constructor(private route: ActivatedRoute, public dialog: MatDialog, private router: Router) { }
 
   initiateEditForm() {
     this.editForm = new FormGroup({
-      firstName: new FormControl({value:this.firstname,disabled:true}),
-      name: new FormControl({value:this.name,disabled:true}),
-      address: new FormControl({value:this.address,disabled:true}),
-      mail: new FormControl({value:this.mail,disabled:true}),
-      phone: new FormControl({value:this.phone,disabled:true}),
-      password: new FormControl({value:this.password,disabled:true}),
-      confirmPassword: new FormControl({value:'',disabled:true})
+      firstName: new FormControl({ value: this.firstname, disabled: true }),
+      name: new FormControl({ value: this.name, disabled: true }),
+      address: new FormControl({ value: this.address, disabled: true }),
+      mail: new FormControl({ value: this.mail, disabled: true }),
+      phone: new FormControl({ value: this.phone, disabled: true }),
+      password: new FormControl({ value: this.password, disabled: true }),
+      confirmPassword: new FormControl({ value: '', disabled: true })
     });
   }
 
@@ -55,6 +57,7 @@ export class ProfilPageComponent implements OnInit {
     });
     this.initiateEditForm();
     this.editProfil(true);
+    this.verifyIfSales();
   }
 
   submitProfil() {
@@ -63,6 +66,26 @@ export class ProfilPageComponent implements OnInit {
 
   submitSponsorship() {
     console.log(this.sponsorshipForm.value);
+  }
+
+  verifyIfSales() {
+    const currentUrl = this.router.url;
+    if (currentUrl.includes('sales')) {
+      this.isSales = true
+    }
+  }
+
+  disableUser() {
+    let dialogRef = this.dialog.open(ModalComponent, {
+      data: { content: 'Voulez-vous vraiment suspendre le profil ?', title: 'Suspendre le compte ?' },
+      height: '186px',
+      width: '659px',
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        console.log('Le profil sera désactiver.');
+      }
+    });
   }
 
 

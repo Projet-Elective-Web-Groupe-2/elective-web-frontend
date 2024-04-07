@@ -17,7 +17,6 @@ import { CoreModule } from './core/core.module';
 import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
 import { PanierComponent } from './client/widget/panier/panier.component';
 import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
-import { DashboardComponent } from './sales/widget/dashboard/dashboard.component';
 import { HomepageClientComponent } from './client/widget/homepage-client/homepage-client.component';
 import { HomepageRestaurantComponent } from './restaurant/widget/homepage-restaurant/homepage-restaurant.component';
 import { HomepageDeliveryComponent } from './delivery/widget/homepage-delivery/homepage-delivery.component';
@@ -30,6 +29,7 @@ import { RestaurantClientComponent } from './client/widget/restaurant-client/res
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { CardDeveloperComponent } from './developer/widget/card-developer/card-developer.component';
+import { UserCardComponent } from './sales/widget/user-card/user-card.component';
 
 
 @NgModule({
@@ -45,7 +45,6 @@ import { CardDeveloperComponent } from './developer/widget/card-developer/card-d
     StatisticComponent,
     PanierComponent,
     UsersInfoComponent,
-    DashboardComponent,
     HomepageClientComponent,
     HomepageRestaurantComponent,
     HomepageDeliveryComponent,
@@ -55,6 +54,7 @@ import { CardDeveloperComponent } from './developer/widget/card-developer/card-d
     AddArticleComponent,
     RestaurantClientComponent,
     CardDeveloperComponent,
+    UserCardComponent
   ],
   imports: [
     HttpClientModule,
@@ -72,7 +72,7 @@ import { CardDeveloperComponent } from './developer/widget/card-developer/card-d
     NoopAnimationsModule
   ],
   providers: [],
-  exports: [DashboardComponent],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

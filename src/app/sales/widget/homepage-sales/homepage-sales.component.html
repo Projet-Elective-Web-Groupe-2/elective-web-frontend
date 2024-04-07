@@ -1,1 +1,82 @@
-<p>homepage-sales works!</p>
+<div>
+    <div>
+        <div class="table-container">
+            <table id="table" mat-table>
+                <thead>
+                    <tr>
+                        <th *ngFor="let item of valuesHeader" scope="col" class=" text-center">
+                            <span style="font-weight: 700;" class="thead">{{ item }}</span>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!--<tr  *ngIf="isLoading">
+                        <td colspan="8">
+                            <app-loader></app-loader>
+                        </td>
+                    </tr>-->
+
+                    <tr *ngFor="let element of valuesTables | slice:startLineDisplay:endLineDisplay; let i = index">
+                        <td class="text-center">{{element.number}}</td>
+                        <td class="text-center">{{element.restaurant}}</td>
+                        <td class="text-center">{{element.price}}</td>
+                        <td class="text-center">{{element.acceptedOrder}}</td>
+                        <td class="text-center">{{element.acceptedDelivery}}</td>
+                        <td class="text-center">{{element.endDelivery}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+<!--        <div id="footer" class="footer">
+            <div class="lines-footer">
+                <div class="number-lines">
+                    <label for="selectRows" class="numbers-lines-label">Lignes par page</label>
+                    <select id="selectRows" (change)="displayRowsElements()">
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+
+                    </select>
+                </div>
+                <div>
+                    <strong>{{actualPageDisplay}}-{{pagesNumber}}</strong>
+                    sur
+                    <strong>{{arrayModelLength}} lignes</strong>
+                </div>
+            </div>
+            <nav class="pagination" role="navigation" aria-label="pagination">
+                <a aria-label="Previous page" (click)="displayPreviousPage()">
+                    <div class="pagination-button">
+                        <svg aria-hidden="true" width="24px" height="24px" fill="#fff"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path
+                                d="M21.707 5.293a1 1 0 010 1.414L12.414 16l9.293 9.293a1 1 0 01-1.414 1.414l-10-10a1 1 0 010-1.414l10-10a1 1 0 011.414 0z">
+                            </path>
+                        </svg>
+                    </div>
+                </a>
+
+                <div class="number-pagination">
+                    <select id="selectPagination" (change)="displayPageOnSelect()">
+                        <option *ngFor="let page of selectChangePage; let i = index" id="option{{i}}" value="{{i}}">
+                            Page {{ page }} sur {{ pagesNumber }}
+                        </option>
+                    </select>
+                </div>
+
+                <a aria-label="Next Page" (click)="displayNextPage()">
+                    <div class="pagination-button">
+                        <svg aria-hidden="true" width="24px" height="24px" fill="#fff"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path
+                                d="M10.293 5.293a1 1 0 011.414 0l10 10a1 1 0 010 1.414l-10 10a1 1 0 01-1.414-1.414L19.586 16l-9.293-9.293a1 1 0 010-1.414z">
+                            </path>
+                        </svg>
+                    </div>
+                </a>
+            </nav>
+        </div>
+    </div>-->
+
+</div>
