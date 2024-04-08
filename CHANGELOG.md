@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.14.0...v1.14.1) (2024-04-08)
+
+
+### Bug Fixes
+
+* header when edit profiles ([08810f5](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/08810f5bc4599c8e43dd1d264dadf96ad089c3a3))
+
 ## [1.14.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.13.1...v1.14.0) (2024-04-08)
 
 
