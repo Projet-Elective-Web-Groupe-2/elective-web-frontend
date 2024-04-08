@@ -3,11 +3,11 @@
         <label class="text-title">
             Liste des commandes
         </label>
-        
+
     </div>
     <div class="divider"></div>
 
-    <div *ngFor="let deli of deliveries" >
+    <div *ngFor="let deli of deliveries">
         <app-card-command [delivery]="deli"></app-card-command>
     </div>
 

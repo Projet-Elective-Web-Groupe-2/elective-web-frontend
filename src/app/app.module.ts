@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy, NgFor, NgIf, UpperCasePipe } from '@angular/common';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { CardDeveloperComponent } from './developer/widget/card-developer/card-d
 
 import { CardCommandComponent } from './delivery/widget/card-command/card-command.component';
 import { UserCardComponent } from './sales/widget/user-card/user-card.component';
+import { DeliveryMapComponent } from './delivery/widget/delivery-map/delivery-map.component';
 
 
 @NgModule({
@@ -56,8 +58,9 @@ import { UserCardComponent } from './sales/widget/user-card/user-card.component'
     AddArticleComponent,
     RestaurantClientComponent,
     CardDeveloperComponent,
-
-    CardCommandComponent
+    UserCardComponent,
+    CardCommandComponent,
+      DeliveryMapComponent
   
   ],
   imports: [
@@ -73,7 +76,8 @@ import { UserCardComponent } from './sales/widget/user-card/user-card.component'
     NgFor,
     NgIf,
     UpperCasePipe,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    LeafletModule,
   ],
   providers: [],
   exports: [],

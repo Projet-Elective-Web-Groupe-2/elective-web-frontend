@@ -17,6 +17,7 @@ import { AddArticleComponent } from './restaurant/widget/add-article/add-article
 import { AddMenuComponent } from './restaurant/widget/add-menu/add-menu.component';
 import { RestaurantClientComponent } from './client/widget/restaurant-client/restaurant-client.component';
 import { ErrorPageComponent } from './core/components/error-page/error-page.component';
+import { DeliveryMapComponent } from './delivery/widget/delivery-map/delivery-map.component';
 
 
 const routes: Routes = [{
@@ -38,7 +39,7 @@ const routes: Routes = [{
 
 {path: 'client/restaurant/:id', component: RestaurantClientComponent},
 {path: 'sales/:type/profil', component: ProfilPageComponent},
-
+{path: 'delivery/details-commande/:id', component: DeliveryMapComponent},
 
 {path: ':type/profil', component: ProfilPageComponent},
 {path: ':type/historic', component: HistoricComponent},

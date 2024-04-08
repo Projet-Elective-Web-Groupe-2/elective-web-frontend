@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="compoDL-link" *ngIf="delivery.isAccepted">
-        <a class="compoDL-text-link" href="{{delivery.link }}">Suivre la commande</a>
+        <a class="compoDL-text-link" [routerLink]="['/', 'delivery','details-commande', commandeID]" >Suivre la commande</a>
     </div>
     <div class="compoDL-link" *ngIf="!delivery.isAccepted">
         <a class="compoDL-text-link-double-accept" href="{{delivery.link }}">Accepter</a>

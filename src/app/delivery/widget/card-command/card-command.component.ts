@@ -8,6 +8,7 @@ import { Input } from '@angular/core';
   styleUrls: ['./card-command.component.css']
 })
 export class CardCommandComponent {
+  commandeID:number = 12131;
 
   @Input() delivery!:Delivery;
 }
