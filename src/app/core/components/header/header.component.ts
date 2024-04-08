@@ -23,7 +23,7 @@ export class HeaderComponent {
         this.router.navigate([`/${this.type}/order-list`], { relativeTo: this.route });
         break;
       case 'developpeur':
-        this.router.navigate([`/${this.type}/component-list`], { relativeTo: this.route });
+        this.router.navigate([`/${this.type}`], { relativeTo: this.route });
         break;
       case 'sales':
         this.router.navigate([`/${this.type}/users-info`], { relativeTo: this.route });
