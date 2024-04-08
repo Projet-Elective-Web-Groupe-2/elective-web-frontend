@@ -56,7 +56,7 @@ import { UserCardComponent } from './sales/widget/user-card/user-card.component'
     AddArticleComponent,
     RestaurantClientComponent,
     CardDeveloperComponent,
-
+    UserCardComponent,
     CardCommandComponent
   
   ],
