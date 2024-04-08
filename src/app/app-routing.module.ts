@@ -34,12 +34,13 @@ const routes: Routes = [{
 {path: 'error-page', component: ErrorPageComponent},
 {path: '**', component: ErrorPageComponent},
 
-
 {path: 'restaurant/add-menu', component: AddMenuComponent},
 {path: 'restaurant/add-article', component: AddArticleComponent},
 
 {path: 'client/restaurant/:id', component: RestaurantClientComponent},
+
 {path: 'sales/:type/profil', component: ProfilPageComponent},
+{path: 'sales/users-info', component: UsersInfoComponent},
 {path: 'delivery/details-commande/:id', component: DeliveryMapComponent},
 
 {path: ':type/profil', component: ProfilPageComponent},
@@ -47,10 +48,7 @@ const routes: Routes = [{
 {path: ':type/statistic', component: StatisticComponent},
 {path: ':type/panier', component: PanierComponent},
 
-{path: ':type/users-info', component: UsersInfoComponent},
-
-
-
+{path: '**', component: ErrorPageComponent},
 ]
 
 @NgModule({
