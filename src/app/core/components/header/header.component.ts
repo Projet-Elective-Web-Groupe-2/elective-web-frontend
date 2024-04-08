@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Input() type: string = '';
+  @Input() type: string|null = '';
   
   constructor(private router: Router, private route: ActivatedRoute) {}
   
@@ -22,7 +22,7 @@ export class HeaderComponent {
       case 'delivery':
         this.router.navigate([`/${this.type}`], { relativeTo: this.route });
         break;
-      case 'developer':
+      case 'developpeur':
         this.router.navigate([`/${this.type}/component-list`], { relativeTo: this.route });
         break;
       case 'sales':

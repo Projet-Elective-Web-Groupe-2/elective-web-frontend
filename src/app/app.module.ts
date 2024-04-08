@@ -16,9 +16,7 @@ import { SalesComponent } from './sales/sales.component';
 import { CoreModule } from './core/core.module';
 import { StatisticComponent } from './restaurant/widget/statistic/statistic.component';
 import { PanierComponent } from './client/widget/panier/panier.component';
-import { ComponentListComponent } from './developer/widget/component-list/component-list.component';
 import { UsersInfoComponent } from './sales/widget/users-info/users-info.component';
-import { DashboardComponent } from './sales/widget/dashboard/dashboard.component';
 import { HomepageClientComponent } from './client/widget/homepage-client/homepage-client.component';
 import { HomepageRestaurantComponent } from './restaurant/widget/homepage-restaurant/homepage-restaurant.component';
 import { HomepageDeliveryComponent } from './delivery/widget/homepage-delivery/homepage-delivery.component';
@@ -31,8 +29,9 @@ import { RestaurantClientComponent } from './client/widget/restaurant-client/res
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { CardDeveloperComponent } from './developer/widget/card-developer/card-developer.component';
-import { HistoricRestaurantComponent } from './restaurant/widget/historic-restaurant/historic-restaurant.component';
+
 import { CardCommandComponent } from './delivery/widget/card-command/card-command.component';
+import { UserCardComponent } from './sales/widget/user-card/user-card.component';
 
 
 @NgModule({
@@ -47,9 +46,7 @@ import { CardCommandComponent } from './delivery/widget/card-command/card-comman
     SalesComponent,
     StatisticComponent,
     PanierComponent,
-    ComponentListComponent,
     UsersInfoComponent,
-    DashboardComponent,
     HomepageClientComponent,
     HomepageRestaurantComponent,
     HomepageDeliveryComponent,
@@ -59,8 +56,9 @@ import { CardCommandComponent } from './delivery/widget/card-command/card-comman
     AddArticleComponent,
     RestaurantClientComponent,
     CardDeveloperComponent,
-    HistoricRestaurantComponent,
+
     CardCommandComponent
+  
   ],
   imports: [
     HttpClientModule,
@@ -78,7 +76,7 @@ import { CardCommandComponent } from './delivery/widget/card-command/card-comman
     NoopAnimationsModule
   ],
   providers: [],
-  exports: [DashboardComponent],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

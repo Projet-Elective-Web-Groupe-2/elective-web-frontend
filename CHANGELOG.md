@@ -1,3 +1,40 @@
+## [1.11.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.11.0...v1.11.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* add toastr if error during login ([a417817](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a417817c2d9813162eb7fcbfc414fad9ae266382))
+
+## [1.11.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.10.1...v1.11.0) (2024-04-07)
+
+
+### Features
+
+* **sales:** connect to profil + finish cards ([cad9fa5](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/cad9fa50569d412772d6d684aa2bfce508889d78))
+* **sales:** Dashboard + start account ([1b1aa44](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/1b1aa44fc8b86c34ee6fad176a069a8c955bb11a))
+
+
+### Bug Fixes
+
+* comment sales.service for now ([a1786dd](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a1786dd9a0e0c425ff2783899d7c92b2b0b64ddd))
+* delete historic-restaurant in app.module ([b1b1e5b](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/b1b1e5bd26de435d5102c8be069e16ae694c94a4))
+
+## [1.10.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.10.0...v1.10.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* my only commit here ([8a7e37f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/8a7e37f3a9700fb142ca51c8945a76b85bfb572a))
+* **urls:** change urls to backend ([1468ac2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/1468ac219e29e8d31657d02c81273badd80ac4d6))
+
+## [1.10.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.9.1...v1.10.0) (2024-04-05)
+
+
+### Features
+
+* **access:** access for historic and order-list ([5260488](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/52604882cb9b7aece5d8afe14f325428b25eea54))
+* **access:** give acces to differents roles ([5801406](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/580140686ba900fb8ba8fd689779b1d83533a623))
+
 ## [1.9.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.9.0...v1.9.1) (2024-04-05)
 
 

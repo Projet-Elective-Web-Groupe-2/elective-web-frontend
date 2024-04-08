@@ -1,2 +1,7 @@
 <app-header [type]="'sales'"></app-header>
-<p>users-info works!</p>
+<div class="pageheading">
+    <div class="title">Gestion des comptes</div>
+</div>
+<div class="card" *ngFor="let menu of usersList">
+    <app-user-card [mail]="menu.mail" [type]="menu.type"></app-user-card>
+</div>

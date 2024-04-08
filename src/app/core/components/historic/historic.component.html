@@ -1,4 +1,4 @@
-<app-header [type]="'client'"></app-header>
+<app-header [type]="userType"></app-header>
 <div class="historic">
     <div class="div-title">
         <label class="text-title">
@@ -13,6 +13,4 @@
     <div *ngFor="let histo of historics" >
         <app-card-historic [historic]="histo"></app-card-historic>
     </div>
-
-
 </div>

@@ -1,0 +1,142 @@
+.frame-4-9 {
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 36px;
+    gap: 500px;
+    background-color: #fafaf5;
+    border: 1px solid #a3a3a3;
+    width: 100%;
+}
+
+.frame-4-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.frame-4-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.text-1 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: 129.99999523162842%;
+    color: #000000;
+}
+
+.text-2 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: 129.99999523162842%;
+    color: #6d6d6d;
+}
+
+.frame-4-5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.component-5 {
+    border-radius: 57px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    gap: 15px;
+    background-color: #bb3333;
+}
+
+.text-3 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: #ffffff;
+}
+
+.component-2 {
+    border-radius: 57px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    gap: 15px;
+    background-color: #426b1f;
+}
+
+.text-4 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: #ffffff;
+}
+
+.component-1 {
+    border-radius: 57px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    gap: 10px;
+    background-color: #ff0000;
+}
+
+.text-5 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: auto;
+    color: #ffffff;
+}
+
+.frame-4-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.frame-4-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.text-6 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: 129.99999523162842%;
+    color: #000000;
+}
+
+.text-7 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    font-family: Inter;
+    line-height: 129.99999523162842%;
+    color: #6d6d6d;
+}

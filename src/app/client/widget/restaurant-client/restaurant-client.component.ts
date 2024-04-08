@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Menu } from 'src/app/core/models/menu.model';
+import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 
 @Component({
   selector: 'app-restaurant-client',
@@ -13,8 +15,16 @@ export class RestaurantClientComponent {
   menuTest = new Menu();
   articleList:Menu[] = [];
   articleTest = new Menu();
+  type!:string|null;
+
+  constructor(private sessionStorageService: SessionStorageService,private router: Router, private route: ActivatedRoute) { }
   
   ngOnInit(): void {
+    this.type = this.sessionStorageService.getItem('type');
+    if(this.type != 'client'){
+      this.router.navigate([`/error-page`], { relativeTo: this.route });
+    }
+
     this.restaurant = "Mcgronald’s";
     this.address = "243 rue de la Republique , 95239";
     this.addMenu();
