@@ -31,7 +31,10 @@ export class AuthComponent implements OnInit {
       this.sessionStorageService.setItem('type', tokenValues.type.toLowerCase());
       let route;
       if(tokenValues.type.toLowerCase() == 'restaurateur'){
-        route = 'restaurant' 
+        route = 'restaurant'; 
+      }
+      else if(tokenValues.type.toLowerCase() == 'livreur'){
+        route = 'delivery';
       }
       else{
         route = tokenValues.type.toLowerCase();
