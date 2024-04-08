@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.14.1...v1.14.2) (2024-04-08)
+
+
+### Bug Fixes
+
+* days filter for restaurant stats ([4a4f5c2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/4a4f5c2353fce16557203026ffc3d67de09d685e))
+
 ## [1.14.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.14.0...v1.14.1) (2024-04-08)
 
 
