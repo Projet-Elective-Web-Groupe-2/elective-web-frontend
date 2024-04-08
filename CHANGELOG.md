@@ -1,3 +1,10 @@
+## [1.14.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.13.1...v1.14.0) (2024-04-08)
+
+
+### Features
+
+* **route:** add error page and route ([6b73571](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/6b73571a33ec20a427f30e3ce3942442f03b9ac0))
+
 ## [1.13.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.13.0...v1.13.1) (2024-04-08)
 
 
