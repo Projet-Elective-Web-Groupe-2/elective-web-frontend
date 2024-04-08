@@ -1,4 +1,5 @@
-<app-header [type]="userType"></app-header>
+<div *ngIf="!isSales"> <app-header [type]="userType"></app-header></div>
+<div *ngIf="isSales"> <app-header [type]="'sales'"></app-header></div>
 <div class="pageheading">
     <div class="profil">Profil</div>
     <div class="name">{{name}} {{firstname}}</div>
@@ -96,7 +97,7 @@
                 <img src="" />
             </div>
             <div class="frame-5-1">
-                <button (click)="deleteProfil()"  class="component-1">
+                <button (click)="deleteProfil()" class="component-1">
                     <p class="delete-user-label">Supprimer le compte</p>
                 </button>
             </div>
