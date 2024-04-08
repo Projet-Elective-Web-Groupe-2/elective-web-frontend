@@ -41,7 +41,6 @@ const routes: Routes = [{
 {path: ':type/statistic', component: StatisticComponent},
 
 {path: ':type/panier', component: PanierComponent},
-{path: ':type/order-list', component: OrderListComponent},
 {path: ':type/component-list', component: ComponentListComponent},
 {path: ':type/users-info', component: UsersInfoComponent},
 
