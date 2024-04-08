@@ -1,3 +1,15 @@
+## [1.12.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.11.1...v1.12.0) (2024-04-08)
+
+
+### Features
+
+* **statistics:** add statistics for restaurant ([838f479](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/838f47932d610e4d1cc877cf9e755a99f36229ac))
+
+
+### Bug Fixes
+
+* routing restaurant ([a08a345](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a08a3450907ab427655e9f0cd5b532fc8b10402e))
+
 ## [1.11.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.11.0...v1.11.1) (2024-04-07)
 
 

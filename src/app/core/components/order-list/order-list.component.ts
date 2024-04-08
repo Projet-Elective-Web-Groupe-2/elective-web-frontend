@@ -15,15 +15,14 @@ export class OrderListComponent {
 
   ngOnInit() {
     this.type = this.sessionStorageService.getItem('type');
-    if ((this.type == 'client' && this.userType == 'client') ||
-      (this.type == 'restaurateur' && this.userType == 'restaurant')) {
-    }
+    this.route.params.subscribe(params => {
+      this.userType = params['type'];
+    });
+    if ((this.type == 'client' && this.userType == 'client') || (this.type == 'restaurateur' && this.userType == 'restaurant')) {}
     else {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
 
-    this.route.params.subscribe(params => {
-      this.userType = params['type'];
-    });
+
   }
 }
