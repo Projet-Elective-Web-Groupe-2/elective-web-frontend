@@ -12,6 +12,8 @@ import { MatDialog } from '@angular/material/dialog';
 export class ProfilPageComponent implements OnInit {
   edit: boolean = false;
   editForm!: FormGroup;
+  editFormDev!: FormGroup;
+  editFormRestaurant!: FormGroup;
   userType!: string;
 
   firstname!: string;
@@ -28,15 +30,39 @@ export class ProfilPageComponent implements OnInit {
   constructor(private route: ActivatedRoute, public dialog: MatDialog, private router: Router) { }
 
   initiateEditForm() {
-    this.editForm = new FormGroup({
-      firstName: new FormControl({ value: this.firstname, disabled: true }),
-      name: new FormControl({ value: this.name, disabled: true }),
-      address: new FormControl({ value: this.address, disabled: true }),
-      mail: new FormControl({ value: this.mail, disabled: true }),
-      phone: new FormControl({ value: this.phone, disabled: true }),
-      password: new FormControl({ value: this.password, disabled: true }),
-      confirmPassword: new FormControl({ value: '', disabled: true })
-    });
+    console.log(this.userType);
+    if (this.userType == 'client' || this.userType == 'livreur') {
+      this.editForm = new FormGroup({
+        firstName: new FormControl({ value: this.firstname, disabled: true }),
+        name: new FormControl({ value: this.name, disabled: true }),
+        address: new FormControl({ value: this.address, disabled: true }),
+        mail: new FormControl({ value: this.mail, disabled: true }),
+        phone: new FormControl({ value: this.phone, disabled: true }),
+        password: new FormControl({ value: this.password, disabled: true }),
+        confirmPassword: new FormControl({ value: '', disabled: true })
+      });
+    }
+    else if (this.userType == 'developpeur') {
+      this.editFormDev = new FormGroup({
+        mail: new FormControl({ value: this.mail, disabled: true }),
+        phone: new FormControl({ value: this.phone, disabled: true }),
+        password: new FormControl({ value: this.password, disabled: true }),
+        confirmPassword: new FormControl({ value: '', disabled: true })
+      });
+    }
+    else if (this.userType == 'restaurant') {
+      this.editFormRestaurant = new FormGroup({
+        name: new FormControl({ value: this.name, disabled: true }),
+        address: new FormControl({ value: this.address, disabled: true }),
+        mail: new FormControl({ value: this.mail, disabled: true }),
+        phone: new FormControl({ value: this.phone, disabled: true }),
+        password: new FormControl({ value: this.password, disabled: true }),
+        confirmPassword: new FormControl({ value: '', disabled: true })
+      });
+    }
+    else {
+      console.log("ERROR IN ROUTING");
+    }
   }
 
   sponsorshipForm = new FormGroup({
@@ -61,7 +87,18 @@ export class ProfilPageComponent implements OnInit {
   }
 
   submitProfil() {
-    console.log(this.editForm.value);
+    if (this.userType == 'client' || this.userType == 'livreur') {
+      console.log(this.editForm.value);
+    }
+    else if (this.userType == 'developpeur') {
+      console.log(this.editFormDev.value);
+    }
+    else if (this.userType == 'restaurant') {
+      console.log(this.editFormRestaurant.value);
+    }
+    else {
+      console.log("ERROR IN ROUTING");
+    }
   }
 
   submitSponsorship() {
@@ -92,20 +129,24 @@ export class ProfilPageComponent implements OnInit {
   editProfil(init: boolean) {
     if (init == false) {
       this.edit = !this.edit;
-      var nameInput = document.getElementById('nameInput') as HTMLInputElement;
-      var firstnameInput = document.getElementById('firstnameInput') as HTMLInputElement;
-      var addressInput = document.getElementById('addressInput') as HTMLInputElement;
       var mailInput = document.getElementById('mailInput') as HTMLInputElement;
       var phoneInput = document.getElementById('phoneInput') as HTMLInputElement;
       var passwordInput = document.getElementById('passwordInput') as HTMLInputElement;
       var confirmPasswordInput = document.getElementById('confirmPasswordInput') as HTMLInputElement;
-      nameInput.disabled = !this.edit;
-      firstnameInput.disabled = !this.edit;
-      addressInput.disabled = !this.edit;
       mailInput.disabled = !this.edit;
       phoneInput.disabled = !this.edit;
       passwordInput.disabled = !this.edit;
       confirmPasswordInput.disabled = !this.edit;
+      if (this.userType == 'client' || this.userType == 'livreur' || this.userType == 'restaurant') {
+        if (this.userType == 'client' || this.userType == 'livreur') {
+          var firstnameInput = document.getElementById('firstnameInput') as HTMLInputElement;
+          firstnameInput.disabled = !this.edit;
+        }
+        var nameInput = document.getElementById('nameInput') as HTMLInputElement;
+        var addressInput = document.getElementById('addressInput') as HTMLInputElement;
+        nameInput.disabled = !this.edit;
+        addressInput.disabled = !this.edit;
+      }
 
       var editButton = document.getElementById('edit-button') as HTMLButtonElement;
       editButton.disabled = this.edit;

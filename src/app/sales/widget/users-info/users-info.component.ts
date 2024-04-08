@@ -14,7 +14,7 @@ export class UsersInfoComponent {
       { mail: "amara.ahmed@gmail.com", type: "client"},
       { mail: "amara2.ahmed@gmail.com", type: "restaurant"},
       { mail: "amara3.ahmed@gmail.com", type: "livreur"},
-      { mail: "amara4.ahmed@gmail.com", type: "Développeur Tiers"},
+      { mail: "amara4.ahmed@gmail.com", type: "developpeur"},
       { mail: "amara5.ahmed@gmail.com", type: "client"},
     );
   }
