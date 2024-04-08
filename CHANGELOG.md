@@ -1,3 +1,12 @@
+## [1.15.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.14.2...v1.15.0) (2024-04-08)
+
+
+### Features
+
+* **error:** add error redirect ([6988339](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/698833963e1bb6d4a33561a92a5223ccccbb7123))
+* **payment:** add fake payment ([37905c9](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/37905c912e2085210cd689336326a2a66b2985c3))
+* **technical:** add technical component ([558948b](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/558948b7b4427005bfdb33b6fd06ac7f0f83886a))
+
 ## [1.14.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.14.1...v1.14.2) (2024-04-08)
 
 
