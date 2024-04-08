@@ -370,3 +370,9 @@
   width: 57px;
   background-color: #ffffff;
 }
+
+.img-dev{
+  display: flex;
+  max-width: 500px;
+  max-height: 500px;
+}

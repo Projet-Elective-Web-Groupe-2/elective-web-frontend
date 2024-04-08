@@ -15,7 +15,7 @@
     </div>
 </div>
 <div class="main-profile">
-    <div class="left-profile">
+    <div class="left-profile" *ngIf="userType == 'client' || userType == 'livreur'">
         <form class="login--form" (ngSubmit)="submitProfil()" [formGroup]="editForm">
             <div class="input-double">
                 <div class="double-1">
@@ -69,8 +69,70 @@
         </form>
 
     </div>
+    <div class="left-profile" *ngIf="userType == 'developpeur'">
+        <form class="login--form" (ngSubmit)="submitProfil()" [formGroup]="editFormDev">
+            <div class="input--field">
+                <div class="text-input-label">Adresse mail</div>
+                <input class="text-input" type="text" formControlName="mail" required id="mailInput">
+            </div>
+
+            <div class="input--field">
+                <div class="text-input-label">Numéro de Téléphone</div>
+                <input class="text-input" type="text" formControlName="phone" required id="phoneInput">
+            </div>
+            <div class="input--field">
+                <div class="text-input-label">Mot de Passe</div>
+                <input class="text-input" formControlName="password" type="password" required
+                    id="passwordInput" autocomplete="off" />
+            </div>
+            <div class="input--field">
+                <div class="text-input-label">Confirmer Mdp</div>
+                <input class="text-input" formControlName="confirmPassword" type="password" required
+                    id="confirmPasswordInput" autocomplete="off" />
+            </div>
+            <div *ngIf="edit" class="submit-buttons">
+                <button type="submit" class="validate-button">
+                    <div class="validate-label">Enregistrer</div>
+                </button>
+                <button (click)="editProfil(false)" class="cancel-button">
+                    <div class="cancel-label">Annuler</div>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="left-profile" *ngIf="userType == 'restaurant'">
+        <form class="login--form" (ngSubmit)="submitProfil()" [formGroup]="editFormRestaurant">
+            <div class="input--field">
+                <div class="text-input-label">Adresse mail</div>
+                <input class="text-input" type="text" formControlName="mail" required id="mailInput">
+            </div>
+
+            <div class="input--field">
+                <div class="text-input-label">Numéro de Téléphone</div>
+                <input class="text-input" type="text" formControlName="phone" required id="phoneInput">
+            </div>
+            <div class="input--field">
+                <div class="text-input-label">Mot de Passe</div>
+                <input class="text-input" formControlName="password" type="password" required
+                    id="passwordInput" autocomplete="off" />
+            </div>
+            <div class="input--field">
+                <div class="text-input-label">Confirmer Mdp</div>
+                <input class="text-input" formControlName="confirmPassword" type="password" required
+                    id="confirmPasswordInput" autocomplete="off" />
+            </div>
+            <div *ngIf="edit" class="submit-buttons">
+                <button type="submit" class="validate-button">
+                    <div class="validate-label">Enregistrer</div>
+                </button>
+                <button (click)="editProfil(false)" class="cancel-button">
+                    <div class="cancel-label">Annuler</div>
+                </button>
+            </div>
+        </form>
+    </div>
     <div class="transition"></div>
-    <div *ngIf="!isSales" class="right-profile">
+    <div *ngIf="!isSales && this.userType != 'developpeur'" class="right-profile">
         <div class="sponsorship">
             <div class="sponsorship-label">Votre code de parrainage</div>
             <div class="our-sponsorship-frame">
@@ -87,6 +149,9 @@
                 </button>
             </div>
         </form>
+    </div>
+    <div *ngIf="!isSales && this.userType == 'developpeur'" class="right-profile">
+        <img class="img-dev" src="https://media.istockphoto.com/id/1402360495/vector/digital-development-people.jpg?s=612x612&w=0&k=20&c=2Ws4ZyJnAPm9wiXMKyIAeyiz8vRdzm30VUfiUuTSJhM=" />
     </div>
     <div *ngIf="isSales" class="right-profile">
         <div class="frame-5-3">
