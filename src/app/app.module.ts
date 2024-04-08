@@ -35,6 +35,7 @@ import { CardCommandComponent } from './delivery/widget/card-command/card-comman
 import { UserCardComponent } from './sales/widget/user-card/user-card.component';
 import { DeliveryMapComponent } from './delivery/widget/delivery-map/delivery-map.component';
 import { PaymentComponent } from './client/widget/payment/payment.component';
+import { TechnicalComponent } from './technical/technical.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { PaymentComponent } from './client/widget/payment/payment.component';
     UserCardComponent,
     CardCommandComponent,
       DeliveryMapComponent,
-      PaymentComponent
+      PaymentComponent,
+      TechnicalComponent
   
   ],
   imports: [
