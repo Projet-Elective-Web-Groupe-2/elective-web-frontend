@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.13.0...v1.13.1) (2024-04-08)
+
+
+### Bug Fixes
+
+* routing ([ae070ed](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/ae070ed2c21ebb34504e74ee606a0ec6bb12ff6d))
+
 ## [1.13.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.12.0...v1.13.0) (2024-04-08)
 
 
