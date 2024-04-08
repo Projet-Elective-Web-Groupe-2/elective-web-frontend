@@ -1,1 +1,15 @@
-<app-card-command [delivery]="deliveryTest"></app-card-command>
+<div class="delivery">
+    <div class="div-title">
+        <label class="text-title">
+            Liste des commandes
+        </label>
+        
+    </div>
+    <div class="divider"></div>
+
+    <div *ngFor="let deli of deliveries" >
+        <app-card-command [delivery]="deli"></app-card-command>
+    </div>
+
+
+</div>
