@@ -19,8 +19,8 @@ export class HeaderComponent {
       case 'restaurant':
         this.router.navigate([`/${this.type}/order-list`], { relativeTo: this.route });
         break;
-      case 'livreur':
-        this.router.navigate([`/${this.type}/order-list`], { relativeTo: this.route });
+      case 'delivery':
+        this.router.navigate([`/${this.type}`], { relativeTo: this.route });
         break;
       case 'developpeur':
         this.router.navigate([`/${this.type}`], { relativeTo: this.route });

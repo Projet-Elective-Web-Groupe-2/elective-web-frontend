@@ -1,3 +1,19 @@
+## [1.13.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.12.0...v1.13.0) (2024-04-08)
+
+
+### Features
+
+* **card delivery:** add logic to card delivery ([cbc7f3d](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/cbc7f3d114219649c8447d0c5751b78347a2364e))
+* **delivery:** add devilery card ([cc5f1a6](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/cc5f1a6da8f7eda9cecaa39c6f28107397a56662))
+* **homepage:** add homepage for delivery ([f8ce299](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/f8ce2997c8380e0bafcc7ca0813e2610c54e8517))
+* **map:** add map for delivery ([b5c1359](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/b5c135924cdbc9e1a0bd0f722b018bd83aaeb49f))
+
+
+### Bug Fixes
+
+* auth delivery ([ea4f24f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/ea4f24faeb80ec20ca162652423e9208d635d4a4))
+* **route:** fix route for delivery ([6f86c31](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/6f86c315e5a4d72d2da2f288d3cca81c5fdd4903))
+
 ## [1.12.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.11.1...v1.12.0) (2024-04-08)
 
 

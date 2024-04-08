@@ -1,0 +1,19 @@
+<div class="card-historic">
+    <div class="component-div-text">
+        <div>
+            <img class="img-card-historic"
+                src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
+        </div>
+        <div class="histo-text">
+            <p class="text-1">{{delivery.name}}</p>
+            <p class="text-2">{{delivery.desc}}</p>
+        </div>
+    </div>
+    <div class="compoDL-link" *ngIf="delivery.isAccepted">
+        <a class="compoDL-text-link" [routerLink]="['/', 'delivery','details-commande', commandeID]" >Suivre la commande</a>
+    </div>
+    <div class="compoDL-link" *ngIf="!delivery.isAccepted">
+        <a class="compoDL-text-link-double-accept" href="{{delivery.link }}">Accepter</a>
+        <a class="compoDL-text-link-double-decline" href="{{delivery.link }}">Refuser</a>
+    </div>
+</div>
