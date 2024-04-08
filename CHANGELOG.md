@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.0...v1.15.1) (2024-04-08)
+
+
+### Bug Fixes
+
+* **profil:** fix all profile page to accord to type ([1efc85c](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/1efc85ce2dbe5879f29ed2df0b656b6b4e839050))
+
 ## [1.15.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.14.2...v1.15.0) (2024-04-08)
 
 
