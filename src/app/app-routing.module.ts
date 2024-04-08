@@ -32,6 +32,7 @@ const routes: Routes = [{
 {path: 'sales', component: SalesComponent},
 
 {path: 'error-page', component: ErrorPageComponent},
+{path: '**', component: ErrorPageComponent},
 
 
 {path: 'restaurant/add-menu', component: AddMenuComponent},
