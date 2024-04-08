@@ -34,6 +34,8 @@ import { CardDeveloperComponent } from './developer/widget/card-developer/card-d
 import { CardCommandComponent } from './delivery/widget/card-command/card-command.component';
 import { UserCardComponent } from './sales/widget/user-card/user-card.component';
 import { DeliveryMapComponent } from './delivery/widget/delivery-map/delivery-map.component';
+import { PaymentComponent } from './client/widget/payment/payment.component';
+import { TechnicalComponent } from './technical/technical.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { DeliveryMapComponent } from './delivery/widget/delivery-map/delivery-ma
     CardDeveloperComponent,
     UserCardComponent,
     CardCommandComponent,
-      DeliveryMapComponent
+      DeliveryMapComponent,
+      PaymentComponent,
+      TechnicalComponent
   
   ],
   imports: [

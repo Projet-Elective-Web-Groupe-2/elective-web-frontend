@@ -10,9 +10,9 @@ export class ErrorPageComponent {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    // Redirection vers une autre page après un délai de 5 secondes
+    
     setTimeout(() => {
-      this.router.navigate(['/home']); // Remplacez '/home' par la route de votre choix
+      this.router.navigate(['/auth']); 
     }, 5000);
   }
 }
