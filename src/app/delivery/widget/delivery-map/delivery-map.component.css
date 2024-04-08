@@ -4,7 +4,7 @@
 .text-title{
     text-align: left;
     vertical-align: bottom;
-    font-size: 40px;
+    font-size: 64px;
     line-height: auto;
     color: #000000;
     font-weight: bold;
@@ -39,6 +39,9 @@
     border-radius: 20px;
     font-weight: bold;
     margin-right: 10px;
+    width: 428px;
+    height: 70px;
+    font-size: 32px;
   }
   .compoDL-text-link-double-decline{
     text-decoration: none;
@@ -49,6 +52,9 @@
     font-weight: bold;
     margin-right: 10px;
     border-color: #426b1f;
+    width: 428px;
+    height: 70px;
+    font-size: 32px;
   }
 .button-details-command{
     display: flex;

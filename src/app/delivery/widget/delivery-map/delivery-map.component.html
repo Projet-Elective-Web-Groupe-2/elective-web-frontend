@@ -2,15 +2,15 @@
 <div class="delivery">
     <div class="div-title">
         <label class="text-title">
-            Détails commande
+            Suivi de commande
         </label>
         
     </div>
     <div class="divider"></div>
     
-    <div id="map" style="height: 400px;"></div>
+    <div id="map" style="height: 600px;"></div>
     <div class="button-details-command">
-        <a class="compoDL-text-link-double-accept">Valider la commande</a>
+        <button class="compoDL-text-link-double-accept" (click)="ValidateOrder()">Valider la commande</button>
         <button class="compoDL-text-link-double-decline" (click)="ShowClientInfo()" >Contacter le client</button>
     </div>
 </div>
