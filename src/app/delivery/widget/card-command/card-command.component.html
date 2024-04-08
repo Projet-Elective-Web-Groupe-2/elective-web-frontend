@@ -9,7 +9,11 @@
             <p class="text-2">{{delivery.desc}}</p>
         </div>
     </div>
-    <div class="compoDL-link">
-        <a class="compoDL-text-link" href="{{delivery.img }}">Suivre la commande</a>
+    <div class="compoDL-link" *ngIf="delivery.isAccepted">
+        <a class="compoDL-text-link" href="{{delivery.link }}">Suivre la commande</a>
+    </div>
+    <div class="compoDL-link" *ngIf="!delivery.isAccepted">
+        <a class="compoDL-text-link-double-accept" href="{{delivery.link }}">Accepter</a>
+        <a class="compoDL-text-link-double-decline" href="{{delivery.link }}">Refuser</a>
     </div>
 </div>

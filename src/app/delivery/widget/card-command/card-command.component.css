@@ -38,12 +38,31 @@
 }
 .compoDL-link{
     align-self: center;
-    background-color: #426b1f;
-    padding: 10px 10px 10px 10px;
-    border-radius: 20px;
+
     margin-right: 20px;
 }
 .compoDL-text-link{
     text-decoration: none;
     color: #e6e6e6;
+    background-color: #426b1f;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+}
+.compoDL-text-link-double-accept{
+  text-decoration: none;
+  color: #e6e6e6;
+  background-color: #426b1f;
+  padding: 10px 10px 10px 10px;
+  border-radius: 20px;
+  font-style: italic;
+  margin-right: 10px;
+}
+.compoDL-text-link-double-decline{
+  text-decoration: none;
+  color: #e6e6e6;
+  background-color:red;
+  padding: 10px 10px 10px 10px;
+  border-radius: 20px;
+  font-style: italic;
+  margin-right: 10px;
 }

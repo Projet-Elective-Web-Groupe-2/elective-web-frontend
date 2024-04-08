@@ -12,6 +12,7 @@ export class HomepageDeliveryComponent {
   ngOnInit(){
     this.deliveryTest.desc="un composant super cool :]";
     this.deliveryTest.name="Composant Cool";
-    this.deliveryTest.img="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    this.deliveryTest.link="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    this.deliveryTest.isAccepted=!true;
   }
 }
