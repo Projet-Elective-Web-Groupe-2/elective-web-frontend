@@ -3,4 +3,6 @@ export class Menu{
     name !:string;
     description !: string;
     price !: string;
+    id!:any;
+    drink!:boolean;
 }
