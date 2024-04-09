@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.2...v1.15.3) (2024-04-09)
+
+
+### Bug Fixes
+
+* fix css in auth, sales, and signup ([6e3135a](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/6e3135ac6780dcffc56e4989982658941b23623b))
+
 ## [1.15.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.1...v1.15.2) (2024-04-08)
 
 
