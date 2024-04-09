@@ -148,7 +148,7 @@ export class ProfilPageComponent implements OnInit {
             }, 2000);
           }
           else {
-            this.toastr.error('Une erreur est survenu');
+            this.toastr.error('Une erreur est survenue');
           }
         })
       }
@@ -167,7 +167,7 @@ export class ProfilPageComponent implements OnInit {
             }, 2000);
           }
           else {
-            this.toastr.error('Une erreur est survenu');
+            this.toastr.error('Une erreur est survenue');
           }
         })
       }
@@ -186,7 +186,7 @@ export class ProfilPageComponent implements OnInit {
             }, 2000);
           }
           else {
-            this.toastr.error('Une erreur est survenu');
+            this.toastr.error('Une erreur est survenue');
           }
         })
       }
@@ -267,7 +267,7 @@ export class ProfilPageComponent implements OnInit {
             }, 2000);
           }
           else {
-            this.toastr.error("Une erreur est survenu");
+            this.toastr.error("Une erreur est survenue");
           }
         });
       }

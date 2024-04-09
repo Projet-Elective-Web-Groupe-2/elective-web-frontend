@@ -22,7 +22,6 @@ export class HomepageClientComponent implements OnInit {
     let token = this.sessionStorageService.getItem('token');
     this.clientService.getRestaurant(token).subscribe((response: HttpResponse<any>) => {
       console.log(response)
-      //this.restoTest = response;
     });
 
     this.restoTest.img = "https://images.bfmtv.com/NUJHUYUkXAYVPZAR888_w9rjrNc=/0x0:1196x1192/1196x0/images/-458880.jpg";

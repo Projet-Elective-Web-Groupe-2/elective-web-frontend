@@ -7,7 +7,10 @@ export const API = Object.freeze({
 
     editUser: '/user/edit',
     deleteUser: '/user/delete',
+    activateUser: '/user/unsuspend',
+    disableUser: '/user/suspend',
     getUserInfo: '/user/get',
+    getUsers: '/user/getAll',
 
     getOrder: '/order/getOrder',
     getRestaurant:'/restaurant/getAll',

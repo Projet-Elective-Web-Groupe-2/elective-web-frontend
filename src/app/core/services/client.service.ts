@@ -11,8 +11,13 @@ export class ClientService {
     constructor(private http: HttpClient) { }
 
     getRestaurant(token: any): Observable<any> {
-        const body = {};
-        return this.http.post(`${environment.urlRestaurant}${API.getRestaurant}`, body, { headers: token, withCredentials: false, observe: 'response' });
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.get(`${environment.urlRestaurant}${API.getRestaurant}`, httpOptions);
     }
 
     getPanier(token: any): Observable<any> {

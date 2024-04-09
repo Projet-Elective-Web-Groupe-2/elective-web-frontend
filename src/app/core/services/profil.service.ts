@@ -31,6 +31,30 @@ export class ProfilService {
         return this.http.delete(`${environment.urlUser}${API.deleteUser}`, { body, ...httpOptions });
     }
 
+    disableUser(token: any, userID: any): Observable<any> {
+        const body = { userID: userID };
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.post(`${environment.urlUser}${API.disableUser}`, body, httpOptions );
+    }
+
+    
+    activateUser(token: any, userID: any): Observable<any> {
+        const body = { userID: userID };
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.post(`${environment.urlUser}${API.activateUser}`, body, httpOptions );
+    }
+
+
     editUser(token: any, userID: any, editFormValue: any): Observable<any> {
         console.log(editFormValue);
         const body = {

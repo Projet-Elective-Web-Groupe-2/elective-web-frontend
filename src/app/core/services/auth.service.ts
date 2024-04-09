@@ -11,7 +11,6 @@ export class AuthService {
     constructor(private http: HttpClient) { }
 
     createAccount(signupForm: any): Observable<any> {
-        console.log(signupForm);
         const body = {
             email: signupForm.email,
             password: signupForm.password,
