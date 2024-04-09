@@ -54,13 +54,25 @@ export class DeliveryMapComponent {
     });
   }
 
-  ShowClientInfo() {
+  ValidateOrder(){
     let dialogRef = this.dialog.open(ModalComponent, {
-      data: { content: 'Numéro de téléphone : +33 6 26 45 75 89', title: 'Appeler le Client' },
+      data: { content: 'Confirmes-tu la livraison ?', title: 'Confirmation livraison' },
       height: '186px',
       width: '659px',
     });
-    
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        console.log('La commande doit être valider.');
+      }
+    });
+  }
+
+  ShowClientInfo() {
+    let dialogRef = this.dialog.open(ModalComponent, {
+      data: { content: 'Numéro de téléphone : +33 6 26 45 75 89', title: 'Appeler le Client',delivery:true },
+      height: '186px',
+      width: '659px',
+    });
   }
 }
 

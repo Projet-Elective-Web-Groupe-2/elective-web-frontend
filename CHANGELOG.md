@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.1...v1.15.2) (2024-04-08)
+
+
+### Bug Fixes
+
+* **delivery:** modals delivery + use more space in page ([61fad0b](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/61fad0b3d19d676d6ee436dd7c59a3adaaa6e705))
+
 ## [1.15.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.0...v1.15.1) (2024-04-08)
 
 
