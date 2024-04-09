@@ -1,3 +1,10 @@
+## [1.16.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.3...v1.16.0) (2024-04-09)
+
+
+### Features
+
+* **edit:** add edit for menu and article ([469cfef](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/469cfef81d938bbb68372969c995f96206e018cd))
+
 ## [1.15.3](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.2...v1.15.3) (2024-04-09)
 
 
