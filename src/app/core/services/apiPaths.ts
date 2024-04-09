@@ -3,7 +3,14 @@
  */
 export const API = Object.freeze({
     createAccount: '/auth/register',
-    login: '/auth/login'
+    login: '/auth/login',
+
+    getOrder: '/order/getOrder',
+    getRestaurant:'/restaurant/getAll',
+    getRestaurantDetail:'/retaurant/find',
+
+    getOrders: '/order/getOrders'
+
 
   });
   

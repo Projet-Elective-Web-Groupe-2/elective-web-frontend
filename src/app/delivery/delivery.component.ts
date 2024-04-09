@@ -12,10 +12,10 @@ export class DeliveryComponent {
   type!:string|null;
 
   ngOnInit() {
-    // this.type = this.sessionStorageService.getItem('type');
-    // if(this.type != 'livreur'){
-    //   this.router.navigate([`/error-page`], { relativeTo: this.route });
-    // }
+     this.type = this.sessionStorageService.getItem('type');
+     if(this.type != 'livreur'){
+       this.router.navigate([`/error-page`], { relativeTo: this.route });
+     }
   }
 
 }
