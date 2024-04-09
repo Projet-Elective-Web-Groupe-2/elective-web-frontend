@@ -7,12 +7,12 @@ export class SessionStorageService {
   constructor() {}
 
   // Set a value in local storage
-  setItem(key: string, value: string): void {
+  setItem(key: string, value: any): void {
     sessionStorage.setItem(key, value);
   }
 
   // Get a value from local storage
-  getItem(key: string): string | null {
+  getItem(key: string): any | null {
     return sessionStorage.getItem(key);
   }
 

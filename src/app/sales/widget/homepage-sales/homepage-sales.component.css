@@ -1,9 +1,15 @@
 table {
-  width: 100%;
+  
+  align-self: center;
+  width: 85%;
+  border-collapse: collapse;
+  font-size: 18px;
 }
 
 .text-center {
   text-align: center !important;
+  /* border: 1px solid #333333; */
+  
 }
 
 thead {
@@ -17,6 +23,8 @@ thead {
   max-height: 54vh;
   overflow: auto;
   padding-bottom: 20px;
+  display: flex;
+justify-content: center;
 }
 
 .footer{
@@ -54,4 +62,8 @@ thead {
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
+}
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
 }

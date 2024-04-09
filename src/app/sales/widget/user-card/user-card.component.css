@@ -3,10 +3,10 @@
     display: flex;
     justify-content: space-between;
     padding: 18px 36px;
-    gap: 500px;
+    /* gap: 500px; */
     background-color: #fafaf5;
     border: 1px solid #a3a3a3;
-    width: 100%;
+    width: 80vw;
 }
 
 .frame-4-6 {
@@ -27,7 +27,6 @@
     text-align: left;
     vertical-align: top;
     font-size: 20px;
-    font-family: Inter;
     line-height: 129.99999523162842%;
     color: #000000;
 }
@@ -36,7 +35,6 @@
     text-align: left;
     vertical-align: top;
     font-size: 20px;
-    font-family: Inter;
     line-height: 129.99999523162842%;
     color: #6d6d6d;
 }
@@ -64,7 +62,6 @@
     text-align: left;
     vertical-align: top;
     font-size: 20px;
-    font-family: Inter;
     line-height: auto;
     color: #ffffff;
 }
@@ -84,7 +81,6 @@
     text-align: left;
     vertical-align: top;
     font-size: 20px;
-    font-family: Inter;
     line-height: auto;
     color: #ffffff;
 }
@@ -104,7 +100,6 @@
     text-align: left;
     vertical-align: top;
     font-size: 20px;
-    font-family: Inter;
     line-height: auto;
     color: #ffffff;
 }
@@ -127,7 +122,6 @@
     text-align: left;
     vertical-align: top;
     font-size: 20px;
-    font-family: Inter;
     line-height: 129.99999523162842%;
     color: #000000;
 }
@@ -136,7 +130,6 @@
     text-align: left;
     vertical-align: top;
     font-size: 20px;
-    font-family: Inter;
     line-height: 129.99999523162842%;
     color: #6d6d6d;
 }
