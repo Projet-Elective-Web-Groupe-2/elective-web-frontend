@@ -18,7 +18,7 @@ export class OrderListComponent {
     this.route.params.subscribe(params => {
       this.userType = params['type'];
     });
-    if ((this.type == 'client' && this.userType == 'client') || (this.type == 'restaurateur' && this.userType == 'restaurant')) {}
+    if ((this.type == 'client' && this.userType == 'client') || (this.type == 'restaurant' && this.userType == 'restaurant')) {}
     else {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }

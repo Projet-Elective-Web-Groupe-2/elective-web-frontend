@@ -13,7 +13,7 @@ export class DeliveryComponent {
 
   ngOnInit() {
      this.type = this.sessionStorageService.getItem('type');
-     if(this.type != 'livreur'){
+     if(this.type != 'delivery'){
        this.router.navigate([`/error-page`], { relativeTo: this.route });
      }
   }

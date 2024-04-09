@@ -29,7 +29,7 @@ const routes: Routes = [{
 {path: 'client', component: ClientComponent},
 {path: 'restaurant', component: RestaurantComponent},
 {path: 'delivery', component: DeliveryComponent},
-{path: 'developpeur', component: DeveloperComponent},
+{path: 'developer', component: DeveloperComponent},
 {path: 'sales', component: SalesComponent},
 
 {path: 'error-page', component: ErrorPageComponent},

@@ -2,6 +2,7 @@ import { HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Delivery } from 'src/app/core/models/delivery.model';
 import { DeliveryService } from 'src/app/core/services/delivery.service';
+import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 
 @Component({
   selector: 'app-homepage-delivery',
@@ -12,11 +13,12 @@ export class HomepageDeliveryComponent {
   deliveryTest = new Delivery();
   deliveries:Delivery[] = [];
 
-  constructor(private deliveryService: DeliveryService) { }
+  constructor(private sessionStorageService: SessionStorageService,private deliveryService: DeliveryService) { }
 
 
   ngOnInit(){
-    this.deliveryService.getOrdersList().subscribe((response: HttpResponse<any>) => {
+    let token = this.sessionStorageService.getItem('token');
+    this.deliveryService.getOrdersList(token).subscribe((response: HttpResponse<any>) => {
       console.log(response)
     });
 

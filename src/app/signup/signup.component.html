@@ -14,9 +14,9 @@
                 <select class="text-input" formControlName="userType" [ngModel]="selectedValue"
                     (ngModelChange)="onOptionChange($event)">
                     <option value="CLIENT" class="text-option" selected="client">CLIENT</option>
-                    <option value="RESTAURATEUR" class="text-option">RESTAURATEUR</option>
-                    <option value="LIVREUR" class="text-option">LIVREUR</option>
-                    <option value="DEVELOPPEUR" class="text-option">DEVELOPPEUR TIER</option>
+                    <option value="RESTAURANT" class="text-option">RESTAURATEUR</option>
+                    <option value="DELIVERY" class="text-option">LIVREUR</option>
+                    <option value="DEVELOPER" class="text-option">DEVELOPPEUR TIER</option>
                 </select>
             </div>
 
@@ -67,7 +67,7 @@
 
             </div>
 
-            <div *ngIf="selectedValue=='RESTAURATEUR'">
+            <div *ngIf="selectedValue=='RESTAURANT'">
 
                 <div class="input--field">
                     <div class="text-input-name">Nom du Restaurant</div>
@@ -104,7 +104,7 @@
                 </div>
             </div>
 
-            <div *ngIf="selectedValue=='LIVREUR'">
+            <div *ngIf="selectedValue=='DELIVERY'">
                 <div class="input-double">
                     <div class="double-1">
                         <div class="text-input-name">Prénom</div>
@@ -149,7 +149,7 @@
                 </div>
             </div>
 
-            <div *ngIf="selectedValue=='DEVELOPPEUR'">
+            <div *ngIf="selectedValue=='DEVELOPER'">
 
                 <div class="input--field">
                     <div class="text-input-name">Adresse mail</div>

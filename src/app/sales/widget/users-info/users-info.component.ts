@@ -13,8 +13,8 @@ export class UsersInfoComponent {
     this.usersList.push(
       { mail: "amara.ahmed@gmail.com", type: "client"},
       { mail: "amara2.ahmed@gmail.com", type: "restaurant"},
-      { mail: "amara3.ahmed@gmail.com", type: "livreur"},
-      { mail: "amara4.ahmed@gmail.com", type: "developpeur"},
+      { mail: "amara3.ahmed@gmail.com", type: "delivery"},
+      { mail: "amara4.ahmed@gmail.com", type: "developer"},
       { mail: "amara5.ahmed@gmail.com", type: "client"},
     );
   }

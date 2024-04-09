@@ -10,9 +10,10 @@ import { environment } from '../../../environments/environment';
 export class DeliveryService {
     constructor(private http: HttpClient) { }
 
-    getOrdersList(): Observable<any> {
+    getOrdersList(token:any): Observable<any> {
         const body = {};
-        return this.http.post(`${environment.urlOrder}${API.getOrders}`, body, { withCredentials: false, observe: 'response' });
+        return this.http.post(`${environment.urlOrder}${API.getOrders}`, body, { headers:token, withCredentials: false, observe: 'response' });
     }
+
 
 }
