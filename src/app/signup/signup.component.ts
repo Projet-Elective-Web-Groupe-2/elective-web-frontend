@@ -13,7 +13,8 @@ import { SessionStorageService } from '../core/services/session-storage.service'
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
+  selectedImage: string | ArrayBuffer | null | undefined;
+  
   constructor(private authService: AuthService, private toastr: ToastrService, private router: Router, private route: ActivatedRoute, private sessionStorageService: SessionStorageService) { }
 
   selectedValue: string = '';
@@ -49,5 +50,15 @@ export class SignupComponent implements OnInit {
 
   onOptionChange(newValue: string) {
     this.selectedValue = newValue;
+  }
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.selectedImage = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
   }
 }
