@@ -1,3 +1,17 @@
+## [1.21.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.20.1...v1.21.0) (2024-04-10)
+
+
+### Features
+
+* create article + start create menu ([5357577](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/53575774bde9695a22a542dfd11505d7d7197907))
+* getInfoRestaurant ([a350d3d](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a350d3d9737fe8ae262737daaa74f0e3e4e4e3b6))
+
+
+### Bug Fixes
+
+* add image ([2e498ba](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/2e498ba7dff87171273512851bc10c6067890891))
+* create menu ([633821c](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/633821c01508b407c7f39821364ea02049c03b1a))
+
 ## [1.20.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.20.0...v1.20.1) (2024-04-10)
 
 
