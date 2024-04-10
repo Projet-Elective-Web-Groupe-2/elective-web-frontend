@@ -19,10 +19,7 @@ export class TechnicalComponent {
 
   ngOnInit(){
     this.token = this.sessionStorage.getItem("token");
-    this.logs.push("log1");
-    this.logs.push("log2");
-    this.logs.push("log3");
-    this.logs.push("log4");
+
     this.getLog();
   }
 
