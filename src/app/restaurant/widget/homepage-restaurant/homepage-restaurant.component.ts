@@ -85,4 +85,4 @@ export class HomepageRestaurantComponent implements OnInit {
 }
 
 
-}
+
