@@ -10,6 +10,9 @@
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
         <button (click)="clickOnButton()" class="header-button">Panier</button>
     </div>
 
@@ -26,12 +29,18 @@
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
         <button (click)="clickOnButton()" class="header-button">Liste des commandes</button>
     </div>
 
     <div class="options" *ngIf="type=='delivery'">
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
+        </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
         </div>
         <button (click)="clickOnButton()" class="header-button">Liste des commandes</button>
     </div>
@@ -40,6 +49,9 @@
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
         <button (click)="clickOnButton()" class="header-button">Liste des composants</button>
     </div>
 
@@ -47,9 +59,10 @@
         <div class="value">
             <a [routerLink]="['/', type]"> Tableaux de bords</a>
         </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
         <button (click)="clickOnButton()" class="header-button">Gestions des comptes</button>
     </div>
-    <div  (click)="disconnect()">
-        déco
-    </div>
+    
 </div>
