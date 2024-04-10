@@ -24,7 +24,6 @@ export class AddMenuComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private sessionStorageService: SessionStorageService,
     private router: Router,
-    private route: ActivatedRoute,
     private restaurantService: RestaurantService,
     private toastr: ToastrService
   ) { }
@@ -36,7 +35,7 @@ export class AddMenuComponent implements OnInit {
     drink: new FormControl(false),
     photo: new FormControl(''),
   });
-
+  
   ngOnInit(): void {
     this.userID = this.sessionStorageService.getItem('restaurantID');
     this.token = this.sessionStorageService.getItem('token');
@@ -73,8 +72,7 @@ export class AddMenuComponent implements OnInit {
   submitMenu() {
     let idList = this.getIdFromArticle();
     this.restaurantService.createMenu(this.token, this.userID, this.menusForm.value,idList).subscribe((response: MessageModel) => {
-      console.log(response);
-      if (response.message == "Product added successfully") {
+      if (response.message == "Menu added successfully") {
         this.toastr.success("L'article a été ajouté avec succès");
         setTimeout(() => {
           this.router.navigate(['/restaurant']);

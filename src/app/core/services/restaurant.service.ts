@@ -42,7 +42,7 @@ export class RestaurantService {
     createMenu(token: any,userID:any,formValue:any,idList:string[]): Observable<any> {
         const body = {
             name:formValue.name,
-            productsIds:idList,
+            productIds:idList,
             totalPrice:formValue.price,
             restaurantID:userID,
             image:formValue.photo,
