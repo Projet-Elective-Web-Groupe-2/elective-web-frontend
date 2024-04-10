@@ -17,13 +17,10 @@
                         </td>
                     </tr>-->
 
-                    <tr *ngFor="let element of valuesTables | slice:startLineDisplay:endLineDisplay; let i = index">
-                        <td class="text-center">{{element.number}}</td>
-                        <td class="text-center">{{element.restaurant}}</td>
-                        <td class="text-center">{{element.price}}</td>
-                        <td class="text-center">{{element.acceptedOrder}}</td>
-                        <td class="text-center">{{element.acceptedDelivery}}</td>
-                        <td class="text-center">{{element.endDelivery}}</td>
+                    <tr *ngFor="let element of valuesTables">
+                        <td class="text-center">{{ element.clientID }}</td>
+                        <td class="text-center">{{ element.totalPrice }}</td>
+                        <td class="text-center">{{ element.status }}</td>
                     </tr>
                 </tbody>
             </table>

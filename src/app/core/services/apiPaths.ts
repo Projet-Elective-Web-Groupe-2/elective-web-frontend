@@ -16,6 +16,7 @@ export const API = Object.freeze({
 
     getOrder: '/order/getOrder',
     getOrders: '/order/getOrders',
+    getAllOrders: '/order/getAllOrders',
 
     createMenu:'/menu/create',
     createArticle:'/product/add',
