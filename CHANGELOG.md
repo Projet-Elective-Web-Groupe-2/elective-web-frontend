@@ -1,3 +1,32 @@
+## [1.18.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.17.1...v1.18.0) (2024-04-10)
+
+
+### Features
+
+* **addmenu:** "fix" multiselect dropdown article ([08450d0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/08450d003973b86c58e2f765ea3e22a596406881))
+
+## [1.17.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.17.0...v1.17.1) (2024-04-10)
+
+
+### Bug Fixes
+
+* **signup:** add image field for restaurant creation ([693751c](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/693751ce38fc8a1d492559dcb03a6b2a42fc2dc8))
+* **signup:** oupsi ^^ ([c2b9073](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/c2b90737d101b6abbe3d8c55d3b665adc66e8941))
+
+## [1.17.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.16.0...v1.17.0) (2024-04-10)
+
+
+### Features
+
+* **connect:** connect for sales + get restaurant for users ([a7610a2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a7610a2cdee95cdf33a1a7a56b6925e892c48b2f))
+* edit profil ([c4431aa](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/c4431aae7abe4421841a9d842ddaef48b1592a59))
+* **routing:** start routing to back + change <p> to <div> ([c0c1a8e](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/c0c1a8e7c9fbec3e6d8581d2aa5e14dee45f99e6))
+
+
+### Bug Fixes
+
+* create dev account ([90a19ef](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/90a19ef085b3dbb210fe64978d8b8d426c6bb341))
+
 ## [1.16.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.3...v1.16.0) (2024-04-09)
 
 

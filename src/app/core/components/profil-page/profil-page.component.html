@@ -15,7 +15,7 @@
     </div>
 </div>
 <div class="main-profile">
-    <div class="left-profile" *ngIf="userType == 'client' || userType == 'livreur'">
+    <div class="left-profile" *ngIf="userType == 'client' || userType == 'delivery'">
         <form class="login--form" (ngSubmit)="submitProfil()" [formGroup]="editForm">
             <div class="input-double">
                 <div class="double-1">
@@ -69,7 +69,7 @@
         </form>
 
     </div>
-    <div class="left-profile" *ngIf="userType == 'developpeur'">
+    <div class="left-profile" *ngIf="userType == 'developer'">
         <form class="login--form" (ngSubmit)="submitProfil()" [formGroup]="editFormDev">
             <div class="input--field">
                 <div class="text-input-label">Adresse mail</div>
@@ -132,7 +132,7 @@
         </form>
     </div>
     <div class="transition"></div>
-    <div *ngIf="!isSales && this.userType != 'developpeur'" class="right-profile">
+    <div *ngIf="!isSales && this.userType != 'developer'" class="right-profile">
         <div class="sponsorship">
             <div class="sponsorship-label">Votre code de parrainage</div>
             <div class="our-sponsorship-frame">
@@ -150,20 +150,20 @@
             </div>
         </form>
     </div>
-    <div *ngIf="!isSales && this.userType == 'developpeur'" class="right-profile">
+    <div *ngIf="!isSales && this.userType == 'developer'" class="right-profile">
         <img class="img-dev" src="https://media.istockphoto.com/id/1402360495/vector/digital-development-people.jpg?s=612x612&w=0&k=20&c=2Ws4ZyJnAPm9wiXMKyIAeyiz8vRdzm30VUfiUuTSJhM=" />
     </div>
     <div *ngIf="isSales" class="right-profile">
         <div class="frame-5-3">
             <div class="frame-5-2">
                 <button (click)="disableUser()" class="component-1">
-                    <p class="disable-user-label">Suspendre le compte</p>
+                    <div class="disable-user-label">Suspendre le compte</div>
                 </button>
                 <img src="" />
             </div>
             <div class="frame-5-1">
                 <button (click)="deleteProfil()" class="component-1">
-                    <p class="delete-user-label">Supprimer le compte</p>
+                    <div class="delete-user-label">Supprimer le compte</div>
                 </button>
             </div>
         </div>

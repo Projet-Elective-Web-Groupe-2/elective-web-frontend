@@ -29,14 +29,14 @@
         <button (click)="clickOnButton()" class="header-button">Liste des commandes</button>
     </div>
 
-    <div class="options" *ngIf="type=='livreur'">
+    <div class="options" *ngIf="type=='delivery'">
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>
         <button (click)="clickOnButton()" class="header-button">Liste des commandes</button>
     </div>
     
-    <div class="options" *ngIf="type=='developpeur'">
+    <div class="options" *ngIf="type=='developer'">
         <div class="value">
             <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
         </div>

@@ -3,5 +3,5 @@
     <div class="title">Gestion des comptes</div>
 </div>
 <div class="card" *ngFor="let menu of usersList">
-    <app-user-card [mail]="menu.mail" [type]="menu.type"></app-user-card>
+    <app-user-card [menu]="menu" ></app-user-card>
 </div>

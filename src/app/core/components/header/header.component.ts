@@ -22,7 +22,7 @@ export class HeaderComponent {
       case 'delivery':
         this.router.navigate([`/${this.type}`], { relativeTo: this.route });
         break;
-      case 'developpeur':
+      case 'developer':
         this.router.navigate([`/${this.type}`], { relativeTo: this.route });
         break;
       case 'sales':

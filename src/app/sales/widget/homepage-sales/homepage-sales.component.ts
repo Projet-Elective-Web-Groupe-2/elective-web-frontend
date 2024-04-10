@@ -25,6 +25,7 @@ export class HomepageSalesComponent {
   constructor(salesService: SalesService) {}
 
   ngOnInit(): void {
+    
     this.valuesTables.push(
       { number: "1", restaurant: "Restaurant A", price: "50", acceptedOrder: true, acceptedDelivery: true, endDelivery: false },
       { number: "2", restaurant: "Restaurant B", price: "30", acceptedOrder: true, acceptedDelivery: false, endDelivery: false },

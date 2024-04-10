@@ -14,7 +14,7 @@ export class DeveloperComponent {
 
   ngOnInit() {
     this.type = this.sessionStorageService.getItem('type');
-    if(this.type != 'developpeur'){
+    if(this.type != 'developer'){
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
   }

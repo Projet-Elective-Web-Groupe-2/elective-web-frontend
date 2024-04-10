@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
-import { Restaurant } from '../../models/restaurant.model';
+import { RestaurantModel } from '../../models/restaurant.model';
 import { Menu } from '../../models/menu.model';
 
 @Component({
@@ -10,7 +10,7 @@ import { Menu } from '../../models/menu.model';
 })
 export class CardComponent {
 
-  @Input() restaurant!:Restaurant;
+  @Input() restaurant!:RestaurantModel;
   @Input() menu!:Menu;
   @Input() isDetailResto!:boolean;
   @Input() isClient!: boolean;

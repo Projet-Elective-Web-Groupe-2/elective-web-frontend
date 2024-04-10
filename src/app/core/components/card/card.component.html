@@ -1,8 +1,8 @@
 <div *ngIf="!isDetailResto">
     <div class="card--client">
         <img src="{{menu.img}}" class="image-card"/>
-        <p class="text-2">{{menu.name}}</p>
-        <p class="text-3">{{menu.description}}</p>
+        <div class="text-2">{{menu.name}}</div>
+        <div class="text-3">{{menu.description}}</div>
         <div *ngIf="isClient">
             <div class="box">
                 <h1 class="box-price">{{menu.price}}</h1>
@@ -20,7 +20,7 @@
 <div *ngIf="isDetailResto">
     <div class="card--client">
         <img src="{{restaurant.img}}" class="image-card"/>
-        <p class="text-2">{{restaurant.name}}</p>
-        <p class="text-3">{{restaurant.address}}</p>
+        <div class="text-2">{{restaurant.name}}</div>
+        <div class="text-3">{{restaurant.address}}</div>
     </div>
 </div>

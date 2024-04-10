@@ -27,14 +27,14 @@ export class AuthComponent implements OnInit {
 
   onSubmit() {
     this.authService.login(this.loginForm.value).subscribe((response: HttpResponse<any>) => {
+      this.sessionStorageService.setItem('token', response.body.accessToken);
+      console.log(response.body.accessToken);
       let tokenValues = this.decodeToken(response.body.accessToken);
+      this.sessionStorageService.setItem('userID', tokenValues.id);
       this.sessionStorageService.setItem('type', tokenValues.type.toLowerCase());
       let route;
-      if(tokenValues.type.toLowerCase() == 'restaurateur'){
+      if(tokenValues.type.toLowerCase() == 'restaurant'){
         route = 'restaurant'; 
-      }
-      else if(tokenValues.type.toLowerCase() == 'livreur'){
-        route = 'delivery';
       }
       else{
         route = tokenValues.type.toLowerCase();

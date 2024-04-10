@@ -4,7 +4,7 @@ import { PaymentComponent } from './payment.component';
 
 describe('PaymentComponent', () => {
   let component: PaymentComponent;
-  let fixture: ComponentFixture<PaymentComponent>;
+  let fixture: ComponentFixture<divaymentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
