@@ -10,9 +10,30 @@ import { environment } from '../../../environments/environment';
 export class RestaurantService {
     constructor(private http: HttpClient) { }
 
-    getRestaurant(): Observable<any> {
-        const body = {};
-        return this.http.post(`${environment.urlRestaurant}${API.getRestaurant}`, body, { withCredentials: false, observe: 'response' });
+    getRestaurantInfo(token: any,userID:any,): Observable<any> {
+        const body = {userID};
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.get(`${environment.urlRestaurant}${API.getRestaurantDetail}`+ '?id=' + userID, httpOptions );
     }
 
+    createArticle(token: any,userID:any,formValue:any): Observable<any> {
+        const body = {
+            name:formValue.name,
+            description:formValue.compo,
+            price:formValue.price,
+            restaurantID:userID
+        };
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.post(`${environment.urlProduct}${API.createArticle}`, body, httpOptions );
+    }
 }

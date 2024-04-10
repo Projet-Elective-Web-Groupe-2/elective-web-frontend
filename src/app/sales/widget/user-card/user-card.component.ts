@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ModalComponent } from 'src/app/core/modal/modal.component';
-import { messageModel } from 'src/app/core/models/message.model';
+import { MessageModel } from 'src/app/core/models/message.model';
 import { userSalesModel } from 'src/app/core/models/user-sales.model';
 import { ProfilService } from 'src/app/core/services/profil.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
@@ -44,7 +44,7 @@ export class UserCardComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
         console.log(this.token);
-        this.profilService.activateUser(this.token, this.menu.userID).subscribe((response: messageModel) => {
+        this.profilService.activateUser(this.token, this.menu.userID).subscribe((response: MessageModel) => {
           if (response.message == 'User unsuspended') {
             this.toastr.success("L'utilisateur a été réactivé");
             setTimeout(() => {
@@ -69,7 +69,7 @@ export class UserCardComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
         console.log(this.token);
-        this.profilService.disableUser(this.token, this.menu.userID).subscribe((response: messageModel) => {
+        this.profilService.disableUser(this.token, this.menu.userID).subscribe((response: MessageModel) => {
           if (response.message == 'User suspended') {
             this.toastr.success("L'utilisateur a bien été suspendu");
             setTimeout(() => {
@@ -96,7 +96,7 @@ export class UserCardComponent {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        this.profilService.deleteUser(this.token, this.menu.userID).subscribe((response: messageModel) => {
+        this.profilService.deleteUser(this.token, this.menu.userID).subscribe((response: MessageModel) => {
           if (response.message == 'User deleted') {
             this.toastr.success("L'utilisateur a bien été supprimé");
             setTimeout(() => {
