@@ -1,3 +1,3 @@
-export interface messageModel {
+export interface MessageModel {
     message:any,
 }
