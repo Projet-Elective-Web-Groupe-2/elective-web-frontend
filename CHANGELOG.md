@@ -1,3 +1,11 @@
+## [1.19.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.18.0...v1.19.0) (2024-04-10)
+
+
+### Features
+
+* **deco:** add disconnect buton ([f8e1c3f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/f8e1c3fc9a973a52e6bfc4307c6e0aa410dff9eb))
+* **disconnect:** add css for disconnect ([a5486dc](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a5486dcc8220c8d4b9bb8b524f3e10ee605e1a9b))
+
 ## [1.18.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.17.1...v1.18.0) (2024-04-10)
 
 
