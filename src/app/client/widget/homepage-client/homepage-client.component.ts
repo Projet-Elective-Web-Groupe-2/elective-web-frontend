@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { RestaurantModel } from 'src/app/core/models/restaurant.model';
-import { Menu } from 'src/app/core/models/menu.model';
-import { HttpResponse } from '@angular/common/http';
 import { ClientService } from 'src/app/core/services/client.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 
@@ -11,19 +10,40 @@ import { SessionStorageService } from 'src/app/core/services/session-storage.ser
   styleUrls: ['./homepage-client.component.css']
 })
 export class HomepageClientComponent implements OnInit {
-  restoList: RestaurantModel[] = []
-  menuTest = new Menu();
+  restoList: RestaurantModel[] = [];
 
-  constructor(private sessionStorageService: SessionStorageService,private clientService: ClientService) { };
+  constructor(private sessionStorageService: SessionStorageService,
+              private clientService: ClientService,
+              private http: HttpClient) { }
 
   ngOnInit(): void {
     let token = this.sessionStorageService.getItem('token');
-    this.clientService.getRestaurant(token).subscribe((response: RestaurantModel) => {
-      for(let i = 0;i<response.restaurants.length;i++){
-        console.log(response.restaurants[i])
-        let restaurantInformation = response.restaurants[i];
-        this.restoList.push(restaurantInformation);
+    this.clientService.getRestaurant(token).subscribe((response: any) => {
+      this.restoList = response.restaurants;
+    });
+  }
+
+  createOrder() {
+    let token = this.sessionStorageService.getItem('token');
+    const orderData = {
+      items: [
+        {
+          itemID: '',
+          isMenu: false, 
+          drink: false,
+          restaurantID: ''
+        }
+      ]
+    };
+
+    this.http.post('http://order.localhost/order/create', orderData, {
+      headers: {
+        Authorization: `Bearer ${token}`
       }
+    }).subscribe(response => {
+      console.log('Order created:', response);
+    }, error => {
+      console.error('Error creating order:', error);
     });
   }
 }
