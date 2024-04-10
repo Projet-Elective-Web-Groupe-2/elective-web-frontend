@@ -5,4 +5,5 @@ export class Menu{
     price !: string;
     id!:any;
     drink!:boolean;
+    isMenu!:boolean;
 }

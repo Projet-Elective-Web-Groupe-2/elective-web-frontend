@@ -44,6 +44,8 @@ export class RestaurantClientComponent {
     this.menuTest.description = "Burger maison, boisson, frites";
     this.menuTest.name = "Menu ElClassico"
     this.menuTest.price = "12,40€";
+    this.menuTest.id=65654654;
+    this.menuTest.isMenu=true;
     this.menuList.push(this.menuTest);
     this.menuList.push(this.menuTest);
 
@@ -51,6 +53,8 @@ export class RestaurantClientComponent {
     this.articleTest.description = "Bun's, Steak, Salade, Fromage";
     this.articleTest.name = "Big Muc"
     this.articleTest.price = "5€40";
+    this.articleTest.id = 555;
+    this.articleTest.isMenu=false;
     this.articleList.push(this.articleTest);
   }
 }

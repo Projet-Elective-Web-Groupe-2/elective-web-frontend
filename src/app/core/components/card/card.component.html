@@ -6,7 +6,7 @@
         <div *ngIf="isClient">
             <div class="box">
                 <h1 class="box-price">{{menu.price}}</h1>
-                <button class="add-panier" >Ajouter au panier</button>
+                <button class="add-panier" (click)="onClick(menu.id, menu.isMenu)">Ajouter au panier</button>
             </div>
         </div>
         <div *ngIf="!isClient" class="forRestaurant">
