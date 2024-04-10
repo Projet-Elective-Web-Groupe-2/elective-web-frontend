@@ -212,3 +212,17 @@
 .double-2{
     width: calc(var(--double)*0.8);
 }
+.image-card{
+    height: 7.6vh;
+    width: auto;
+    padding-right: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+.input--field-image {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

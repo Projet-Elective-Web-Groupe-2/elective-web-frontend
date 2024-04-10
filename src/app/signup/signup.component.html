@@ -89,6 +89,15 @@
                     <input class="text-input" type="text" formControlName="phoneNumber">
                 </div>
 
+                    <!--mettre insertion d'image-->
+                    <div class="input--field">
+                        <div class="text-input-name">Image (DIMENSION MAX : 250x250)</div>
+                        <div class="input--field-image">
+                            <input formControlName="photo" required type="file" class="file-upload" (change)="onFileSelected($event)" accept=".jpg, .jpeg, .png"/>
+                            <img [src]="selectedImage" class="image-card" />
+                        </div>
+                    </div>
+                
                 <div class="input-double">
                     <div class="double-1">
                         <div class="text-input-name">Mot de Passe</div>
