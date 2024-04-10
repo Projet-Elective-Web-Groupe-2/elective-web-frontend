@@ -50,4 +50,8 @@ export class AddMenuComponent implements OnInit {
   submitMenu(){
     console.log(this.menusForm.value);
   }
+
+
+
+
 }

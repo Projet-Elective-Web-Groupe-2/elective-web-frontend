@@ -12,13 +12,13 @@ export class RestaurantComponent {
   type!:string|null;
 
   ngOnInit() {
-    this.type = this.sessionStorageService.getItem('type');
-    if(this.type != 'restaurant'){
-      this.router.navigate([`/error-page`], { relativeTo: this.route });
-    }
-    else{
-      this.type = "restaurant";
-    }
+    // this.type = this.sessionStorageService.getItem('type');
+    // if(this.type != 'restaurant'){
+    //   this.router.navigate([`/error-page`], { relativeTo: this.route });
+    // }
+    // else{
+    //   this.type = "restaurant";
+    // }
   }
 
 }
