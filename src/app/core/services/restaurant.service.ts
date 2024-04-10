@@ -18,7 +18,7 @@ export class RestaurantService {
                 'Authorization': `Bearer ${token}`
             })
         };
-        return this.http.get(`${environment.urlRestaurant}${API.getRestaurantDetail}`+ '?id=' + userID, httpOptions );
+        return this.http.get(`${environment.urlRestaurant}${API.getRestaurantInformation}`+ '?id=' + userID, httpOptions );
     }
 
     createArticle(token: any,userID:any,formValue:any): Observable<any> {
@@ -26,7 +26,9 @@ export class RestaurantService {
             name:formValue.name,
             description:formValue.compo,
             price:formValue.price,
-            restaurantID:userID
+            restaurantID:userID,
+            image:formValue.photo,
+            isDrink:false,
         };
         const httpOptions = {
             headers: new HttpHeaders({
@@ -35,5 +37,24 @@ export class RestaurantService {
             })
         };
         return this.http.post(`${environment.urlProduct}${API.createArticle}`, body, httpOptions );
+    }
+
+    createMenu(token: any,userID:any,formValue:any,idList:string[]): Observable<any> {
+        const body = {
+            name:formValue.name,
+            productsIds:idList,
+            totalPrice:formValue.price,
+            restaurantID:userID,
+            image:formValue.photo,
+            drinkButtonClicked:formValue.drink,
+        };
+        console.log(body);
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.post(`${environment.urlMenu}${API.createMenu}`, body, httpOptions );
     }
 }

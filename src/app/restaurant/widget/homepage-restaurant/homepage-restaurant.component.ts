@@ -2,6 +2,8 @@ import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Menu } from 'src/app/core/models/menu.model';
+import { MenuArticle } from 'src/app/core/models/menuArticle.model';
+import { RestaurantModel } from 'src/app/core/models/restaurant.model';
 import { RestaurantService } from 'src/app/core/services/restaurant.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 
@@ -18,7 +20,7 @@ export class HomepageRestaurantComponent implements OnInit {
   menuList: Menu[] = [];
   menuTest = new Menu();
   articleList: Menu[] = [];
-  articleTest = new Menu();
+  articleListForMenu: MenuArticle[] = [];
 
 
   constructor(private router: Router,
@@ -29,30 +31,16 @@ export class HomepageRestaurantComponent implements OnInit {
   ngOnInit(): void {
     this.userID = this.sessionStorageService.getItem('userID');
     this.token = this.sessionStorageService.getItem('token');
-    this.restaurantService.getRestaurantInfo(this.token, this.userID).subscribe((response: HttpResponse<any>) => { console.log(response)})
-
-    
-    this.restaurant = "Mcgronald’s";
-    this.address = "243 rue de la Republique , 95239";
-    this.addMenu();
-  }
-
-  addMenu() {
-    this.menuTest.img = "https://eu-images.contentstack.com/v3/assets/blt5004e64d3579c43f/blt9418bc6e38e6544a/660439b26eb29729ab905cdf/MxBO_BIGMAC.png?auto=webp&width=1280&disable=upscale";
-    this.menuTest.description = "Burger maison, boisson, frites";
-    this.menuTest.name = "Menu ElClassico"
-    this.menuTest.price = "12.40€";
-    this.menuTest.id = 684684;
-    this.menuTest.drink = true;
-    this.menuList.push(this.menuTest);
-    this.menuList.push(this.menuTest);
-
-    this.articleTest.img = "https://eu-images.contentstack.com/v3/assets/blt5004e64d3579c43f/blta639ebc798204a17/66043a77dd76c70108f663a3/400x400_Big_Mac.png?auto=webp&width=1280&disable=upscale";
-    this.articleTest.description = "Bun's, Steak, Salade, Fromage";
-    this.articleTest.name = "Big Muc"
-    this.articleTest.price = "5.40€";
-    this.articleTest.id = 2165165;
-    this.articleList.push(this.articleTest);
+    this.restaurantService.getRestaurantInfo(this.token, this.userID).subscribe((response: RestaurantModel) => {
+      let values = response.restaurant;
+      console.log(values);
+      this.restaurant = values.name;
+      this.address = values.address;
+      this.menuList = values.menus;
+      this.articleList = values.products;
+      this.sessionStorageService.setItem('articleList', JSON.stringify(this.articleList));
+      this.sessionStorageService.setItem('restaurantID', values.id);
+    })
   }
 
   onClickArticle(articleSelected: Menu): void {

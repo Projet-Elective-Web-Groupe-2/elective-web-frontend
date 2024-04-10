@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { MessageModel } from 'src/app/core/models/message.model';
 import { RestaurantService } from 'src/app/core/services/restaurant.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
@@ -20,7 +21,8 @@ export class AddArticleComponent {
     private sessionStorageService: SessionStorageService,
     private router: Router,
     private route: ActivatedRoute,
-    private restaurantService: RestaurantService
+    private restaurantService: RestaurantService,
+    private toastr: ToastrService
   ) { }
 
   articleForm = this.formBuilder.group({
@@ -31,7 +33,7 @@ export class AddArticleComponent {
   });
 
   ngOnInit(): void {
-    this.userID = this.sessionStorageService.getItem('userID');
+    this.userID = this.sessionStorageService.getItem('restaurantID');
     this.token = this.sessionStorageService.getItem('token');
     this.type = this.sessionStorageService.getItem('type');
     if (this.type != 'restaurant') {
@@ -54,7 +56,16 @@ export class AddArticleComponent {
   }
 
   submitArticle() {
-    console.log(this.articleForm.value);
-    this.restaurantService.createArticle(this.token,this.userID,this.articleForm.value).subscribe((response: MessageModel) => { })
+    this.restaurantService.createArticle(this.token,this.userID,this.articleForm.value).subscribe((response: MessageModel) => {
+      if(response.message == "Product added successfully"){
+        this.toastr.success("L'article a été ajouté avec succès");
+        setTimeout(() => {
+          this.router.navigate(['/restaurant']);
+        }, 2000);
+      }
+      else{
+        this.toastr.error("Erreur lors de la création de l'article");
+      }
+     })
   }
 }
