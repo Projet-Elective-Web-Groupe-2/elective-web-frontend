@@ -1,3 +1,17 @@
+## [1.17.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.16.0...v1.17.0) (2024-04-10)
+
+
+### Features
+
+* **connect:** connect for sales + get restaurant for users ([a7610a2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a7610a2cdee95cdf33a1a7a56b6925e892c48b2f))
+* edit profil ([c4431aa](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/c4431aae7abe4421841a9d842ddaef48b1592a59))
+* **routing:** start routing to back + change <p> to <div> ([c0c1a8e](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/c0c1a8e7c9fbec3e6d8581d2aa5e14dee45f99e6))
+
+
+### Bug Fixes
+
+* create dev account ([90a19ef](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/90a19ef085b3dbb210fe64978d8b8d426c6bb341))
+
 ## [1.16.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.15.3...v1.16.0) (2024-04-09)
 
 
