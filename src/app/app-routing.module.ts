@@ -21,6 +21,7 @@ import { DeliveryMapComponent } from './delivery/widget/delivery-map/delivery-ma
 import { PaymentComponent } from './client/widget/payment/payment.component';
 import { EditArticleComponent } from './restaurant/widget/edit-article/edit-article.component';
 import { EditMenuComponent } from './restaurant/widget/edit-menu/edit-menu.component';
+import { TechnicalComponent } from './technical/technical.component';
 
 
 const routes: Routes = [{
@@ -33,6 +34,7 @@ const routes: Routes = [{
 {path: 'delivery', component: DeliveryComponent},
 {path: 'developer', component: DeveloperComponent},
 {path: 'sales', component: SalesComponent},
+{path: 'technical', component: TechnicalComponent},
 
 {path: 'error-page', component: ErrorPageComponent},
 

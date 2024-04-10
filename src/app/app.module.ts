@@ -64,11 +64,11 @@ import { EditArticleComponent } from './restaurant/widget/edit-article/edit-arti
     CardDeveloperComponent,
     UserCardComponent,
     CardCommandComponent,
-      DeliveryMapComponent,
-      PaymentComponent,
-      TechnicalComponent,
-      EditMenuComponent,
-      EditArticleComponent
+    DeliveryMapComponent,
+    PaymentComponent,
+    TechnicalComponent,
+    EditMenuComponent,
+    EditArticleComponent
   
   ],
   imports: [
