@@ -7,7 +7,7 @@ import { SessionStorageService } from '../../services/session-storage.service';
 import { ProfilService } from '../../services/profil.service';
 import { UserInfo } from '../../models/userInfo.model';
 import { HttpResponse } from '@angular/common/http';
-import { messageModel } from '../../models/message.model';
+import { MessageModel } from '../../models/message.model';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -140,7 +140,7 @@ export class ProfilPageComponent implements OnInit {
     if (this.userType == 'client' || this.userType == 'delivery') {
       let editFormValue = this.editForm.value;
       if (editFormValue.password != '' && editFormValue.confirmPassword != '' && editFormValue.password == editFormValue.confirmPassword) {
-        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: messageModel) => {
+        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: MessageModel) => {
           if (response.message == 'User edited') {
             this.toastr.success("L'utilisateur a bien été édité");
             setTimeout(() => {
@@ -159,7 +159,7 @@ export class ProfilPageComponent implements OnInit {
     else if (this.userType == 'developer') {
       let editFormValue = this.editFormDev.value;
       if (editFormValue.password != '' && editFormValue.confirmPassword != '' && editFormValue.password == editFormValue.confirmPassword) {
-        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: messageModel) => {
+        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: MessageModel) => {
           if (response.message == 'User edited') {
             this.toastr.success("L'utilisateur a bien été édité");
             setTimeout(() => {
@@ -178,7 +178,7 @@ export class ProfilPageComponent implements OnInit {
     else if (this.userType == 'restaurant') {
       let editFormValue = this.editFormRestaurant.value;
       if (editFormValue.password != '' && editFormValue.confirmPassword != '' && editFormValue.password == editFormValue.confirmPassword) {
-        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: messageModel) => {
+        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: MessageModel) => {
           if (response.message == 'User edited') {
             this.toastr.success("L'utilisateur a bien été édité");
             setTimeout(() => {
@@ -259,7 +259,7 @@ export class ProfilPageComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        this.profilService.deleteUser(this.token, this.userID).subscribe((response: messageModel) => {
+        this.profilService.deleteUser(this.token, this.userID).subscribe((response: MessageModel) => {
           if (response.message == 'User deleted') {
             this.toastr.success("L'utilisateur a bien été supprimé");
             setTimeout(() => {

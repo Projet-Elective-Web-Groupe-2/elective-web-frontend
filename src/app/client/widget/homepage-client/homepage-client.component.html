@@ -1,5 +1,5 @@
 <div class="card-rest-show">
     <div *ngFor="let resto of restoList">
-        <a class="route-link-client" [routerLink]="['/', 'client','restaurant', restaurantID]"> <app-card [isClient]="true" [isDetailResto]="true" [restaurant]="resto"></app-card></a>
+        <a class="route-link-client" [routerLink]="['/', 'client','restaurant', resto.id]"> <app-card [isClient]="true" [isDetailResto]="true" [restaurant]="resto"></app-card></a>
     </div>
 </div> 

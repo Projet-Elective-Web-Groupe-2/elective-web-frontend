@@ -4,5 +4,6 @@ export class Menu{
     description !: string;
     price !: string;
     id!:any;
+    _id!:any;
     drink!:boolean;
 }

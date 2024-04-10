@@ -39,14 +39,20 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authService.createAccount(this.signupForm.value).subscribe((response: HttpResponse<any>) => {
-      const responseBody: string = response.body;
-      this.toastr.success('Inscription réussi');
-      this.router.navigate([`/auth`], { relativeTo: this.route });
-    }, (error) => {
-      this.toastr.error("Erreur lors de l'inscription, Veuillez réessayer");
-      this.signupForm.reset()
-    });;
+    let values = this.signupForm.value;
+    if (values.password == values.repassword) {
+      this.authService.createAccount(values).subscribe((response: HttpResponse<any>) => {
+        const responseBody: string = response.body;
+        this.toastr.success('Inscription réussi');
+        this.router.navigate([`/auth`], { relativeTo: this.route });
+      }, (error) => {
+        this.toastr.error("Erreur lors de l'inscription, Veuillez réessayer");
+        this.signupForm.reset()
+      });;
+    }
+    else{
+      this.toastr.error("Votre mot de passe est incorrecte");
+    }
   }
 
   onOptionChange(newValue: string) {

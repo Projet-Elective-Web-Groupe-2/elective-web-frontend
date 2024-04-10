@@ -12,27 +12,18 @@ import { SessionStorageService } from 'src/app/core/services/session-storage.ser
 })
 export class HomepageClientComponent implements OnInit {
   restoList: RestaurantModel[] = []
-  restoTest = new RestaurantModel();
   menuTest = new Menu();
-  restaurantID: number = 21225;
 
   constructor(private sessionStorageService: SessionStorageService,private clientService: ClientService) { };
 
   ngOnInit(): void {
     let token = this.sessionStorageService.getItem('token');
-    this.clientService.getRestaurant(token).subscribe((response: HttpResponse<any>) => {
-      console.log(response)
+    this.clientService.getRestaurant(token).subscribe((response: RestaurantModel) => {
+      for(let i = 0;i<response.restaurants.length;i++){
+        console.log(response.restaurants[i])
+        let restaurantInformation = response.restaurants[i];
+        this.restoList.push(restaurantInformation);
+      }
     });
-
-    this.restoTest.img = "https://images.bfmtv.com/NUJHUYUkXAYVPZAR888_w9rjrNc=/0x0:1196x1192/1196x0/images/-458880.jpg";
-    this.restoTest.address = "2 rue du capitaine hadock St-Michel Chef Chef";
-    this.restoTest.name = "MacRonaid"
-
-   /* this.menuTest.img = "https://images.bfmtv.com/NUJHUYUkXAYVPZAR888_w9rjrNc=/0x0:1196x1192/1196x0/images/-458880.jpg";
-    this.menuTest.description = "2 rue du capitaine hadock St-Michel Chef Chef";
-    this.menuTest.name = "MacRonaid"
-    this.menuTest.price = "12,40€";*/
-
-    this.restoList.push(this.restoTest);
   }
 }
