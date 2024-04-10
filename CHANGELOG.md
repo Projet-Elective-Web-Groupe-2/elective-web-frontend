@@ -1,3 +1,15 @@
+## [1.20.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.19.0...v1.20.0) (2024-04-10)
+
+
+### Features
+
+* **technical:** link with back ([19ed7ac](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/19ed7ac61f9ab5e039fc1042980fa8300be199e9))
+
+
+### Bug Fixes
+
+* **^^:** ^^ ([07f9c96](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/07f9c9655fa71b4f093cdbe4f981a5a658b74046))
+
 ## [1.19.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.18.0...v1.19.0) (2024-04-10)
 
 
