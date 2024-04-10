@@ -31,5 +31,7 @@ export class HeaderComponent {
     }
   }
   
-
+  disconnect(){
+    this.router.navigate(['/auth']);
+  }
 }
