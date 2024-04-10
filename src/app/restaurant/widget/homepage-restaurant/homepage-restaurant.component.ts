@@ -6,6 +6,10 @@ import { MenuArticle } from 'src/app/core/models/menuArticle.model';
 import { RestaurantModel } from 'src/app/core/models/restaurant.model';
 import { RestaurantService } from 'src/app/core/services/restaurant.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
+import { NotificationsService } from 'src/app/core/services/notifications.service';
+import { interval } from 'rxjs';
+import { Toaster } from 'ngx-toast-notifications'; 
+
 
 @Component({
   selector: 'app-homepage-restaurant',
@@ -25,7 +29,10 @@ export class HomepageRestaurantComponent implements OnInit {
 
   constructor(private router: Router,
     private sessionStorageService: SessionStorageService,
-    private restaurantService: RestaurantService
+    private restaurantService: RestaurantService,
+    private notificationsService: NotificationsService, 
+    private toaster: Toaster
+
   ) { }
 
   ngOnInit(): void {
@@ -58,4 +65,24 @@ export class HomepageRestaurantComponent implements OnInit {
     this.sessionStorageService.setItem("price", menuSelected.price);
     this.router.navigate(['/restaurant/menu/' + menuSelected.id]);
   }
+  startFetchingOrderCount(): void {
+    interval(10000).subscribe(() => {
+      this.notificationsService.getOrderCount(this.token, this.userID)
+        .subscribe(
+          (response: any) => {
+            this.toaster.open({
+              text: `Nombre de commandes : ${response.orderCount}`,
+              duration: 5000,
+              type: 'success'
+            });
+          },
+          (error: any) => {
+            console.error('Erreur lors de la récupération du nombre de commandes : ', error);
+          }
+        );
+    });
+  }
+}
+
+
 }
