@@ -16,7 +16,7 @@ export class StatisticComponent {
 
   ngOnInit() {
     this.type = this.sessionStorageService.getItem('type');
-    if (this.type != 'restaurateur') {
+    if (this.type != 'restaurant') {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
     else {

@@ -21,6 +21,7 @@ export class AuthService {
             address: signupForm.address,
             restaurantName: signupForm.restaurantName,
             restaurantAddress: signupForm.restaurantAddress,
+            apiKey: signupForm.key,
         };
         return this.http.post(`${environment.urlAuth}${API.createAccount}`, body, { withCredentials: false, observe: 'response' });
     }

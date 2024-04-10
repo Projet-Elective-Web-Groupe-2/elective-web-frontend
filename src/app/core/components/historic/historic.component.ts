@@ -24,7 +24,7 @@ export class HistoricComponent {
 
     this.type = this.sessionStorageService.getItem('type');
     if ((this.type == 'client' && this.userType == 'client') ||
-      (this.type == 'restaurateur' && this.userType == 'restaurant') ||
+      (this.type == 'restaurant' && this.userType == 'restaurant') ||
       (this.type == 'delivery' && this.userType == 'delivery')) {
     }
     else {

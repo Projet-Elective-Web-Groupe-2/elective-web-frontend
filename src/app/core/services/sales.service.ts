@@ -10,9 +10,14 @@ import { environment } from '../../../environments/environment';
 export class SalesService {
     constructor(private http: HttpClient) { }
 
-    /*getInfoForSales(): Observable<any> {
-        const body = {};
-        return this.http.post(`${environment.baseUrl}${API.createAccount}`, body, { withCredentials: false, observe: 'response' });
-    }*/
+    getUsers(token: any): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.get(`${environment.urlUser}${API.getUsers}`, httpOptions);
+    }
 
 }

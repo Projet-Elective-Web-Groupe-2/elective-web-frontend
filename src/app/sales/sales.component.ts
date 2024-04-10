@@ -12,9 +12,9 @@ export class SalesComponent {
   type!:string|null;
 
   ngOnInit() {
-    // this.type = this.sessionStorageService.getItem('type');
-    // if(this.type != 'commercial'){
-    //   this.router.navigate([`/error-page`], { relativeTo: this.route });
-    // }
+    this.type = this.sessionStorageService.getItem('type');
+    if(this.type != 'sales'){
+      this.router.navigate([`/error-page`], { relativeTo: this.route });
+    }
   }
 }

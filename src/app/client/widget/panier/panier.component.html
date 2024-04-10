@@ -14,26 +14,26 @@
         </div>
         <div class="panier-recap">
             <div class="summary">
-                <p class="text-recap-title">Resumé de la commande</p>
+                <div class="text-recap-title">Resumé de la commande</div>
                 <div class="line-recap">
-                    <p class="text-recap-left">Frais de la commande</p>
-                    <p class="text-recap-right">$27.44</p>
+                    <div class="text-recap-left">Frais de la commande</div>
+                    <div class="text-recap-right">{{panierTest.price}}€</div>
                 </div>
                 <div class="line-recap">
-                    <p class="text-recap-left">Livraison</p>
-                    <p class="text-recap-right">$3.99</p>
+                    <div class="text-recap-left">Livraison</div>
+                    <div class="text-recap-right">{{deliveryFee}}€</div> <!--NEED TO CHANGE-->
                 </div>
                 <div class="line-recap">
-                    <p class="text-recap-left">Tax</p>
-                    <p class="text-recap-right">$2.00</p>
+                    <div class="text-recap-left">Tax</div>
+                    <div class="text-recap-right">{{tax}}€</div> <!--NEED TO CHANGE-->
                 </div>
                 <div class="line-recap">
-                    <p class="text-recap-left">Totale</p>
-                    <p class="text-recap-right">$33.43</p>
+                    <div class="text-recap-left">Totale</div>
+                    <div class="text-recap-right">{{totalPrice}}€</div>
                 </div>
                 <div class="recap-button">
                     <button class="button-recap" onclick="location.href = '/client/payment';">
-                      <p class="text-recap-button">Passer au paiement</p>
+                      <div class="text-recap-button">Passer au paiement</div>
                       <img src="" />
                     </button>
                 </div>
