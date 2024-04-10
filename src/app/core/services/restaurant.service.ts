@@ -21,6 +21,16 @@ export class RestaurantService {
         return this.http.get(`${environment.urlRestaurant}${API.getRestaurantInformation}`+ '?id=' + userID, httpOptions );
     }
 
+    getOrdersNumbers(token: any,restaurantID:any,daysBack:any): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.get(`${environment.urlRestaurant}${API.getOrdersSince}`+ '?restaurantID=' + restaurantID+ '&daysBack=' + daysBack, httpOptions );
+    }
+
     createArticle(token: any,userID:any,formValue:any): Observable<any> {
         const body = {
             name:formValue.name,
