@@ -15,6 +15,7 @@ export const API = Object.freeze({
     getUsers: '/user/getAll',
 
     getOrder: '/order/getOrder',
+    getAllOrders: '/order/getAllOrders',
     getRestaurant:'/restaurant/getAll',
     getRestaurantDetail:'/retaurant/find',
 
