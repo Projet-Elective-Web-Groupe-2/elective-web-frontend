@@ -1,3 +1,11 @@
+## [1.17.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.17.0...v1.17.1) (2024-04-10)
+
+
+### Bug Fixes
+
+* **signup:** add image field for restaurant creation ([693751c](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/693751ce38fc8a1d492559dcb03a6b2a42fc2dc8))
+* **signup:** oupsi ^^ ([c2b9073](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/c2b90737d101b6abbe3d8c55d3b665adc66e8941))
+
 ## [1.17.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.16.0...v1.17.0) (2024-04-10)
 
 
