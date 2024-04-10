@@ -1,3 +1,10 @@
+## [1.22.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.21.0...v1.22.0) (2024-04-10)
+
+
+### Features
+
+* added dashboard to sales ([1ff08a8](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/1ff08a832d34054327c9eb3d92d0ce46fa486f67))
+
 ## [1.21.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.20.1...v1.21.0) (2024-04-10)
 
 
