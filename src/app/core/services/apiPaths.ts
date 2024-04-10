@@ -5,6 +5,8 @@ export const API = Object.freeze({
     createAccount: '/auth/register',
     login: '/auth/login',
 
+    logs:'/auth/logs',
+
     editUser: '/user/edit',
     deleteUser: '/user/delete',
     activateUser: '/user/unsuspend',
