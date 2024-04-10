@@ -14,7 +14,7 @@ import { SessionStorageService } from '../core/services/session-storage.service'
 })
 export class SignupComponent implements OnInit {
   selectedImage: string | ArrayBuffer | null | undefined;
-  
+
   constructor(private authService: AuthService, private toastr: ToastrService, private router: Router, private route: ActivatedRoute, private sessionStorageService: SessionStorageService) { }
 
   selectedValue: string = '';
@@ -30,7 +30,8 @@ export class SignupComponent implements OnInit {
     repassword: new FormControl(""),
     restaurantName: new FormControl(""),
     restaurantAddress: new FormControl(""),
-    key: new FormControl("")
+    key: new FormControl(""),
+    photo: new FormControl(""),
   });
 
   ngOnInit() {
