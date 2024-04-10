@@ -1,3 +1,10 @@
+## [1.18.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.17.1...v1.18.0) (2024-04-10)
+
+
+### Features
+
+* **addmenu:** "fix" multiselect dropdown article ([08450d0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/08450d003973b86c58e2f765ea3e22a596406881))
+
 ## [1.17.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.17.0...v1.17.1) (2024-04-10)
 
 
