@@ -1,3 +1,10 @@
+## [1.24.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.23.0...v1.24.0) (2024-04-11)
+
+
+### Features
+
+* **link:** add linik to back for component ([65769fe](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/65769fe3b53e789d3a028f5fcf3a729ce13416b9))
+
 ## [1.23.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.22.0...v1.23.0) (2024-04-11)
 
 
