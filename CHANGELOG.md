@@ -1,3 +1,10 @@
+## [1.30.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.29.0...v1.30.0) (2024-04-11)
+
+
+### Features
+
+* Added github links to download components ([7e50da1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/7e50da1012701ec56057b061aa652390acb7c697))
+
 ## [1.29.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.28.0...v1.29.0) (2024-04-11)
 
 
