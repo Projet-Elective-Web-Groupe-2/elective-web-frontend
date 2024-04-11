@@ -12,23 +12,26 @@ import { SessionStorageService } from 'src/app/core/services/session-storage.ser
 })
 export class HomepageDeliveryComponent {
   deliveryTest = new Delivery();
-  deliveries:Delivery[] = [];
+  deliveries: Delivery[] = [];
 
-  constructor(private toastr: ToastrService,private sessionStorageService: SessionStorageService,private deliveryService: DeliveryService) { }
+  constructor(private toastr: ToastrService, private sessionStorageService: SessionStorageService, private deliveryService: DeliveryService) { }
 
 
-  ngOnInit(){
+  ngOnInit() {
     let token = this.sessionStorageService.getItem('token');
-    this.deliveryService.getOrdersList(token).subscribe((response: HttpResponse<any>) => {
-      console.log(response)
-    }, (error) => {
-      this.toastr.error("Erreur lors de la récupération des commandes : " + error);
+    this.deliveryService.getOrdersList(token).subscribe({
+      next: (response: HttpResponse<any>) => {
+        console.log(response)
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la récupération des commandes ");
+      }
     });
 
     this.deliveries.push(this.deliveryTest);
-    this.deliveryTest.desc="un composant super cool :]";
-    this.deliveryTest.name="Composant Cool";
-    this.deliveryTest.link="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    this.deliveryTest.isAccepted=!true;
+    this.deliveryTest.desc = "un composant super cool :]";
+    this.deliveryTest.name = "Composant Cool";
+    this.deliveryTest.link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    this.deliveryTest.isAccepted = !true;
   }
 }

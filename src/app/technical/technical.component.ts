@@ -14,10 +14,10 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class TechnicalComponent {
 
-  logs:string[]=[];
-  token!:any;
-  log!:any;
-  constructor(private toastr:ToastrService,private router: Router,private logservice: LogService,private sessionStorage : SessionStorageService,private composantService: ComponentService) { }
+  logs: string[] = [];
+  token!: any;
+  log!: any;
+  constructor(private toastr: ToastrService, private router: Router, private logservice: LogService, private sessionStorage: SessionStorageService, private composantService: ComponentService) { }
 
   ngOnInit() {
     this.token = this.sessionStorage.getItem("token");
@@ -26,13 +26,16 @@ export class TechnicalComponent {
   }
 
   getLog() {
-    this.log = this.logservice.getLog(this.token).subscribe((response: LogModel) => {
-      this.logs = response.logs;
-    }, (error) => {
-      this.toastr.error("Erreur lors de la récupération des logs : " + error);
+    this.log = this.logservice.getLog(this.token).subscribe({
+      next: (response: LogModel) => {
+        this.logs = response.logs;
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la récupération des logs ");
+      }
     });
     this.log = this.composantService.getLogComponent(this.token).subscribe((response: LogModel) => {
-      this.logs= response.logs;
+      this.logs = response.logs;
     });
     //console.log(this.log);
   }

@@ -22,8 +22,8 @@ export class StatisticComponent {
     private toastr: ToastrService
   ) { }
   type!: string | null;
-  token!:any;
-  restaurantID!:any;
+  token!: any;
+  restaurantID!: any;
 
   ngOnInit() {
     this.restaurantID = this.sessionStorageService.getItem('restaurantID');
@@ -63,14 +63,17 @@ export class StatisticComponent {
   }
 
   fetchData() {
-    this.restaurantService.getOrdersNumbers(this.token,this.restaurantID,this.dateValueSelected).subscribe((response: HttpResponse<any>) => {
-      console.log(response);
-      //this.orderTable = datas;
-      //this.labelsChart.push(...datas.map((data) => data.dateCom));
-    }, (error) => {
-      this.toastr.error("Erreur lors de la recupération des commandes : " + error);
+    this.restaurantService.getOrdersNumbers(this.token, this.restaurantID, this.dateValueSelected).subscribe({
+      next: (response: HttpResponse<any>) => {
+        console.log(response);
+        //this.orderTable = datas;
+        //this.labelsChart.push(...datas.map((data) => data.dateCom));
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la recupération des commandes ");
+      }
     });
-    
+
     this.orderTable = [11, 21, 58, 14, 41, 10, 2];
     if (this.dateValueSelected == 7) {
       this.labelsChart = [

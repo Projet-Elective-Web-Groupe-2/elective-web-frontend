@@ -21,7 +21,7 @@ export class RestaurantClientComponent {
   type!: string | null;
   idRestaurant!: string;
 
-  constructor(private toastr: ToastrService,private clientService: ClientService, private sessionStorageService: SessionStorageService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private toastr: ToastrService, private clientService: ClientService, private sessionStorageService: SessionStorageService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.type = this.sessionStorageService.getItem('type');
@@ -35,10 +35,13 @@ export class RestaurantClientComponent {
 
   addMenu() {
     let token = this.sessionStorageService.getItem('token');
-    this.clientService.getRestaurantDetail(this.idRestaurant, token).subscribe((response: HttpResponse<any>) => {
-      console.log(response)
-    }, (error) => {
-      this.toastr.error("Erreur lors de la récupération du détail des restaurants : " + error);
+    this.clientService.getRestaurantDetail(this.idRestaurant, token).subscribe({
+      next: (response: HttpResponse<any>) => {
+        console.log(response)
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la récupération du détail des restaurants ");
+      }
     });
     this.restaurant = "Mcgronald’s";
     this.address = "243 rue de la Republique , 95239";

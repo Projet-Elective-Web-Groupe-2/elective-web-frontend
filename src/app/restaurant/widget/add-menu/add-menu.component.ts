@@ -35,7 +35,7 @@ export class AddMenuComponent implements OnInit {
     drink: new FormControl(false),
     photo: new FormControl(''),
   });
-  
+
   ngOnInit(): void {
     this.userID = this.sessionStorageService.getItem('restaurantID');
     this.token = this.sessionStorageService.getItem('token');
@@ -57,7 +57,7 @@ export class AddMenuComponent implements OnInit {
   }
 
   getIdFromArticle() {
-    let idList:string[] = [];
+    let idList: string[] = [];
     for (let i = 0; i < this.articleList.length; i++) {
       if (this.articleList.includes(this.menusForm.value.compo[i])) {
         const index = this.articleList.indexOf(this.menusForm.value.compo[i]);
@@ -71,18 +71,21 @@ export class AddMenuComponent implements OnInit {
 
   submitMenu() {
     let idList = this.getIdFromArticle();
-    this.restaurantService.createMenu(this.token, this.userID, this.menusForm.value,idList).subscribe((response: MessageModel) => {
-      if (response.message == "Menu added successfully") {
-        this.toastr.success("L'article a été ajouté avec succès");
-        setTimeout(() => {
-          this.router.navigate(['/restaurant']);
-        }, 2000);
+    this.restaurantService.createMenu(this.token, this.userID, this.menusForm.value, idList).subscribe({
+      next: (response: MessageModel) => {
+        if (response.message == "Menu added successfully") {
+          this.toastr.success("L'article a été ajouté avec succès");
+          setTimeout(() => {
+            this.router.navigate(['/restaurant']);
+          }, 2000);
+        }
+        else {
+          this.toastr.error("Erreur lors de la création de l'article");
+        }
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la création du menu ");
       }
-      else {
-        this.toastr.error("Erreur lors de la création de l'article");
-      }
-    }, (error) => {
-      this.toastr.error("Erreur lors de la création du menu : " + error);
     });
   }
 }

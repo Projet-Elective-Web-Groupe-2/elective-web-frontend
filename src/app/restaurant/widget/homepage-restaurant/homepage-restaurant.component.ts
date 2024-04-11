@@ -33,17 +33,20 @@ export class HomepageRestaurantComponent implements OnInit {
   ngOnInit(): void {
     this.userID = this.sessionStorageService.getItem('userID');
     this.token = this.sessionStorageService.getItem('token');
-    this.restaurantService.getRestaurantInfo(this.token, this.userID).subscribe((response: RestaurantModel) => {
-      let values = response.restaurant;
-      console.log(values);
-      this.restaurant = values.name;
-      this.address = values.address;
-      this.menuList = values.menus;
-      this.articleList = values.products;
-      this.sessionStorageService.setItem('articleList', JSON.stringify(this.articleList));
-      this.sessionStorageService.setItem('restaurantID', values.id);
-    }, (error) => {
-      this.toastr.error("Erreur lors de la recupération des informations du restaurant : " + error);
+    this.restaurantService.getRestaurantInfo(this.token, this.userID).subscribe({
+      next: (response: RestaurantModel) => {
+        let values = response.restaurant;
+        console.log(values);
+        this.restaurant = values.name;
+        this.address = values.address;
+        this.menuList = values.menus;
+        this.articleList = values.products;
+        this.sessionStorageService.setItem('articleList', JSON.stringify(this.articleList));
+        this.sessionStorageService.setItem('restaurantID', values.id);
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la recupération des informations du restaurant ");
+      }
     });
   }
 

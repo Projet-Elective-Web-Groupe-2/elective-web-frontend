@@ -11,11 +11,11 @@ import { SessionStorageService } from 'src/app/core/services/session-storage.ser
   styleUrls: ['./homepage-sales.component.css']
 })
 export class HomepageSalesComponent {
-  
+
   //  TABLE variables 
   valuesTables: salesValueModel[] = [];
 
-  valuesHeader: string[] = ['ID du Client','Prix total','Status'];
+  valuesHeader: string[] = ['ID du Client', 'Prix total', 'Status'];
 
   arrayModelLength!: number;
   countTotalRow!: number;
@@ -26,16 +26,20 @@ export class HomepageSalesComponent {
   startLineDisplay: number = 0;
   endLineDisplay: number = 20;
 
-  constructor(private toastr: ToastrService,private sessionStorageService: SessionStorageService, private salesService: SalesService) { }
+  constructor(private toastr: ToastrService, private sessionStorageService: SessionStorageService, private salesService: SalesService) { }
 
   ngOnInit(): void {
     let token = this.sessionStorageService.getItem('token');
-    this.salesService.getAllOrders(token).subscribe((response: any) => {
-      if (response && response.orders) {
-        this.valuesTables = response.orders;
+    this.salesService.getAllOrders(token).subscribe({
+      next: (response: any) => {
+
+        if (response && response.orders) {
+          this.valuesTables = response.orders;
+        }
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la récupération des commandes ");
       }
-    }, (error) => {
-      this.toastr.error("Erreur lors de la récupération des commandes : " + error);
     });
   }
 }

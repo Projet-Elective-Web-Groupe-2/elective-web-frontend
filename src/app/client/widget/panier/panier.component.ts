@@ -1,9 +1,11 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { CardPanierComponent } from 'src/app/core/components/card-panier/card-panier.component';
 import { Panier } from 'src/app/core/models/panier.model';
 import { ClientService } from 'src/app/core/services/client.service';
+import { OrderService } from 'src/app/core/services/order.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 
 @Component({
@@ -16,26 +18,48 @@ export class PanierComponent {
   totalPrice!: number;
   tax!: number;
   deliveryFee!: number;
-  type!:string|null;
+  type!: string | null;
+  token!: any;
+  panier!: any;
 
-  constructor(private clientService: ClientService,private sessionStorageService: SessionStorageService,private router: Router, private route: ActivatedRoute) { }
+  constructor(private toastr: ToastrService,
+    private clientService: ClientService,
+    private orderService: OrderService,
+    private sessionStorageService: SessionStorageService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
-  ngOnInit(){
-    let token = this.sessionStorageService.getItem('token');
+  ngOnInit() {
+    this.token = this.sessionStorageService.getItem('token');
     this.type = this.sessionStorageService.getItem('type');
-    if(this.type != 'client'){
+    if (this.type != 'client') {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
 
-    this.clientService.getPanier(token).subscribe((response: HttpResponse<any>) => {
-      console.log(response)
+    this.clientService.getPanier(this.token).subscribe({
+      next: (response: HttpResponse<any>) => {
+        console.log(response)
+      }
     });
 
     this.panierTest.haveDrink = true;
-    this.panierTest.name="Happy Meal";
-    this.panierTest.price=66;
-    this.tax = this.panierTest.price/15;
-    this.deliveryFee = this.panierTest.price/10;
+    this.panierTest.name = "Happy Meal";
+    this.panierTest.price = 66;
+    this.tax = this.panierTest.price / 15;
+    this.deliveryFee = this.panierTest.price / 10;
     this.totalPrice = this.panierTest.price + this.tax + this.deliveryFee;
+  }
+
+  createOrder() {    
+    this.orderService.createOrder(this.token,this.panier).subscribe({
+      next: (response: HttpResponse<any>) => {
+        console.log(response)
+        this.router.navigate(['/client/payment']);
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la connection. Veuillez réessayer ");
+      }
+    });
   }
 }
