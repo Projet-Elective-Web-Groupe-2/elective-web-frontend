@@ -78,7 +78,7 @@ export class HomepageRestaurantComponent implements OnInit {
             if(this.oldValue<response.orderCount){
               
               this.sessionStorageService.setItem("orderCount", response.orderCount );
-              this.toastr.show(
+              this.toastr.success(
                 `Vous avec : ${response.orderCount} commandes en attente`,
   
                 'Commande reçu !',

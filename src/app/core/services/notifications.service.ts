@@ -20,6 +20,7 @@ export class NotificationsService {
 
         const params = new HttpParams().set('restaurantID', restaurantID);
 
-        return this.http.get('http://localhost:3002/restaurant/getOrderCount', { params, ...httpOptions }); // a voir pourquoi ca marche qu'avec cet URL
+      return this.http.get(`${environment.urlRestaurant}${API.getOrderCount}`, { params, ...httpOptions });
+
     }
 }
