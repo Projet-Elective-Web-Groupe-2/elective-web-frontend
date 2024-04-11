@@ -8,8 +8,7 @@ import { RestaurantService } from 'src/app/core/services/restaurant.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 import { NotificationsService } from 'src/app/core/services/notifications.service';
 import { interval } from 'rxjs';
-import { Toaster } from 'ngx-toast-notifications'; 
-
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-homepage-restaurant',
@@ -25,13 +24,15 @@ export class HomepageRestaurantComponent implements OnInit {
   menuTest = new Menu();
   articleList: Menu[] = [];
   articleListForMenu: MenuArticle[] = [];
+  restaurantID='';
+  oldValue=0;
 
 
   constructor(private router: Router,
     private sessionStorageService: SessionStorageService,
     private restaurantService: RestaurantService,
     private notificationsService: NotificationsService, 
-    private toaster: Toaster
+    private toastr: ToastrService,
 
   ) { }
 
@@ -46,10 +47,10 @@ export class HomepageRestaurantComponent implements OnInit {
       this.menuList = values.menus;
       this.articleList = values.products;
       this.sessionStorageService.setItem('articleList', JSON.stringify(this.articleList));
-      this.sessionStorageService.setItem('restaurantID', values.id);
+      this.sessionStorageService.setItem('restaurantID', values.id); // restaurantID 
+      this.restaurantID=values.id;
     })
-  }
-
+    this.startFetchingOrderCount()  }
   onClickArticle(articleSelected: Menu): void {
     this.sessionStorageService.setItem("description", articleSelected.description);
     this.sessionStorageService.setItem("img", articleSelected.img);
@@ -64,17 +65,28 @@ export class HomepageRestaurantComponent implements OnInit {
     this.sessionStorageService.setItem("name", menuSelected.name);
     this.sessionStorageService.setItem("price", menuSelected.price);
     this.router.navigate(['/restaurant/menu/' + menuSelected.id]);
+
   }
   startFetchingOrderCount(): void {
+    console.log('test reponse'),
     interval(10000).subscribe(() => {
-      this.notificationsService.getOrderCount(this.token, this.userID)
+      this.notificationsService.getOrderCount(this.token, this.userID, this.restaurantID)
         .subscribe(
           (response: any) => {
-            this.toaster.open({
-              text: `Nombre de commandes : ${response.orderCount}`,
-              duration: 5000,
-              type: 'success'
-            });
+            console.log('test reponse',response),
+            this.oldValue = this.sessionStorageService.getItem("orderCount");
+            if(this.oldValue<response.orderCount){
+              
+              this.sessionStorageService.setItem("orderCount", response.orderCount );
+              this.toastr.show(
+                `Vous avec : ${response.orderCount} commandes en attente`,
+  
+                'Commande reçu !',
+                { timeOut: 5000, progressBar: true }
+              );
+            };
+            
+        
           },
           (error: any) => {
             console.error('Erreur lors de la récupération du nombre de commandes : ', error);

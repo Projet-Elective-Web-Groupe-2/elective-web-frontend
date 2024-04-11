@@ -10,7 +10,7 @@ import { environment } from '../../../environments/environment';
 export class NotificationsService {
     constructor(private http: HttpClient) { }
 
-    getOrderCount(token: any, userID: any): Observable<any> {
+    getOrderCount(token: any, userID: any,restaurantID:string): Observable<any> {
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
@@ -18,8 +18,8 @@ export class NotificationsService {
             })
         };
 
-        const params = new HttpParams().set('restaurantID', userID);
+        const params = new HttpParams().set('restaurantID', restaurantID);
 
-        return this.http.get(`${environment.urlRestaurant}${API.getOrderCount}`, { params, ...httpOptions });
+        return this.http.get('http://localhost:3002/restaurant/getOrderCount', { params, ...httpOptions }); // a voir pourquoi ca marche qu'avec cet URL
     }
 }
