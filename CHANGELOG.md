@@ -1,3 +1,11 @@
+## [1.25.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.24.0...v1.25.0) (2024-04-11)
+
+
+### Features
+
+* **link:** DE LA MERDE ATTENTION MAIS JE VEUX PUSH CAR JE SUIS SEUL ICI ([2842523](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/2842523508c5a26b0129b74288a1026538b65005))
+* **panier:** j'ai fait des trucs un peu malsin ([552496e](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/552496eb44079cb7a5a7a4d9b1aadb1855192f6b))
+
 ## [1.24.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.23.0...v1.24.0) (2024-04-11)
 
 
