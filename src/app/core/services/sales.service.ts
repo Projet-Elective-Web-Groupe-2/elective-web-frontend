@@ -18,6 +18,16 @@ export class SalesService {
             })
         };
         return this.http.get(`${environment.urlUser}${API.getUsers}`, httpOptions);
+    };
+
+    getAllOrders(token: any): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };        
+        return this.http.get(`${environment.urlOrder}${API.getAllOrders}`, httpOptions);
     }
 
 }
