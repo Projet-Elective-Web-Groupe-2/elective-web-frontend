@@ -26,7 +26,6 @@ export class RestaurantClientComponent  implements OnInit{
     private sessionStorageService: SessionStorageService,
     private router: Router,
     private route: ActivatedRoute,
-    private restaurantService: RestaurantService,
   ) { }
 
   ngOnInit(): void {

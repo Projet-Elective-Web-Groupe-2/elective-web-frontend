@@ -22,7 +22,6 @@ export class HomepageClientComponent implements OnInit {
     this.clientService.getRestaurant(token).subscribe({
       next: (response: RestaurantModel) => {
         for (let i = 0; i < response.restaurants.length; i++) {
-          console.log(response.restaurants[i])
           let restaurantInformation = response.restaurants[i];
           this.restoList.push(restaurantInformation);
         }

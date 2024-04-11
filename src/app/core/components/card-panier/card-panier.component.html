@@ -8,7 +8,7 @@
         <div class="text-2">{{panier.price}}€</div>
         <div *ngIf="panier.haveDrink">
             <select >
-                <option *ngFor="let drink of drinks" value="{{drink}}">{{drink}}</option>
+                <option  [formControl]="selectedValue" *ngFor="let drink of drinks" value="{{drink}}">{{drink}}</option>
             </select>
         </div>
     </div>

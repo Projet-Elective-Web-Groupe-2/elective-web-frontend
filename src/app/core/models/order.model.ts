@@ -1,5 +1,5 @@
 export class OrderModel{
     idProduit!:string;
     isMenu!:string;
-    drink!:string;
+    drink!:string|undefined;
 }
