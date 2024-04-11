@@ -1,3 +1,10 @@
+## [1.27.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.26.0...v1.27.0) (2024-04-11)
+
+
+### Features
+
+* getOrders ([fafb43f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/fafb43faf6c3a24dc153ca42cdb518a38b045726))
+
 ## [1.26.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.25.0...v1.26.0) (2024-04-11)
 
 
