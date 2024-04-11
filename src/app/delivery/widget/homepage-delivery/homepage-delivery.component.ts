@@ -19,7 +19,7 @@ export class HomepageDeliveryComponent {
 
   ngOnInit() {
     let token = this.sessionStorageService.getItem('token');
-    this.deliveryService.getOrdersList(token).subscribe({
+    this.deliveryService.getDeliveryWithFilter(token).subscribe({
       next: (response: HttpResponse<any>) => {
         console.log(response)
       },
@@ -33,5 +33,6 @@ export class HomepageDeliveryComponent {
     this.deliveryTest.name = "Composant Cool";
     this.deliveryTest.link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     this.deliveryTest.isAccepted = !true;
+    this.deliveryTest.id=45
   }
 }
