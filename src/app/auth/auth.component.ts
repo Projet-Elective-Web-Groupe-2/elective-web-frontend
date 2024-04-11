@@ -41,7 +41,7 @@ export class AuthComponent implements OnInit {
       }
       this.router.navigate([`/${route}`], { relativeTo: this.route });
     }, (error) => {
-      this.toastr.error("Erreur lors de la connection. Veuillez réessayer");
+      this.toastr.error("Erreur lors de la connection. Veuillez réessayer : " + error);
       this.loginForm.reset();
     });;
   }

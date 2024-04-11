@@ -5,6 +5,7 @@ import { Chart, registerables } from 'node_modules/chart.js';
 import { forkJoin, of, tap } from 'rxjs';
 import { RestaurantService } from 'src/app/core/services/restaurant.service';
 import { HttpResponse } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 Chart.register(...registerables);
 
 @Component({
@@ -18,6 +19,7 @@ export class StatisticComponent {
     private router: Router,
     private route: ActivatedRoute,
     private restaurantService: RestaurantService,
+    private toastr: ToastrService
   ) { }
   type!: string | null;
   token!:any;
@@ -65,7 +67,9 @@ export class StatisticComponent {
       console.log(response);
       //this.orderTable = datas;
       //this.labelsChart.push(...datas.map((data) => data.dateCom));
-    })
+    }, (error) => {
+      this.toastr.error("Erreur lors de la recupération des commandes : " + error);
+    });
     
     this.orderTable = [11, 21, 58, 14, 41, 10, 2];
     if (this.dateValueSelected == 7) {
