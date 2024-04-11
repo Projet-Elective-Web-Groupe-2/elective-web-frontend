@@ -16,12 +16,18 @@ export const API = Object.freeze({
     getUserInfo: '/user/get',
     getUsers: '/user/getAll',
 
+    createOrder: '/order/create',
     getOrder: '/order/getOrder',
     getOrders: '/order/getOrders',
     getAllOrders: '/order/getAllOrders',
 
     createMenu:'/menu/create',
     createArticle:'/product/add',
+    getMenu:'/menu/find',
+    getArticle:'/product/find',
+    getDrinks:'/product/getDrinks',
+
+
 
     getOrdersSince:'/restaurant/getOrdersSince',
     getRestaurantInformation: '/restaurant/findByOwner',

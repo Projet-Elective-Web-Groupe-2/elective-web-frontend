@@ -11,8 +11,9 @@ export class OrderService {
     constructor(private http: HttpClient) { }
 
     createOrder(token: any, panier: any): Observable<any> {
+        console.log(panier);
         const body = {
-            panier,
+            items:panier,
         }
         const httpOptions = {
             headers: new HttpHeaders({
@@ -20,7 +21,7 @@ export class OrderService {
                 'Authorization': `Bearer ${token}`
             })
         };
-        return this.http.post(`${environment.urlRestaurant}${API.getRestaurant}`, body, httpOptions);
+        return this.http.post(`${environment.urlOrder}${API.createOrder}`, body, httpOptions);
     }
 
 

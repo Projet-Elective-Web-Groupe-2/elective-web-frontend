@@ -2,6 +2,7 @@ import { HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { OrderModel } from 'src/app/core/models/order.model';
 import { PanierModel } from 'src/app/core/models/panier-create.model';
 import { Panier } from 'src/app/core/models/panier.model';
 import { ClientService } from 'src/app/core/services/client.service';
@@ -21,7 +22,6 @@ export class PanierComponent {
   deliveryFee!: number;
   type!: string | null;
   token!: any;
-  panier!: any;
   paniers!:PanierModel[];
 
   constructor(private toastr: ToastrService,
@@ -40,12 +40,6 @@ export class PanierComponent {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
 
-    this.clientService.getPanier(this.token).subscribe({
-      next: (response: HttpResponse<any>) => {
-        console.log(response)
-      }
-    });
-
     this.panierTest.haveDrink = true;
     this.panierTest.name = "Happy Meal";
     this.panierTest.price = 66;
@@ -55,10 +49,25 @@ export class PanierComponent {
 
 
     this.paniers=this.panierService.getPanier();
+    console.log(this.paniers);
+  }
+
+  getDrink(value: string){
+    console.log(value);
   }
 
   createOrder() {    
-    this.orderService.createOrder(this.token,this.panier).subscribe({
+    let order:OrderModel[] = [];
+    for(let i = 0;i<this.paniers.length;i++){
+      this.paniers[i].drink = 'Coca-Cola';
+      const valueOrder:OrderModel = {
+        idProduit:this.paniers[i].id,
+        isMenu:this.paniers[i].isMenu,
+        drink:this.paniers[i].drink
+      }
+      order.push(valueOrder);
+    }
+    this.orderService.createOrder(this.token,order).subscribe({
       next: (response: HttpResponse<any>) => {
         console.log(response)
         this.router.navigate(['/client/payment']);
