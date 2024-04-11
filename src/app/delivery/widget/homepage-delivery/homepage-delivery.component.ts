@@ -22,6 +22,7 @@ export class HomepageDeliveryComponent {
     this.deliveryService.getDeliveryWithFilter(token).subscribe({
       next: (response: HttpResponse<any>) => {
         console.log(response)
+        //réponse
       },
       error: () => {
         this.toastr.error("Erreur lors de la récupération des commandes ");
