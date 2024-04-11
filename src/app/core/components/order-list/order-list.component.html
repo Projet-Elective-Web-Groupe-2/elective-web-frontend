@@ -8,7 +8,9 @@
     </div>
     <div class="divider"></div>
 
-    <!-- <div *ngFor="let histo of historics" >
-        <app-card-command [historic]="histo"></app-card-command>
-    </div> -->
+    <div *ngFor="let order of OrderValuesList">
+        <app-card-command [OrderValues]="order"></app-card-command>
+    </div>
+
+
 </div>

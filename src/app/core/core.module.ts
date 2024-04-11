@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { CardCommandComponent } from './components/card-command/card-command.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
       CardHistoricComponent,
       ModalComponent,
       ErrorPageComponent,
+      CardCommandComponent,
     ],
   imports: [
       RouterModule,
