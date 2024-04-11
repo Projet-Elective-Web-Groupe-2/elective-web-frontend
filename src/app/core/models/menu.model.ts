@@ -7,4 +7,5 @@ export class Menu{
     id!:any;
     _id!:any;
     drink!:boolean;
+    isMenu!:boolean;
 }

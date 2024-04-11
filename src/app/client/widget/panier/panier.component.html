@@ -8,9 +8,14 @@
     </div>
     <div class="divider"></div>
     <div class="panier-body">
+        <!-- <div class="panier-article">
+            <app-card-panier [panier]="panierTest"></app-card-panier>
+            <app-card-panier [panier]="panierTest"></app-card-panier>
+        </div> -->
         <div class="panier-article">
-            <app-card-panier [panier]="panierTest"></app-card-panier>
-            <app-card-panier [panier]="panierTest"></app-card-panier>
+            <div *ngFor="let panier of paniers" >
+                <app-card-panier [panier]="panier"></app-card-panier>
+            </div>
         </div>
         <div class="panier-recap">
             <div class="summary">

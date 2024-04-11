@@ -2,8 +2,10 @@ import { HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CardPanierComponent } from 'src/app/core/components/card-panier/card-panier.component';
+import { PanierModel } from 'src/app/core/models/panier-create.model';
 import { Panier } from 'src/app/core/models/panier.model';
 import { ClientService } from 'src/app/core/services/client.service';
+import { PanierService } from 'src/app/core/services/panier.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 
 @Component({
@@ -18,7 +20,8 @@ export class PanierComponent {
   deliveryFee!: number;
   type!:string|null;
 
-  constructor(private clientService: ClientService,private sessionStorageService: SessionStorageService,private router: Router, private route: ActivatedRoute) { }
+  paniers!:PanierModel[];
+  constructor(private panierService: PanierService,private clientService: ClientService,private sessionStorageService: SessionStorageService,private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(){
     let token = this.sessionStorageService.getItem('token');
@@ -37,5 +40,8 @@ export class PanierComponent {
     this.tax = this.panierTest.price/15;
     this.deliveryFee = this.panierTest.price/10;
     this.totalPrice = this.panierTest.price + this.tax + this.deliveryFee;
+
+
+    this.paniers=this.panierService.getPanier();
   }
 }
