@@ -25,7 +25,7 @@ export class CardPanierComponent {
     private toastr: ToastrService,
   ) {
     this.selectedValue.valueChanges.subscribe(value => {
-      this.selectedValueChanged.emit(value);
+     // this.selectedValueChanged.emit(value);
     });
   }
 

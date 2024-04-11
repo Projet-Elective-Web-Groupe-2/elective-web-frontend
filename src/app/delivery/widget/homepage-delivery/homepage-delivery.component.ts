@@ -21,19 +21,11 @@ export class HomepageDeliveryComponent {
     let token = this.sessionStorageService.getItem('token');
     this.deliveryService.getDeliveryWithFilter(token).subscribe({
       next: (response: HttpResponse<any>) => {
-        console.log(response)
-        //réponse
+        console.log(response);
       },
       error: () => {
         this.toastr.error("Erreur lors de la récupération des commandes ");
       }
     });
-
-    this.deliveries.push(this.deliveryTest);
-    this.deliveryTest.desc = "un composant super cool :]";
-    this.deliveryTest.name = "Composant Cool";
-    this.deliveryTest.link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    this.deliveryTest.isAccepted = !true;
-    this.deliveryTest.id=45
   }
 }
