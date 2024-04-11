@@ -20,7 +20,7 @@ export class OrderListComponent {
     });
     if ((this.type == 'client' && this.userType == 'client') || (this.type == 'restaurant' && this.userType == 'restaurant')) {}
     else {
-      this.router.navigate([`/error-page`], { relativeTo: this.route });
+      // this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
 
 

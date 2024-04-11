@@ -1,2 +1,14 @@
-<app-header [type]="userType"></app-header>
-<div>order-list works!</div>
+<app-header [type]="'restaurant'"></app-header>
+<div class="order-list">
+    <div class="div-title">
+        <label class="text-title">
+            Liste des commandes
+        </label>
+
+    </div>
+    <div class="divider"></div>
+
+    <!-- <div *ngFor="let histo of historics" >
+        <app-card-command [historic]="histo"></app-card-command>
+    </div> -->
+</div>
