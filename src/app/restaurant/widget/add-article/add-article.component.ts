@@ -66,6 +66,8 @@ export class AddArticleComponent {
       else{
         this.toastr.error("Erreur lors de la création de l'article");
       }
-     })
+    }, (error) => {
+      this.toastr.error("Erreur lors de la création de l'article : " + error);
+    });
   }
 }

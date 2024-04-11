@@ -2,15 +2,17 @@
     <div class="card--client">
         <img src="{{menu.img}}" class="image-card"/>
         <div class="text-2">{{menu.name}}</div>
-        <div class="text-3">{{menu.description}}</div>
+        <div class="text-3">{{menu.description}}{{isMenu}}</div>
         <div *ngIf="isClient">
             <div class="box">
-                <h1 class="box-price">{{menu.price}}</h1>
+                <h1 *ngIf="isMenu" class="box-price">{{menu.totalPrice}}€</h1>
+                <h1 *ngIf="!isMenu" class="box-price">{{menu.price}}€</h1>
                 <button class="add-panier" >Ajouter au panier</button>
             </div>
         </div>
         <div *ngIf="!isClient" class="forRestaurant">
-            <div class="price">{{menu.price}}</div>
+            <h1 *ngIf="isMenu" class="box-price">{{menu.totalPrice}}€</h1>
+            <h1 *ngIf="!isMenu" class="box-price">{{menu.price}}€</h1>
             <div class="edit">EDIT</div>
         </div>
 

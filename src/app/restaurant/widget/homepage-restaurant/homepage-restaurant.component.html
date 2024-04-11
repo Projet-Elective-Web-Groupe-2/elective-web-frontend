@@ -20,7 +20,7 @@
     <div class="content">
         <div *ngFor="let menu of menuList">
             <div class="route-link-client" (click)="onClickMenu(menu)" >
-                <app-card [isClient]="false" [isDetailResto]="false" [menu]="menu"></app-card>
+                <app-card [isMenu]="true"  [isClient]="false" [isDetailResto]="false" [menu]="menu"></app-card>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
     <div class="content">
         <div *ngFor="let article of articleList">
             <div class="route-link-client"  (click)="onClickArticle(article)">
-                <app-card [isClient]="false" [isDetailResto]="false" [menu]="article"></app-card>
+                <app-card [isMenu]="false" [isClient]="false" [isDetailResto]="false" [menu]="article"></app-card>
             </div>
         </div>
     </div>
