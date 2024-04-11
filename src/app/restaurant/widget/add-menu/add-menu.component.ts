@@ -41,7 +41,9 @@ export class AddMenuComponent implements OnInit {
     this.token = this.sessionStorageService.getItem('token');
     this.articlesInfoList = JSON.parse(this.sessionStorageService.getItem('articleList'));
     for (let i = 0; i < this.articlesInfoList.length; i++) {
-      this.articleList.push(this.articlesInfoList[i].name);
+      if (this.articlesInfoList[i].isDrink == false) {
+        this.articleList.push(this.articlesInfoList[i].name);
+      }
     }
   }
 

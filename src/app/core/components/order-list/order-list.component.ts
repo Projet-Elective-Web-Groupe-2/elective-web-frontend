@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SessionStorageService } from '../../services/session-storage.service';
+import { ToastrService } from 'ngx-toastr';
+import { OrderService } from '../../services/order.service';
+import { Orders } from '../../models/infoOrders.model';
 
 @Component({
   selector: 'app-order-list',
@@ -9,20 +12,37 @@ import { SessionStorageService } from '../../services/session-storage.service';
 })
 export class OrderListComponent {
   userType!: string;
-  
-  constructor(private sessionStorageService: SessionStorageService,private router: Router, private route: ActivatedRoute) { }
-  type!:string|null;
+  OrderValuesList: Orders[] = [];
+
+  constructor(
+    private sessionStorageService: SessionStorageService,
+    private route: ActivatedRoute,
+    private toastr: ToastrService,
+    private orderService: OrderService,
+  ) { }
+  type!: string | null;
 
   ngOnInit() {
+    let token = this.sessionStorageService.getItem('token');
+    let restaurantID = this.sessionStorageService.getItem('restaurantID');
     this.type = this.sessionStorageService.getItem('type');
     this.route.params.subscribe(params => {
       this.userType = params['type'];
     });
-    if ((this.type == 'client' && this.userType == 'client') || (this.type == 'restaurant' && this.userType == 'restaurant')) {}
+    if ((this.type == 'client' && this.userType == 'client') || (this.type == 'restaurant' && this.userType == 'restaurant')) { }
     else {
-      this.router.navigate([`/error-page`], { relativeTo: this.route });
+      // this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
-
+    
+    this.orderService.getAllCreatedOrdersFromRestaurant(token,restaurantID).subscribe({
+      next: (response: Orders) => {
+        console.log(response);
+        this.OrderValuesList.push(response);
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la récupération des commandes");
+      }
+    });
 
   }
 }

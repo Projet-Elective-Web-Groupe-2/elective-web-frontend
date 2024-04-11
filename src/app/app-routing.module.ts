@@ -45,7 +45,6 @@ const routes: Routes = [{
 {path: 'restaurant/menu/:id', component: EditMenuComponent},
 {path: 'restaurant/order-list', component: OrderListComponent},
 
-
 {path: 'client/restaurant/:id', component: RestaurantClientComponent},
 {path: 'client/payment', component: PaymentComponent},
 
