@@ -8,7 +8,7 @@
                 <h1 *ngIf="isMenu" class="box-price">{{menu.totalPrice}}€</h1>
                 <h1 *ngIf="!isMenu" class="box-price">{{menu.price}}€</h1>
                 <button *ngIf="isMenu" class="add-panier" (click)="onClick(menu.id,isMenu,menu.name,menu.totalPrice,menu.drink)" >Ajouter au panier</button>
-                <button *ngIf="!isMenu" class="add-panier" (click)="onClick(menu.id,isMenu,menu.name,menu.price,false)" >Ajouter au panier</button>
+                <button *ngIf="!isMenu" class="add-panier" (click)="onClick(menu._id,isMenu,menu.name,menu.price,false)" >Ajouter au panier</button>
             </div>
         </div>
         <div *ngIf="!isClient" class="forRestaurant">

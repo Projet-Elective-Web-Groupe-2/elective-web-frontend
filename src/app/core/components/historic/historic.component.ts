@@ -3,6 +3,9 @@ import { Historic } from '../../models/historic.model';
 import { NgFor } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SessionStorageService } from '../../services/session-storage.service';
+import { OrderService } from '../../services/order.service';
+import { ToastrService } from 'ngx-toastr';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-historic',
@@ -14,10 +17,18 @@ export class HistoricComponent {
   histoTest = new Historic();
   historics: Historic[] = [];
 
-  constructor(private sessionStorageService: SessionStorageService, private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private sessionStorageService: SessionStorageService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private orderService: OrderService,
+    private toastr: ToastrService,
+  ) { }
   type!: string | null;
 
   ngOnInit() {
+    let token = this.sessionStorageService.getItem('token');
+    let userID = this.sessionStorageService.getItem('userID');
     this.route.params.subscribe(params => {
       this.userType = params['type'];
     });
@@ -30,6 +41,17 @@ export class HistoricComponent {
     else {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
+
+
+
+    this.orderService.getAllOrdersFromRestaurant(token, userID).subscribe({
+      next: (response: HttpResponse<any>) => {
+        console.log(response);
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la récupération des commandes");
+      }
+    });
 
     this.historics.push(this.histoTest);
     this.histoTest.img = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Pizza_Hut_international_logo_2014.svg/1087px-Pizza_Hut_international_logo_2014.svg.png";
