@@ -15,7 +15,7 @@ export class AddArticleComponent {
   selectedImage: string | ArrayBuffer | null | undefined;
   type!: string | null;
   token!: any;
-  userID!:any;
+  userID!: any;
 
   constructor(private formBuilder: FormBuilder,
     private sessionStorageService: SessionStorageService,
@@ -56,18 +56,21 @@ export class AddArticleComponent {
   }
 
   submitArticle() {
-    this.restaurantService.createArticle(this.token,this.userID,this.articleForm.value).subscribe((response: MessageModel) => {
-      if(response.message == "Product added successfully"){
-        this.toastr.success("L'article a été ajouté avec succès");
-        setTimeout(() => {
-          this.router.navigate(['/restaurant']);
-        }, 2000);
+    this.restaurantService.createArticle(this.token, this.userID, this.articleForm.value).subscribe({
+      next: (response: MessageModel) => {
+        if (response.message == "Product added successfully") {
+          this.toastr.success("L'article a été ajouté avec succès");
+          setTimeout(() => {
+            this.router.navigate(['/restaurant']);
+          }, 2000);
+        }
+        else {
+          this.toastr.error("Erreur lors de la création de l'article");
+        }
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la création de l'article ");
       }
-      else{
-        this.toastr.error("Erreur lors de la création de l'article");
-      }
-    }, (error) => {
-      this.toastr.error("Erreur lors de la création de l'article : " + error);
     });
   }
 }

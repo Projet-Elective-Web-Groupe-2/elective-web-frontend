@@ -14,24 +14,27 @@ import { SessionStorageService } from 'src/app/core/services/session-storage.ser
 export class UsersInfoComponent {
   usersList: userSalesModel[] = [];
 
-  constructor(private toastr: ToastrService,private sessionStorageService: SessionStorageService, private salesService: SalesService) { };
+  constructor(private toastr: ToastrService, private sessionStorageService: SessionStorageService, private salesService: SalesService) { };
 
 
   ngOnInit(): void {
     let token = this.sessionStorageService.getItem('token');
-    this.salesService.getUsers(token).subscribe((response: Users) => {
-      for (let i = 0; i < response.allUsers.length; i++) {
+    this.salesService.getUsers(token).subscribe({
+      next: (response: Users) => {
+        for (let i = 0; i < response.allUsers.length; i++) {
 
-        let mail = response.allUsers[i].email;
-        let type = response.allUsers[i].userType;
-        let userID = response.allUsers[i].userID;
-        let isSuspended = response.allUsers[i].isSuspended
-        this.usersList.push(
-          { mail: mail, type: type,userID:userID,isSuspended:isSuspended},
-        );
+          let mail = response.allUsers[i].email;
+          let type = response.allUsers[i].userType;
+          let userID = response.allUsers[i].userID;
+          let isSuspended = response.allUsers[i].isSuspended
+          this.usersList.push(
+            { mail: mail, type: type, userID: userID, isSuspended: isSuspended },
+          );
+        }
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la récupération des utilisateurs ");
       }
-    }, (error) => {
-      this.toastr.error("Erreur lors de la récupération des utilisateurs : " + error);
     });
   }
 }
