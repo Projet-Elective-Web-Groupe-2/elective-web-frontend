@@ -5,7 +5,7 @@ import { RestaurantService } from '../../services/restaurant.service';
 import { SessionStorageService } from '../../services/session-storage.service';
 import { ToastrService } from 'ngx-toastr';
 import { DrinkModel, InfoDrink } from '../../models/drink.model';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-card-panier',
@@ -23,12 +23,11 @@ export class CardPanierComponent {
     private restaurantService: RestaurantService,
     private sessionStorageService: SessionStorageService,
     private toastr: ToastrService,
-    private formBuilder: FormBuilder,
-  ) {}
-
-  drinkForm = this.formBuilder.group({
-    drink: new FormControl(),
-  });
+  ) {
+    this.selectedValue.valueChanges.subscribe(value => {
+      this.selectedValueChanged.emit(value);
+    });
+  }
 
   drinks: string[] = [];
   ngOnInit(): void {

@@ -22,7 +22,7 @@ export class PanierComponent {
   deliveryFee!: number;
   type!: string | null;
   token!: any;
-  paniers!:PanierModel[];
+  paniers!: PanierModel[];
 
   constructor(private toastr: ToastrService,
     private clientService: ClientService,
@@ -39,35 +39,32 @@ export class PanierComponent {
     if (this.type != 'client') {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
-
-    this.panierTest.haveDrink = true;
-    this.panierTest.name = "Happy Meal";
-    this.panierTest.price = 66;
+    this.paniers = this.panierService.getPanier();
+    
+    this.panierTest.price = 0;
+    for(let i = 0;i<this.paniers.length;i++){
+      this.panierTest.price = this.paniers[i].price + this.panierTest.price
+    }
     this.tax = this.panierTest.price / 15;
     this.deliveryFee = this.panierTest.price / 10;
     this.totalPrice = this.panierTest.price + this.tax + this.deliveryFee;
-
-
-    this.paniers=this.panierService.getPanier();
-    console.log(this.paniers);
   }
 
-  getDrink(value: string){
+  getDrink(value: string) {
     console.log(value);
   }
 
-  createOrder() {    
-    let order:OrderModel[] = [];
-    for(let i = 0;i<this.paniers.length;i++){
-      this.paniers[i].drink = 'Coca-Cola';
-      const valueOrder:OrderModel = {
-        idProduit:this.paniers[i].id,
-        isMenu:this.paniers[i].isMenu,
-        drink:this.paniers[i].drink
-      }
-      order.push(valueOrder);
+  createOrder() {
+    let order: OrderModel[] = [];
+    for (let i = 0; i < this.paniers.length; i++) {
+        const valueOrder: OrderModel = {
+          idProduit: this.paniers[i].id,
+          isMenu: this.paniers[i].isMenu,
+          drink: this.paniers[i].drink
+        }
+        order.push(valueOrder);
     }
-    this.orderService.createOrder(this.token,order).subscribe({
+    this.orderService.createOrder(this.token,this.paniers[0].idRestaurantValue, order).subscribe({
       next: (response: HttpResponse<any>) => {
         console.log(response)
         this.router.navigate(['/client/payment']);
