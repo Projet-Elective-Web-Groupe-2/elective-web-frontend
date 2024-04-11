@@ -1,3 +1,10 @@
+## [1.26.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.25.0...v1.26.0) (2024-04-11)
+
+
+### Features
+
+* error messages + create order ([ee5d871](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/ee5d8717b8ca474a99683f388342305664e6c00a))
+
 ## [1.25.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.24.0...v1.25.0) (2024-04-11)
 
 
