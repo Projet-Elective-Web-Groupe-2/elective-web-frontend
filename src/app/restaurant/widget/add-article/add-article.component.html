@@ -18,6 +18,13 @@
                 <div class="labelPrice">Prix</div>
                 <input class="priceInput" formControlName="price" type="number" required>
             </div>
+            <div style="padding-bottom: 50px" class="drink ">
+                <div class="labelDrink">Boisson</div>
+                <label class="switch">
+                    <input class="drinkCheckbox" formControlName="isDrink" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
             <div class="pic padding">
                 <div class="label">Photo de l'article</div>
                 <div class="warning">DIMENSION MAX : 250x250</div>
@@ -39,6 +46,10 @@
                     <div class="summary-price">
                         <div class="summary-label">Prix :</div>
                         <div class="summary-content-price">{{articleForm.get('price')?.value}}€</div>
+                    </div>
+                    <div>
+                        <div *ngIf="articleForm.get('isDrink')?.value" class="summary-label">Boisson</div>
+                        <div *ngIf="!(articleForm.get('isDrink')?.value)" class="summary-label">Pas boisson</div>
                     </div>
                 <button [disabled]="!articleForm.valid" class="confirm-article">
                     <div class="confirm-article-label">Ajouter l'article</div>
