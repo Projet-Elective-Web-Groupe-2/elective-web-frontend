@@ -1,3 +1,45 @@
+## [1.23.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.22.0...v1.23.0) (2024-04-11)
+
+
+### Features
+
+* get stats for restaurant ([18967a1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/18967a1e23fb84e184e6ba522086d4ed6a46d145))
+
+
+### Bug Fixes
+
+* 'à la' to 'au' ([9a929c7](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/9a929c7d34abfbae339c06d1bb9979dec5e0edf8))
+* **error:** add error messages ([81f29b8](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/81f29b8b74ce0b93fa1e6c2c56ea23e2731daad0))
+* print price in menu ([143ec68](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/143ec68341e05ab1b68b3b0760275e71f6ea299e))
+
+## [1.22.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.21.0...v1.22.0) (2024-04-10)
+
+
+### Features
+
+* added dashboard to sales ([1ff08a8](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/1ff08a832d34054327c9eb3d92d0ce46fa486f67))
+
+## [1.21.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.20.1...v1.21.0) (2024-04-10)
+
+
+### Features
+
+* create article + start create menu ([5357577](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/53575774bde9695a22a542dfd11505d7d7197907))
+* getInfoRestaurant ([a350d3d](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a350d3d9737fe8ae262737daaa74f0e3e4e4e3b6))
+
+
+### Bug Fixes
+
+* add image ([2e498ba](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/2e498ba7dff87171273512851bc10c6067890891))
+* create menu ([633821c](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/633821c01508b407c7f39821364ea02049c03b1a))
+
+## [1.20.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.20.0...v1.20.1) (2024-04-10)
+
+
+### Bug Fixes
+
+* Fixed copy img :) ([aedd1d1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/aedd1d1eb26343a7492c38db4f68a64e05a7ebf8))
+
 ## [1.20.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.19.0...v1.20.0) (2024-04-10)
 
 

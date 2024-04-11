@@ -3,6 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 import { Chart, registerables } from 'node_modules/chart.js';
 import { forkJoin, of, tap } from 'rxjs';
+import { RestaurantService } from 'src/app/core/services/restaurant.service';
+import { HttpResponse } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 Chart.register(...registerables);
 
 @Component({
@@ -11,16 +14,25 @@ Chart.register(...registerables);
   styleUrls: ['./statistic.component.css']
 })
 export class StatisticComponent {
-  constructor(private sessionStorageService: SessionStorageService, private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private sessionStorageService: SessionStorageService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private restaurantService: RestaurantService,
+    private toastr: ToastrService
+  ) { }
   type!: string | null;
+  token!:any;
+  restaurantID!:any;
 
   ngOnInit() {
+    this.restaurantID = this.sessionStorageService.getItem('restaurantID');
+    this.token = this.sessionStorageService.getItem('token');
     this.type = this.sessionStorageService.getItem('type');
     if (this.type != 'restaurant') {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
     else {
-      this.type = "restaurant";
       this.fetchData();
     }
   }
@@ -51,14 +63,15 @@ export class StatisticComponent {
   }
 
   fetchData() {
-    /* const order$ = this.orderService.getOrderQuantity(this.dataValueSelected).pipe(
-       tap((datas) => {
-         this.orderTable = datas;
-         this.labelsChart.push(...datas.map((data) => data.dateCom));
-       })
-     );*/
+    this.restaurantService.getOrdersNumbers(this.token,this.restaurantID,this.dateValueSelected).subscribe((response: HttpResponse<any>) => {
+      console.log(response);
+      //this.orderTable = datas;
+      //this.labelsChart.push(...datas.map((data) => data.dateCom));
+    }, (error) => {
+      this.toastr.error("Erreur lors de la recupération des commandes : " + error);
+    });
+    
     this.orderTable = [11, 21, 58, 14, 41, 10, 2];
-    //forkJoin({ order$ }).subscribe(() => {
     if (this.dateValueSelected == 7) {
       this.labelsChart = [
         "2024-04-01T00:00:00.000Z",
@@ -125,7 +138,6 @@ export class StatisticComponent {
     this.labelsChart = this.allDates(this.labelsChart);
     this.labelsChart = this.convertDateToFormat(this.labelsChart);
     this.updateChart(this.orderTable);
-    //});
   }
 
   updateChart(orderTable: Array<any>) {

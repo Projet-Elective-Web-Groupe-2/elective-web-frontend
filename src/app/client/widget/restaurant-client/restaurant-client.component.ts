@@ -1,6 +1,7 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Menu } from 'src/app/core/models/menu.model';
 import { ClientService } from 'src/app/core/services/client.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
@@ -20,7 +21,7 @@ export class RestaurantClientComponent {
   type!: string | null;
   idRestaurant!: string;
 
-  constructor(private clientService: ClientService, private sessionStorageService: SessionStorageService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private toastr: ToastrService,private clientService: ClientService, private sessionStorageService: SessionStorageService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.type = this.sessionStorageService.getItem('type');
@@ -36,6 +37,8 @@ export class RestaurantClientComponent {
     let token = this.sessionStorageService.getItem('token');
     this.clientService.getRestaurantDetail(this.idRestaurant, token).subscribe((response: HttpResponse<any>) => {
       console.log(response)
+    }, (error) => {
+      this.toastr.error("Erreur lors de la récupération du détail des restaurants : " + error);
     });
     this.restaurant = "Mcgronald’s";
     this.address = "243 rue de la Republique , 95239";

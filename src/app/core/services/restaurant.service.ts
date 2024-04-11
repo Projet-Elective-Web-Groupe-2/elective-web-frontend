@@ -10,9 +10,61 @@ import { environment } from '../../../environments/environment';
 export class RestaurantService {
     constructor(private http: HttpClient) { }
 
-    getRestaurant(): Observable<any> {
-        const body = {};
-        return this.http.post(`${environment.urlRestaurant}${API.getRestaurant}`, body, { withCredentials: false, observe: 'response' });
+    getRestaurantInfo(token: any,userID:any,): Observable<any> {
+        const body = {userID};
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.get(`${environment.urlRestaurant}${API.getRestaurantInformation}`+ '?id=' + userID, httpOptions );
     }
 
+    getOrdersNumbers(token: any,restaurantID:any,daysBack:any): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.get(`${environment.urlRestaurant}${API.getOrdersSince}`+ '?restaurantID=' + restaurantID+ '&daysBack=' + daysBack, httpOptions );
+    }
+
+    createArticle(token: any,userID:any,formValue:any): Observable<any> {
+        const body = {
+            name:formValue.name,
+            description:formValue.compo,
+            price:formValue.price,
+            restaurantID:userID,
+            image:formValue.photo,
+            isDrink:false,
+        };
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.post(`${environment.urlProduct}${API.createArticle}`, body, httpOptions );
+    }
+
+    createMenu(token: any,userID:any,formValue:any,idList:string[]): Observable<any> {
+        const body = {
+            name:formValue.name,
+            productIds:idList,
+            totalPrice:formValue.price,
+            restaurantID:userID,
+            image:formValue.photo,
+            drinkButtonClicked:formValue.drink,
+        };
+        console.log(body);
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.post(`${environment.urlMenu}${API.createMenu}`, body, httpOptions );
+    }
 }

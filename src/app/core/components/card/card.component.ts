@@ -22,6 +22,8 @@ export class CardComponent {
   @Input() menu!:Menu;
   @Input() isDetailResto!:boolean;
   @Input() isClient!: boolean;
+  @Input() isMenu!: boolean;
+
 
   quantity !: number;
 

@@ -7,27 +7,32 @@ import { environment } from '../../../environments/environment';
 @Injectable({
     providedIn: 'root'
 })
-export class SalesService {
+export class ComponentService {
     constructor(private http: HttpClient) { }
 
-    getUsers(token: any): Observable<any> {
+    getLogComponent(token: any): Observable<any> {
+        
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             })
         };
-        return this.http.get(`${environment.urlUser}${API.getUsers}`, httpOptions);
-    };
+        return this.http.get(`${environment.urlComponent}${API.getComponentLog}`, httpOptions );
+    }
 
-    getAllOrders(token: any): Observable<any> {
+    writeLogComponent(token: any,componentName:any): Observable<any> {
+        const body = {
+            componentName:componentName,
+        };
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             })
-        };        
-        return this.http.get(`${environment.urlOrder}${API.getAllOrders}`, httpOptions);
+        };
+        return this.http.post(`${environment.urlComponent}${API.writeComponentLog}`, body, httpOptions );
     }
+
 
 }
