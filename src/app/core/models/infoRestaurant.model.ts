@@ -1,19 +1,19 @@
 import { Menu } from "./menu.model";
 
-export interface Restaurant {
+export interface Restaurants {
     _id: string;
     name: string;
     image: string;
     ownerID: number;
     address: string;
     isOpen: boolean;
-    menus: any[]; // Vous pouvez remplacer any par le type approprié si nécessaire
+    menus: any[]; 
     products: Menu[];
-    orders: any[]; // Vous pouvez remplacer any par le type approprié si nécessaire
+    orders: any[]; 
     __v: number;
     id: string;
 }
 
 export interface InfoRestaurantModel {
-    restaurant: Restaurant;
+    restaurant: Restaurants;
 }

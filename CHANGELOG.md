@@ -1,3 +1,11 @@
+## [1.29.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.28.0...v1.29.0) (2024-04-11)
+
+
+### Features
+
+* get order-list but only console.log() ([a725239](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a725239ab40f4d934caffcca6202d5c5def30432))
+* **test:** add some thing for order-list ([2bd4422](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/2bd442225fd142a3738bb9e3660214efbb2531ec))
+
 ## [1.28.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.27.0...v1.28.0) (2024-04-11)
 
 
