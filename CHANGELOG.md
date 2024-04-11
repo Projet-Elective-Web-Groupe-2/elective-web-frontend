@@ -1,3 +1,17 @@
+## [1.23.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.22.0...v1.23.0) (2024-04-11)
+
+
+### Features
+
+* get stats for restaurant ([18967a1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/18967a1e23fb84e184e6ba522086d4ed6a46d145))
+
+
+### Bug Fixes
+
+* 'à la' to 'au' ([9a929c7](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/9a929c7d34abfbae339c06d1bb9979dec5e0edf8))
+* **error:** add error messages ([81f29b8](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/81f29b8b74ce0b93fa1e6c2c56ea23e2731daad0))
+* print price in menu ([143ec68](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/143ec68341e05ab1b68b3b0760275e71f6ea299e))
+
 ## [1.22.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.21.0...v1.22.0) (2024-04-10)
 
 
