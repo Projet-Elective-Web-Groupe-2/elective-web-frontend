@@ -31,5 +31,7 @@ export class HomepageClientComponent implements OnInit {
         this.toastr.error("Erreur lors de la récupération du token ");
       }
     });
+
+
   }
 }
