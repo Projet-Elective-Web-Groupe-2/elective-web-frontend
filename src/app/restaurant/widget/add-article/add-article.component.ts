@@ -30,6 +30,7 @@ export class AddArticleComponent {
     compo: new FormControl(),
     price: new FormControl('0'),
     photo: new FormControl(''),
+    isDrink: new FormControl(false),
   });
 
   ngOnInit(): void {
