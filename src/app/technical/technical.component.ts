@@ -4,6 +4,7 @@ import { LogService } from '../core/services/logs.service';
 import { SessionStorageService } from '../core/services/session-storage.service';
 import { HttpResponse } from '@angular/common/http';
 import { LogModel } from '../core/models/log.model';
+import { ComponentService } from '../core/services/component.service';
 
 @Component({
   selector: 'app-technical',
@@ -15,7 +16,7 @@ export class TechnicalComponent {
   logs:string[]=[];
   token!:any;
   log!:any;
-  constructor(private router: Router,private logservice: LogService,private sessionStorage : SessionStorageService) { }
+  constructor(private router: Router,private logservice: LogService,private sessionStorage : SessionStorageService,private composantService: ComponentService) { }
 
   ngOnInit(){
     this.token = this.sessionStorage.getItem("token");
@@ -25,6 +26,9 @@ export class TechnicalComponent {
 
   getLog(){
     this.log = this.logservice.getLog(this.token).subscribe((response: LogModel) => {
+      this.logs= response.logs;
+    });
+    this.log = this.composantService.getLogComponent(this.token).subscribe((response: LogModel) => {
       this.logs= response.logs;
     });
     //console.log(this.log);
