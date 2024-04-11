@@ -21,6 +21,7 @@ export const API = Object.freeze({
     createMenu:'/menu/create',
     createArticle:'/product/add',
 
+    getOrdersSince:'/restaurant/getOrdersSince',
     getRestaurantInformation: '/restaurant/findByOwner',
     getRestaurant:'/restaurant/getAll',
     getRestaurantDetail:'/restaurant/find',

@@ -1,5 +1,6 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { salesValueModel } from 'src/app/core/models/salesValue.model';
 import { SalesService } from 'src/app/core/services/sales.service';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
@@ -25,7 +26,7 @@ export class HomepageSalesComponent {
   startLineDisplay: number = 0;
   endLineDisplay: number = 20;
 
-  constructor(private sessionStorageService: SessionStorageService, private salesService: SalesService) { }
+  constructor(private toastr: ToastrService,private sessionStorageService: SessionStorageService, private salesService: SalesService) { }
 
   ngOnInit(): void {
     let token = this.sessionStorageService.getItem('token');
@@ -33,6 +34,8 @@ export class HomepageSalesComponent {
       if (response && response.orders) {
         this.valuesTables = response.orders;
       }
+    }, (error) => {
+      this.toastr.error("Erreur lors de la récupération des commandes : " + error);
     });
   }
 }

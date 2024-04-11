@@ -81,6 +81,8 @@ export class AddMenuComponent implements OnInit {
       else {
         this.toastr.error("Erreur lors de la création de l'article");
       }
-    })
+    }, (error) => {
+      this.toastr.error("Erreur lors de la création du menu : " + error);
+    });
   }
 }

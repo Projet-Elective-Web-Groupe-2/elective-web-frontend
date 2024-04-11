@@ -1,6 +1,7 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Menu } from 'src/app/core/models/menu.model';
 import { MenuArticle } from 'src/app/core/models/menuArticle.model';
 import { RestaurantModel } from 'src/app/core/models/restaurant.model';
@@ -25,7 +26,8 @@ export class HomepageRestaurantComponent implements OnInit {
 
   constructor(private router: Router,
     private sessionStorageService: SessionStorageService,
-    private restaurantService: RestaurantService
+    private restaurantService: RestaurantService,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -40,7 +42,9 @@ export class HomepageRestaurantComponent implements OnInit {
       this.articleList = values.products;
       this.sessionStorageService.setItem('articleList', JSON.stringify(this.articleList));
       this.sessionStorageService.setItem('restaurantID', values.id);
-    })
+    }, (error) => {
+      this.toastr.error("Erreur lors de la recupération des informations du restaurant : " + error);
+    });
   }
 
   onClickArticle(articleSelected: Menu): void {

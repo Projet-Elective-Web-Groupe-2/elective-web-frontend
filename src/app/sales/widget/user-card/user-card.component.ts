@@ -54,6 +54,8 @@ export class UserCardComponent {
           else {
             this.toastr.error("Une erreur est survenue");
           }
+        }, (error) => {
+          this.toastr.error("Erreur lors de l'activation d'un utilisateur : " + error);
         });
       }
     });
@@ -68,7 +70,6 @@ export class UserCardComponent {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        console.log(this.token);
         this.profilService.disableUser(this.token, this.menu.userID).subscribe((response: MessageModel) => {
           if (response.message == 'User suspended') {
             this.toastr.success("L'utilisateur a bien été suspendu");
@@ -79,6 +80,8 @@ export class UserCardComponent {
           else {
             this.toastr.error("Une erreur est survenue");
           }
+        }, (error) => {
+          this.toastr.error("Erreur lors de la suspension de l'utilisateur : " + error);
         });
       }
     });
@@ -106,6 +109,8 @@ export class UserCardComponent {
           else {
             this.toastr.error("Une erreur est survenue");
           }
+        }, (error) => {
+          this.toastr.error("Erreur lors de la suppression de l'utilisateur : " + error);
         });
       }
     });
