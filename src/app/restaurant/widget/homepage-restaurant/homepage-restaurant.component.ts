@@ -31,7 +31,8 @@ export class HomepageRestaurantComponent implements OnInit {
   constructor(private router: Router,
     private sessionStorageService: SessionStorageService,
     private restaurantService: RestaurantService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private notificationsService: NotificationsService
   ) { }
 
   ngOnInit(): void {
