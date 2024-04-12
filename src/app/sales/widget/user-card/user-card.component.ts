@@ -43,7 +43,6 @@ export class UserCardComponent {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        console.log(this.token);
         this.profilService.activateUser(this.token, this.menu.userID).subscribe({
       next: (response: MessageModel) => {
           if (response.message == 'User unsuspended') {

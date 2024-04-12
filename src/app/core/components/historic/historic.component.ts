@@ -46,7 +46,6 @@ export class HistoricComponent {
 
     this.orderService.getAllOrdersFromRestaurant(token, userID).subscribe({
       next: (response: HttpResponse<any>) => {
-        console.log(response);
       },
       error: () => {
         this.toastr.error("Erreur lors de la récupération des commandes");

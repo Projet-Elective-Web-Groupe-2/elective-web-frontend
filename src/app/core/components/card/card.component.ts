@@ -31,9 +31,7 @@ export class CardComponent implements OnInit {
 
   onClick(id: any, isMenu: boolean, name: any, price: any, haveDrink: boolean) {
     var idRestaurantValue = this.idRestaurant;
-    console.log(id);
     this.panierService.addPanier({ id,idRestaurantValue, isMenu, name, price, haveDrink, drink: "" })
-    console.log(this.panierService.getPanier());
   }
 
 }

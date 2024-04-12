@@ -81,6 +81,5 @@ export class EditMenuComponent {
   
 
   submitMenu(){
-    console.log(this.menusForm.value);
   }
 }

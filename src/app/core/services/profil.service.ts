@@ -56,7 +56,6 @@ export class ProfilService {
 
 
     editUser(token: any, userID: any, editFormValue: any): Observable<any> {
-        console.log(editFormValue);
         const body = {
             userID: userID,
             email: editFormValue.mail,
@@ -67,7 +66,6 @@ export class ProfilService {
             address: editFormValue.address,
             
         };
-        console.log(body);
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',

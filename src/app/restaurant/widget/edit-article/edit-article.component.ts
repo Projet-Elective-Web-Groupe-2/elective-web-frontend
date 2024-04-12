@@ -68,6 +68,5 @@ export class EditArticleComponent {
     }
   }
   submitArticle(){
-    console.log(this.articleForm.value);
   }
 }

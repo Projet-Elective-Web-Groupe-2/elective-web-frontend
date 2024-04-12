@@ -32,7 +32,6 @@ export class DeliveryMapComponent {
 
   ngAfterViewInit(): void {
     this.address = this.sessionStorageService.getItem("deliveryAddress");
-    console.log(this.address);
     this.route.paramMap.subscribe(params => {
       this.orderID = params.get('id');
     });

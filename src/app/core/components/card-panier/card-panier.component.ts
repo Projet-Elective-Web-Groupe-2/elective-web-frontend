@@ -32,7 +32,6 @@ export class CardPanierComponent {
   drinks: string[] = [];
   ngOnInit(): void {
     let token = this.sessionStorageService.getItem('token');
-    console.log(this.panier);
     this.restaurantService.getDrinks(token, this.panier.idRestaurantValue).subscribe({
       next: (response: InfoDrink) => {
         let values = response.drinks;

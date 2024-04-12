@@ -27,7 +27,6 @@ export class CardCommandComponent  implements OnInit {
 
   
   ngOnInit() {
-   console.log(this.OrderValues);
   }
 
 

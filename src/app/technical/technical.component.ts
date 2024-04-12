@@ -45,11 +45,9 @@ export class TechnicalComponent {
     this.log = this.composantService.getLogComponent(this.token).subscribe((response: LogModel) => {
       this.logs.push(response.logs);
     });
-    //console.log(this.log);
   }
 
   onClick() {
-    console.log("test click");
     window.location.href = "http://localhost:8080";
   }
 }

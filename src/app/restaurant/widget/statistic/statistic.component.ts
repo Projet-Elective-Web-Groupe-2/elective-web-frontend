@@ -65,7 +65,6 @@ export class StatisticComponent {
   fetchData() {
     this.restaurantService.getOrdersNumbers(this.token, this.restaurantID, this.dateValueSelected).subscribe({
       next: (response: HttpResponse<any>) => {
-        console.log(response);
         //this.orderTable = datas;
         //this.labelsChart.push(...datas.map((data) => data.dateCom));
       },
