@@ -1,3 +1,10 @@
+## [1.30.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.1...v1.30.2) (2024-04-12)
+
+
+### Bug Fixes
+
+* **plein de truc:** fix pein de truc ([3f11441](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3f11441b02f604f866d3202700f35995ec0c57d8))
+
 ## [1.30.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.0...v1.30.1) (2024-04-12)
 
 
