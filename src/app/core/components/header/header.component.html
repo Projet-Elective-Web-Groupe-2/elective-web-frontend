@@ -64,5 +64,13 @@
         </div>
         <button (click)="clickOnButton()" class="header-button">Gestions des comptes</button>
     </div>
+
+    <div class="options" *ngIf="type=='technical'">
+ 
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
+        
+    </div>
     
 </div>
