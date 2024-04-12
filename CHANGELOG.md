@@ -1,3 +1,10 @@
+## [1.33.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.32.2...v1.33.0) (2024-04-12)
+
+
+### Features
+
+* add message if there's none delivery ([f147554](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/f147554090be9460ae40abfc1e780e92ce27a73b))
+
 ## [1.32.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.32.1...v1.32.2) (2024-04-12)
 
 
