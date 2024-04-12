@@ -1,3 +1,20 @@
+## [1.30.4](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.3...v1.30.4) (2024-04-12)
+
+
+### Bug Fixes
+
+* eau ([3b715d9](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3b715d93f6eb7e7cb42feb4c91d7517a48133951))
+
+## [1.30.3](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.2...v1.30.3) (2024-04-12)
+
+
+### Bug Fixes
+
+* change statut ([7420253](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/742025304935ef5a951644198cd26114321c2183))
+* **css:** fix css ([3ee8e7f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3ee8e7f606f0d61c8354e5d4553aec8b9be6f389))
+* get values from getAllCreatedOrdersFromRestaurant ([68864f2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/68864f2610f707003ae4ea76cb7e32cec9d7267a))
+* getOrders for restaurant ([5b7a815](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/5b7a8152c792e01c300b004d414886611a16716b))
+
 ## [1.30.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.1...v1.30.2) (2024-04-12)
 
 
