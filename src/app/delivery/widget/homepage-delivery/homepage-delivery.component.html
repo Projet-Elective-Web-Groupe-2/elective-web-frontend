@@ -6,10 +6,13 @@
 
     </div>
     <div class="divider"></div>
-
-    <div *ngFor="let deli of deliveries">
-        <app-card-command [delivery]="deli"></app-card-command>
+    <div class="panier-recap" *ngIf="deliveries.length != 0">
+        <div *ngFor="let deli of deliveries">
+            <app-card-command [delivery]="deli"></app-card-command>
+        </div>
     </div>
-
+    <div class="panier-recap" *ngIf="deliveries.length == 0">
+        <h1 class="empty"> PAS DE COMMANDE DISPONIBLE </h1>
+    </div>
 
 </div>

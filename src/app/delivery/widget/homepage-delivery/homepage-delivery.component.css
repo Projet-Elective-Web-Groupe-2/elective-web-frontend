@@ -37,3 +37,9 @@
 .route-link-delivery{
     text-decoration: none;
 }
+.empty{
+    padding: 30px;
+    border: 1px solid #426B1F;
+    background-color: #E3E3E3;
+    color: #426B1F;
+}
