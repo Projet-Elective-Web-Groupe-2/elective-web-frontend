@@ -38,6 +38,15 @@ export const API = Object.freeze({
     getRestaurant:'/restaurant/getAll',
     getRestaurantDetail:'/restaurant/find',
 
+    getDelivery:'/delivery/getAllWithFilter',
+    refuseDelivery:'/delivery/refuse',
+    acceptDelivery:'/delivery/accept',
+    getStatutDelivery:'/delivery/getStatut',
+    trackDeliveryDelivery:'/delivery/trackDelivery',
+    nerbyDelivery:'/delivery/nearby',
+    validateDelivery:'/delivery/validate',
+    getMetricDelivery:'/delivery/metrics',
+
 
 
   });

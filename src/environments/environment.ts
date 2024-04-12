@@ -13,5 +13,6 @@ export const environment = {
     urlDelivery: 'http://delivery.localhost',
     urlMonitoring: 'http://monitoring.localhost',
     urlComponent:'http://components.localhost',
+    
 
   };

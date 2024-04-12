@@ -16,7 +16,7 @@ export class CardPanierComponent {
   selectedValue: FormControl = new FormControl();
 
   @Input() panier!: PanierModel;
-  @Output() selectedValueChanged = new EventEmitter<string>();
+  // @Output() selectedValueChanged = new EventEmitter<string>();
 
 
   constructor(
@@ -25,7 +25,7 @@ export class CardPanierComponent {
     private toastr: ToastrService,
   ) {
     this.selectedValue.valueChanges.subscribe(value => {
-      this.selectedValueChanged.emit(value);
+     // this.selectedValueChanged.emit(value);
     });
   }
 
@@ -47,6 +47,6 @@ export class CardPanierComponent {
   }
 
   onValueChanged() {
-    this.selectedValueChanged.emit(this.selectedValue.value);
+    // this.selectedValueChanged.emit(this.selectedValue.value);
   }
 }

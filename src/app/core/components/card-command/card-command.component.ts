@@ -34,11 +34,11 @@ export class CardCommandComponent  implements OnInit {
   acceptCommand(){
     this.token = this.sessionStorageService.getItem('token');
     this.restaurantID = this.sessionStorageService.getItem('restaurantID');
-    console.log(this.OrderValues.id);
     this.orderService.updateOrder(this.token,this.restaurantID,this.OrderValues.id,"In preparation").subscribe({
       next: (response: MessageModel) => {
         if(response.message == "Order status updated"){
           this.toastr.success("Commande validée");
+          location.reload();
         }
         else{
           this.toastr.success("Erreur lors de la validation de la commande");

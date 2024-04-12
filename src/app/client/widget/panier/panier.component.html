@@ -10,7 +10,7 @@
     <div class="panier-body">
         <div class="panier-article">
             <div *ngFor="let panier of paniers" >
-                <app-card-panier [panier]="panier" (selectedValueChanged)="getDrink($event)"></app-card-panier>
+                <app-card-panier [panier]="panier" ></app-card-panier>
             </div>
         </div>
         <div class="panier-recap" *ngIf="paniers.length != 0">
