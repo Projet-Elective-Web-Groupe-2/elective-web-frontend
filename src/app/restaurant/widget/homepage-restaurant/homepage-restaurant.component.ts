@@ -46,6 +46,7 @@ export class HomepageRestaurantComponent implements OnInit {
         this.address = values.address;
         this.menuList = values.menus;
         this.articleList = values.products;
+        this.restaurantID = values.id;
         this.sessionStorageService.setItem('articleList', JSON.stringify(this.articleList));
         this.sessionStorageService.setItem('restaurantID', values.id);
       },
@@ -53,6 +54,7 @@ export class HomepageRestaurantComponent implements OnInit {
         this.toastr.error("Erreur lors de la recupération des informations du restaurant ");
       }
     });
+    this.startFetchingOrderCount();
   }
 
   onClickArticle(articleSelected: Menu): void {
@@ -83,7 +85,7 @@ export class HomepageRestaurantComponent implements OnInit {
               
               this.sessionStorageService.setItem("orderCount", response.orderCount );
               this.toastr.success(
-                `Vous avec : ${response.orderCount} commandes en attente`,
+                `Vous avec une commande en attente`,
   
                 'Commande reçu !',
                 { timeOut: 5000, progressBar: true }
