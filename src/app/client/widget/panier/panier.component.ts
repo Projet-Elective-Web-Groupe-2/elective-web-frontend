@@ -51,7 +51,6 @@ export class PanierComponent {
   }
 
   getDrink(value: string) {
-    console.log(value);
   }
 
   createOrder() {
@@ -66,7 +65,6 @@ export class PanierComponent {
     }
     this.orderService.createOrder(this.token,this.paniers[0].idRestaurantValue, order).subscribe({
       next: (response: HttpResponse<any>) => {
-        console.log(response)
         this.toastr.success("Commande crée")
         this.panierService.resetPanier()
         this.router.navigate(['/client/payment']);

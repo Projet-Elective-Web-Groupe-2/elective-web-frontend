@@ -41,7 +41,6 @@ export class HomepageRestaurantComponent implements OnInit {
     this.restaurantService.getRestaurantInfo(this.token, this.userID).subscribe({
       next: (response: RestaurantModel) => {
         let values = response.restaurant;
-        console.log(values);
         this.restaurant = values.name;
         this.address = values.address;
         this.menuList = values.menus;
@@ -74,12 +73,10 @@ export class HomepageRestaurantComponent implements OnInit {
 
   }
   startFetchingOrderCount(): void {
-    console.log('test reponse'),
     interval(10000).subscribe(() => {
       this.notificationsService.getOrderCount(this.token, this.userID, this.restaurantID)
         .subscribe(
           (response: any) => {
-            console.log('test reponse',response),
             this.oldValue = this.sessionStorageService.getItem("orderCount");
             if(this.oldValue<response.orderCount){
               

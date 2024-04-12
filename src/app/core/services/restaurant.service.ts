@@ -58,7 +58,6 @@ export class RestaurantService {
             image:formValue.photo,
             drinkButtonClicked:formValue.drink,
         };
-        console.log(body);
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
@@ -82,7 +81,6 @@ export class RestaurantService {
         const body = {
             id:menuID,
         };
-        console.log(body);
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
@@ -96,7 +94,6 @@ export class RestaurantService {
         const body = {
             id:articleID,
         };
-        console.log(body);
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',

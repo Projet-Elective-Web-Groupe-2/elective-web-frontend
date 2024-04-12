@@ -23,7 +23,6 @@ export class CardCommandComponent {
   @Input() delivery!: Orders;
 
   ngOnInit() {
-    console.log(this.delivery);
     this.commandeID = this.delivery.id;
     this.token = this.sessionStorage.getItem("token");
   }
@@ -31,7 +30,6 @@ export class CardCommandComponent {
   onClickAccept() {
     this.sessionStorage.setItem('deliveryAddress', this.delivery.address);
     this.deliveryService.acceptDelivery(this.token, this.delivery.id).subscribe((response: MessageModel) => {
-      console.log(response.message);
       if (response.message == "Delivery accepted") {
         this.toastr.success("Commande délivré");
           location.reload();
@@ -43,7 +41,6 @@ export class CardCommandComponent {
   }
   onClickRefuse() {
     this.deliveryService.refuseDelivery(this.token, this.delivery.id).subscribe((response: any) => {
-      console.log(response);
     });
   }
 }

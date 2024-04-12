@@ -216,7 +216,6 @@ export class ProfilPageComponent implements OnInit {
   }
 
   submitSponsorship() {
-    console.log(this.sponsorshipForm.value);
   }
 
   verifyIfSales() {

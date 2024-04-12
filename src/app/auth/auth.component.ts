@@ -29,7 +29,6 @@ export class AuthComponent implements OnInit {
     this.authService.login(this.loginForm.value).subscribe({
       next: (response: HttpResponse<any>) => {
         this.sessionStorageService.setItem('token', response.body.accessToken);
-        console.log(response.body.accessToken);
         let tokenValues = this.decodeToken(response.body.accessToken);
         this.sessionStorageService.setItem('userID', tokenValues.id);
         this.sessionStorageService.setItem('type', tokenValues.type.toLowerCase());
