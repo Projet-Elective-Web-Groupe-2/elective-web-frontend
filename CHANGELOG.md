@@ -1,3 +1,10 @@
+## [1.34.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.33.0...v1.34.0) (2024-04-12)
+
+
+### Features
+
+* get histo for client ([e47212c](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/e47212c0213d90cf1aebdd2ddce09435afa2535b))
+
 ## [1.33.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.32.2...v1.33.0) (2024-04-12)
 
 
