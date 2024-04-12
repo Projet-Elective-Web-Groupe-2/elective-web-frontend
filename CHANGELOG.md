@@ -1,3 +1,10 @@
+## [1.30.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.0...v1.30.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* fixed orthographe ([83b52d6](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/83b52d60cb2d558300aecb339f36bacd6e9cb6a1))
+
 ## [1.30.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.29.0...v1.30.0) (2024-04-11)
 
 
