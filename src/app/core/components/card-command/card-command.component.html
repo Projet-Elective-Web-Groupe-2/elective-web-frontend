@@ -1,7 +1,17 @@
-<div class="card-historic">
-    <div class="histo-text">
-        <div class="text-1">{{OrderValues.adress}}</div>
-        <div class="text-2">{{OrderValues.date}}</div>
-        <div class="text-2">{{OrderValues.totalPrice}}</div>
+<div class="card-historic" *ngIf="OrderValues.address != 'REFUSE'">
+    <div class="component-div-text">
+        <div class="histo-text">
+            <div style="padding-top: 10px;" class="text-1">{{OrderValues.address}}</div>
+            <div class="text-2">{{OrderValues.date}}</div>
+            <div *ngIf="OrderValues.menus.length != 0" class="text-2">{{OrderValues.menus.length}} Menu(s)</div>
+            <div *ngIf="OrderValues.products.length != 0" class="text-2">{{OrderValues.products.length}} Article(s)</div>
+        </div>
+    </div>
+    <div class="compoDL-link" *ngIf="OrderValues.status != 'Created'">
+        <div class="compoDL-text-link">Commande en cours</div>
+    </div>
+    <div class="compoDL-link" *ngIf="OrderValues.status == 'Created'">
+        <button class="compoDL-text-link-double-accept" (click)="acceptCommand()" >Accepter</button>
+        <button class="compoDL-text-link-double-decline" (click)="refuseCommand()" >Refuser</button>
     </div>
 </div>

@@ -1,3 +1,24 @@
+## [1.30.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.1...v1.30.2) (2024-04-12)
+
+
+### Bug Fixes
+
+* **plein de truc:** fix pein de truc ([3f11441](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3f11441b02f604f866d3202700f35995ec0c57d8))
+
+## [1.30.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.0...v1.30.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* fixed orthographe ([83b52d6](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/83b52d60cb2d558300aecb339f36bacd6e9cb6a1))
+
+## [1.30.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.29.0...v1.30.0) (2024-04-11)
+
+
+### Features
+
+* Added github links to download components ([7e50da1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/7e50da1012701ec56057b061aa652390acb7c697))
+
 ## [1.29.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.28.0...v1.29.0) (2024-04-11)
 
 
