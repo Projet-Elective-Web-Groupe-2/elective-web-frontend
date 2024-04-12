@@ -1,0 +1,76 @@
+<div class="navigation">
+    <div class="logo"><a [routerLink]="['/', type]">CESI EATS</a></div>
+    <div class="options" *ngIf="type=='client'">
+        <div class="value">
+            <a [routerLink]="['/', type]"> Restaurants</a>
+        </div>
+        <div class="value">
+            <a [routerLink]="['/', type, 'historic']"> Historique de commandes </a>
+        </div>
+        <div class="value">
+            <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
+        </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
+        <button (click)="clickOnButton()" class="header-button">Panier</button>
+    </div>
+
+    <div class="options" *ngIf="type=='restaurant'">
+        <div class="value">
+            <a [routerLink]="['/', type]"> Accueil</a>
+        </div>
+        <div class="value">
+            <a [routerLink]="['/', type, 'historic']"> Historique de commandes </a>
+        </div>
+        <div class="value">
+            <a [routerLink]="['/', type, 'statistic']"> Statistiques </a>
+        </div>
+        <div class="value">
+            <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
+        </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
+        <button (click)="clickOnButton()" class="header-button">Liste des commandes</button>
+    </div>
+
+    <div class="options" *ngIf="type=='delivery'">
+        <div class="value">
+            <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
+        </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
+        <button (click)="clickOnButton()" class="header-button">Liste des commandes</button>
+    </div>
+    
+    <div class="options" *ngIf="type=='developer'">
+        <div class="value">
+            <a [routerLink]="['/', type, 'profil']"> Mon profil</a>
+        </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
+        <button (click)="clickOnButton()" class="header-button">Liste des composants</button>
+    </div>
+
+    <div class="options" *ngIf="type=='sales'">
+        <div class="value">
+            <a [routerLink]="['/', type]"> Tableaux de bords</a>
+        </div>
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
+        <button (click)="clickOnButton()" class="header-button">Gestions des comptes</button>
+    </div>
+
+    <div class="options" *ngIf="type=='technical'">
+ 
+        <div class="value"  (click)="disconnect()">
+            Déconnexion
+        </div>
+        
+    </div>
+    
+</div>

@@ -1,0 +1,17 @@
+<div class="card-historic" *ngIf="delivery.address != 'REFUSE'">
+    <div class="component-div-text">
+        <div class="histo-text">
+            <div style="padding-top: 10px;" class="text-1">{{delivery.address}}</div>
+            <div class="text-2">{{delivery.date}}</div>
+            <div *ngIf="delivery.menus.length != 0" class="text-2">{{delivery.menus.length}} Menu(s)</div>
+            <div *ngIf="delivery.products.length != 0" class="text-2">{{delivery.products.length}} Article(s)</div>
+        </div>
+    </div>
+    <div class="compoDL-link" *ngIf="delivery.status != 'In preparation'">
+        <a class="compoDL-text-link" [routerLink]="['/', 'delivery','details-commande', commandeID]" >Suivre la commande</a>
+    </div>
+    <div class="compoDL-link" *ngIf="delivery.status == 'In preparation'">
+        <button class="compoDL-text-link-double-accept" (click)="onClickAccept()" >Accepter</button>
+        <button class="compoDL-text-link-double-decline" (click)="onClickRefuse()" >Refuser</button>
+    </div>
+</div>

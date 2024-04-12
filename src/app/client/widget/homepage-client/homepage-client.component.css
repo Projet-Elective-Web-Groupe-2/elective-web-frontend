@@ -1,0 +1,7 @@
+.card-rest-show{
+    display: flex;
+    flex-flow: row wrap;
+}
+.route-link-client{
+    text-decoration: none;
+}

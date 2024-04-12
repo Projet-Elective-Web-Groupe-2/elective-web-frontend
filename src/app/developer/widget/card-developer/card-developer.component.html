@@ -1,0 +1,15 @@
+<div class="card-historic">
+    <div class="component-div-text">
+        <div>
+            <img class="img-card-historic"
+                src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
+        </div>
+        <div class="histo-text">
+            <div class="text-1">{{componentDL.name}}</div>
+            <div class="text-2">{{componentDL.desc}}</div>
+        </div>
+    </div>
+    <div class="compoDL-link">
+        <a class="compoDL-text-link" (click)="onClick(componentDL.name)" href="{{componentDL.link}}">Télécharger le composant</a>
+    </div>
+</div>

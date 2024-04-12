@@ -1,0 +1,19 @@
+<app-header [type]="type"></app-header>
+<div class="pageheading">
+    <div class="title">Statistiques</div>
+</div>
+<div class="graph-title-filter">
+    <div class="graph-label"> Nombres de commandes par jour</div>
+    <div class="choseDate">
+        <table>
+            <tr class="change-date-table">
+                <td ><button [ngClass]="{'change-date-button': true, 'selected': dateValueSelected === 30}" (click)="changeDate(30)"><div class="change-date-label"> 30 JOURS </div> </button></td>
+                <td><button [ngClass]="{'change-date-button': true, 'selected': dateValueSelected === 14}" (click)="changeDate(14)"><div class="change-date-label"> 14 JOURS </div> </button></td>
+                <td><button [ngClass]="{'change-date-button': true, 'selected': dateValueSelected === 7}" (click)="changeDate(7)"><div class="change-date-label"> 7 JOURS </div> </button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="canvas">
+    <canvas id="lineChart"></canvas>
+</div>

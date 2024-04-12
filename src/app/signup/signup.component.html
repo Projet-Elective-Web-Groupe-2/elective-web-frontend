@@ -1,0 +1,206 @@
+<div class="pagedeconnexion">
+    <img src="https://fr.ooni.com/cdn/shop/articles/Margherita-9920.jpg?crop=center&height=800&v=1644590066&width=800"
+        class="img-half-screen" />
+
+    <form class="login--form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="title--signin--signup--pages">
+            <div class="text-title">Inscription</div>
+            <div class="line-title"></div>
+        </div>
+        <div class="login--fields">
+
+            <div class="input--field">
+                <div class="text-input-name">Qui suis-je ?</div>
+                <select class="text-input" formControlName="userType" [ngModel]="selectedValue"
+                    (ngModelChange)="onOptionChange($event)">
+                    <option value="CLIENT" class="text-option" selected="client">CLIENT</option>
+                    <option value="RESTAURANT" class="text-option">RESTAURATEUR</option>
+                    <option value="DELIVERY" class="text-option">LIVREUR</option>
+                    <option value="DEVELOPER" class="text-option">DEVELOPPEUR TIER</option>
+                </select>
+            </div>
+
+            <div *ngIf="selectedValue=='CLIENT'">
+
+                <div class="input-double">
+                    <div class="double-1">
+                        <div class="text-input-name">Prénom</div>
+                        <input class="text-input-double-1" type="text" required autocomplete="off"
+                            formControlName="firstName" />
+                    </div>
+
+                    <div class="double-2">
+                        <div class="text-input-name">Nom</div>
+                        <input class="text-input-double-2" type="text" required autocomplete="off"
+                            formControlName="lastName" />
+                    </div>
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Adresse</div>
+                    <input class="text-input" type="text" formControlName="address">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Adresse mail</div>
+                    <input class="text-input" type="text" formControlName="email">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Numéro de Téléphone</div>
+                    <input class="text-input" type="text" formControlName="phoneNumber">
+                </div>
+
+                <div class="input-double">
+                    <div class="double-1">
+                        <div class="text-input-name">Mot de Passe</div>
+                        <input class="text-input-double-1" type="password" required autocomplete="off"
+                            formControlName="password" />
+                    </div>
+
+                    <div class="double-2">
+                        <div class="text-input-name">Confirmer Mdp</div>
+                        <input class="text-input-double-2" type="password" required autocomplete="off"
+                            formControlName="repassword" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div *ngIf="selectedValue=='RESTAURANT'">
+
+                <div class="input--field">
+                    <div class="text-input-name">Nom du Restaurant</div>
+                    <input class="text-input" type="text" formControlName="restaurantName">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Adresse du Restaurant</div>
+                    <input class="text-input" type="text" formControlName="restaurantAddress">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Adresse mail</div>
+                    <input class="text-input" type="text" formControlName="email">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Numéro de Téléphone</div>
+                    <input class="text-input" type="text" formControlName="phoneNumber">
+                </div>
+
+                    <!--mettre insertion d'image-->
+                    <div class="input--field">
+                        <div class="text-input-name">Image (DIMENSION MAX : 250x250)</div>
+                        <div class="input--field-image">
+                            <input formControlName="photo" required type="file" class="file-upload" (change)="onFileSelected($event)" accept=".jpg, .jpeg, .png"/>
+                            <img [src]="selectedImage" class="image-card" />
+                        </div>
+                    </div>
+                
+                <div class="input-double">
+                    <div class="double-1">
+                        <div class="text-input-name">Mot de Passe</div>
+                        <input class="text-input-double-1" type="password" required autocomplete="off"
+                            formControlName="password" />
+                    </div>
+
+                    <div class="double-2">
+                        <div class="text-input-name">Confirmer Mdp</div>
+                        <input class="text-input-double-2" type="password" required autocomplete="off"
+                            formControlName="repassword" />
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="selectedValue=='DELIVERY'">
+                <div class="input-double">
+                    <div class="double-1">
+                        <div class="text-input-name">Prénom</div>
+                        <input class="text-input-double-1" type="text" required autocomplete="off"
+                            formControlName="firstName" />
+                    </div>
+
+                    <div class="double-2">
+                        <div class="text-input-name">Nom</div>
+                        <input class="text-input-double-2" type="text" required autocomplete="off"
+                            formControlName="lastName" />
+                    </div>
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Adresse</div>
+                    <input class="text-input" type="text" formControlName="address">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Adresse mail</div>
+                    <input class="text-input" type="text" formControlName="email">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Numéro de Téléphone</div>
+                    <input class="text-input" type="text" formControlName="phoneNumber">
+                </div>
+
+                <div class="input-double">
+                    <div class="double-1">
+                        <div class="text-input-name">Mot de Passe</div>
+                        <input class="text-input-double-1" type="password" required autocomplete="off"
+                            formControlName="password" />
+                    </div>
+
+                    <div class="double-2">
+                        <div class="text-input-name">Confirmer Mdp</div>
+                        <input class="text-input-double-2" type="password" required autocomplete="off"
+                            formControlName="repassword" />
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="selectedValue=='DEVELOPER'">
+
+                <div class="input--field">
+                    <div class="text-input-name">Adresse mail</div>
+                    <input class="text-input" type="text" formControlName="email">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Clé de Sécurité</div>
+                    <input class="text-input" type="text" formControlName="key">
+                </div>
+
+                <div class="input--field">
+                    <div class="text-input-name">Numéro de Téléphone</div>
+                    <input class="text-input" type="text" formControlName="phoneNumber">
+                </div>
+
+                <div class="input-double">
+                    <div class="double-1">
+                        <div class="text-input-name">Mot de Passe</div>
+                        <input class="text-input-double-1" type="password" required autocomplete="off"
+                            formControlName="password" />
+                    </div>
+
+                    <div class="double-2">
+                        <div class="text-input-name">Confirmer Mdp</div>
+                        <input class="text-input-double-2" type="password" required autocomplete="off"
+                            formControlName="repassword" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" class="text-4 form-input-button" value="Inscription">
+            </div>
+
+            <div class="text-link">
+                <a href="/auth" class="text-link">
+                    Avez vous déja un compte? Connectez-vous
+                </a>
+            </div>
+        </div>
+
+
+    </form>
+</div>

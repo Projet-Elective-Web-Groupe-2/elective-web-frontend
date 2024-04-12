@@ -1,0 +1,7 @@
+<app-header [type]="'sales'"></app-header>
+<div class="pageheading">
+    <div class="title">Gestion des comptes</div>
+</div>
+<div class="card" *ngFor="let menu of usersList">
+    <app-user-card [menu]="menu" ></app-user-card>
+</div>

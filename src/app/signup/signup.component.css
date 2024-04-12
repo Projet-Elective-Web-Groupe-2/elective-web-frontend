@@ -1,0 +1,227 @@
+.pagedeconnexion {
+    background-color: #ffffff;
+    font-weight: 600;
+    font-style: bold italic;
+    display: flex;
+    justify-content: center;
+}
+
+.login--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* gap: 102px; */
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+    flex-grow: 1;
+}
+
+.title--signin--signup--pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.text-title {
+    text-align: left;
+    vertical-align: bottom;
+    font-size: 40px;
+    line-height: auto;
+    color: #000000;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.line-title {
+    height: 0px;
+    width: 490px;
+    border: 1px solid #426b1f;
+    margin-bottom: 30px;
+}
+
+.login--fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* gap: 29px; */
+}
+
+.input--field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* gap: 11px; */
+}
+
+.rectangle-1-0 {
+    border-radius: 14px;
+    height: 56px;
+    width: 530px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.text-input-name {
+    text-align: left;
+    vertical-align: bottom;
+    font-size: 24px;
+    /* line-height: auto; */
+    color: #a2a2a2;
+    bottom: 10px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.rectangle-1-0 {
+    border-radius: 14px;
+    height: 56px;
+    width: 530px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.sign--insign--up--buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.component-1 {
+    border-radius: 57px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 114px;
+    gap: 10px;
+    background-color: #426b1f;
+}
+
+.text-4 {
+    text-align: center;
+    vertical-align: top;
+    font-size: 32px;
+    line-height: auto;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.text-5 {
+    text-align: left;
+    vertical-align: top;
+    font-size: 20px;
+    line-height: auto;
+}
+
+.button {
+    text-align: center;
+    /* bottom: 50px; */
+    position: relative;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.text-link {
+    text-align: center;
+    position: relative;
+    /* bottom: 50px; */
+    color: #426b1f;
+    align-self: center;
+}
+
+.text-input {
+    width: 100%;
+    border-radius: 10px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 40px;
+    line-height: auto;
+    text-indent: 5px;
+    height: 46px;
+    font-size: 16px;
+    width: 494.4px;
+}
+
+.img-half-screen {
+    border-radius: 10px;
+    flex-grow: 1;
+    align-self: left;
+    width: 30%;
+    height: 100vh;
+    box-shadow: 3px 0px 10px black;
+    object-fit: fill;
+}
+
+.form-input-button {
+    border-radius: 57px;
+    height: 83px;
+    width: 463px;
+    background-color: #426b1f;
+    align-self: center;
+}
+
+.text-option {
+    font-size: 20px;
+}
+
+.text-input-double-1 {
+    flex-flow: row wrap;
+    width: 80%;
+    border-radius: 10px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 40px;
+    line-height: auto;
+    text-indent: 5px;
+    height: 46px;
+    font-size: 16px;
+}
+.text-input-double-2 {
+    flex-flow: row wrap;
+    width: 224.4px;
+    border-radius: 10px;
+    text-align: left;
+    vertical-align: top;
+    line-height: auto;
+    text-indent: 5px;
+    height: 46px;
+    font-size: 16px;
+}
+
+.input-double {
+    flex-direction: row ;
+    display: inline-flex;
+    --double : 270px;
+}
+.double-1{
+    width: var(--double);
+}
+.double-2{
+    width: calc(var(--double)*0.8);
+}
+.image-card{
+    height: 7.6vh;
+    width: auto;
+    padding-right: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+.input--field-image {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,16 @@
+<app-header [type]="'delivery'"></app-header>
+<div class="delivery">
+    <div class="div-title">
+        <label class="text-title">
+            Suivi de commande
+        </label>
+        
+    </div>
+    <div class="divider"></div>
+    
+    <div id="map" style="height: 500px;"></div>
+    <div class="button-details-command">
+        <button class="compoDL-text-link-double-accept" (click)="ValidateOrder()">Valider la commande</button>
+        <button class="compoDL-text-link-double-decline" (click)="ShowClientInfo()" >Contacter le client</button>
+    </div>
+</div>

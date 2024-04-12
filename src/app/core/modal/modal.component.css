@@ -1,0 +1,72 @@
+.modal {
+    background-color: #ffffff;
+    height: 185px;
+    width: 658px;
+}
+
+.title {
+    font-size: 32px;
+    padding: 15px 0px 15px 50px;
+    font-weight: 700;
+    font-family: Inter,sans-serif;
+    line-height: 130%;
+    color: #000000;
+}
+
+.content {
+    text-align: left;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 15px 0px 15px 30px;
+    font-family: Inter,sans-serif;
+    line-height: 130%;
+    color: #000000;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirm-button {
+    border-radius: 57px;
+    height: 40px;
+    width: 101px;
+    background-color: #426b1f;
+    margin-right: 10px;
+}
+
+.confirm-label {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: Inter,sans-serif;
+    line-height: 129.99999523162842%;
+    color: #ffffff;
+}
+
+.cancel-button {
+    border-radius: 57px;
+    height: 40px;
+    width: 101px;
+    background-color: #ff0000;
+    border: 1px solid #000000;
+    margin-right: 30px;
+}
+
+.cancel-label {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: Inter,sans-serif;
+    line-height: 129.99999523162842%;
+    color: #ffffff;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    height: 0px;
+    margin: 0px 30px;
+    border: 1px solid #9e9797;
+}

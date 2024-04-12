@@ -1,0 +1,24 @@
+<div class="modal">
+    <div class="title">{{title}} </div>
+    <div class="line"></div>
+    <div class="content">{{content}}</div>
+
+    <div *ngIf="!delivery">
+        <div class="buttons">
+            <button (click)="confirm()" class="confirm-button">
+                <div class="confirm-label">Confirmer</div>
+            </button>
+
+            <button (click)="cancel()" class="cancel-button">
+                <div class="cancel-label">Annuler</div>
+            </button>
+        </div>
+    </div>
+    <div *ngIf="delivery">
+        <div class="buttons">
+            <button (click)="cancel()" class="confirm-button">
+                <div class="confirm-label">Fermer</div>
+            </button>
+        </div>
+    </div>
+</div>

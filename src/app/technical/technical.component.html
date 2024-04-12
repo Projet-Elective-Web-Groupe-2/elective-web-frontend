@@ -1,0 +1,11 @@
+<app-header [type]="type"></app-header>
+<div>
+    lien vers Traefik : <a (click)="onClick()">ici</a>
+</div>
+
+<div>
+    Liste des Logs
+    <ul>
+        <li *ngFor="let log of logs">{{log}}</li>
+    </ul>
+</div>
