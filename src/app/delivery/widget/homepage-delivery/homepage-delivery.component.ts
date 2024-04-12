@@ -36,7 +36,7 @@ export class HomepageDeliveryComponent {
         this.deliveries = orders;    
       },
       error: () => {
-        this.toastr.error("Erreur lors de la récupération des commandes");
+        // this.toastr.error("Erreur lors de la récupération des commandes");
       }
     });
   }
