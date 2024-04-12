@@ -1,3 +1,17 @@
+## [1.31.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.4...v1.31.0) (2024-04-12)
+
+
+### Features
+
+* delivery ([272604d](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/272604dd760f209eee5b4db65113bfaa40ec49cf))
+* **link:** link delivery to back (WIP) ([69775b6](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/69775b6fc78a2315f91ce43a9877389f7b29731c))
+* **link:** link delivery to back (WIP) ([465447e](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/465447e9b7cb6a75484aa1c5d4f9fd4c5b357b9d))
+
+
+### Bug Fixes
+
+* comment error ([88298ff](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/88298ffa04e050fbf49492c883b07022b957021c))
+
 ## [1.30.4](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.3...v1.30.4) (2024-04-12)
 
 
