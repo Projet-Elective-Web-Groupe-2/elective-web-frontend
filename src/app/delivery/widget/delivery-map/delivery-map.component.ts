@@ -3,6 +3,11 @@ import * as L from 'leaflet';
 import { HttpClient } from '@angular/common/http';
 import { ModalComponent } from 'src/app/core/modal/modal.component';
 import { MatDialog } from '@angular/material/dialog';
+import { SessionStorageService } from 'src/app/core/services/session-storage.service';
+import { DeliveryService } from 'src/app/core/services/delivery.service';
+import { ToastrService } from 'ngx-toastr';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MessageModel } from 'src/app/core/models/message.model';
 
 @Component({
   selector: 'app-delivery-map',
@@ -13,11 +18,24 @@ export class DeliveryMapComponent {
 
   private map!:any;
 
-  private address = 'saint nazaire'; // Adresse à convertir en coordonnées
+  private address!:string; 
+  private orderID!:string|null;
 
-  constructor(private http: HttpClient,public dialog: MatDialog) { }
+  constructor(private toastr: ToastrService, 
+  private sessionStorageService: SessionStorageService,
+   private deliveryService: DeliveryService,
+   private http: HttpClient,
+   public dialog: MatDialog,
+   private route: ActivatedRoute,
+   private router: Router,
+  ) { }
 
   ngAfterViewInit(): void {
+    this.address = this.sessionStorageService.getItem("deliveryAddress");
+    console.log(this.address);
+    this.route.paramMap.subscribe(params => {
+      this.orderID = params.get('id');
+    });
     this.initMap();
   }
 
@@ -55,6 +73,7 @@ export class DeliveryMapComponent {
   }
 
   ValidateOrder(){
+    let token = this.sessionStorageService.getItem('token');
     let dialogRef = this.dialog.open(ModalComponent, {
       data: { content: 'Confirmes-tu la livraison ?', title: 'Confirmation livraison' },
       height: '186px',
@@ -62,7 +81,20 @@ export class DeliveryMapComponent {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        console.log('La commande doit être valider.');
+        this.deliveryService.validateDelivery(token,this.orderID).subscribe({
+          next: (response: MessageModel) => {
+            if(response.message == "Delivery has been validated"){
+              this.toastr.success("Commande délivré");
+              this.router.navigate([`/delivery`], { relativeTo: this.route });
+            }
+            else{
+              this.toastr.error("Erreur lors de la livraison");
+            }
+          },
+          error: () => {
+            this.toastr.error("Erreur lors de la récupération des commandes");
+          }
+        });
       }
     });
   }

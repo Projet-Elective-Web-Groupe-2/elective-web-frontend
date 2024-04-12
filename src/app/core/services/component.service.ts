@@ -7,31 +7,32 @@ import { environment } from '../../../environments/environment';
 @Injectable({
     providedIn: 'root'
 })
-export class ClientService {
+export class ComponentService {
     constructor(private http: HttpClient) { }
 
-    getRestaurant(token: any): Observable<any> {
+    getLogComponent(token: any): Observable<any> {
+        
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             })
         };
-        return this.http.get(`${environment.urlRestaurant}${API.getRestaurant}`, httpOptions);
+        return this.http.get(`${environment.urlComponent}${API.getComponentLog}`, httpOptions );
     }
 
-    getPanier(token: any): Observable<any> {
-        const body = {};
-        return this.http.post(`${environment.urlOrder}${API.getOrder}`, body, { headers: token, withCredentials: false, observe: 'response' });
-    }
-
-    getRestaurantDetail(idRestaurant: any, token: any): Observable<any> {
+    writeLogComponent(token: any,componentName:any): Observable<any> {
+        const body = {
+            componentName:componentName,
+        };
         const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             })
         };
-        return this.http.get(`${environment.urlRestaurant}${API.getRestaurantDetail}`+ '?id=' + idRestaurant, httpOptions);
+        return this.http.post(`${environment.urlComponent}${API.writeComponentLog}`, body, httpOptions );
     }
+
+
 }

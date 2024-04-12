@@ -7,16 +7,23 @@
     <div class="content">
         <div class="formValue">
             <div style="padding-bottom: 30px" class="name">
-                <div class="label">Nom du article</div>
+                <div class="label">Nom de l'article</div>
                 <input class="nameInput" formControlName="name" type="text" required>
             </div>
             <div style="padding-bottom: 30px" class="compo">
-                <div class="label">Composition du article</div>
+                <div class="label">Composition de l'article</div>
                 <input class="nameInput" formControlName="compo" type="text" required>
             </div>
             <div style="padding-bottom: 30px" class="price">
                 <div class="labelPrice">Prix</div>
                 <input class="priceInput" formControlName="price" type="number" required>
+            </div>
+            <div style="padding-bottom: 50px" class="drink ">
+                <div class="labelDrink">Boisson</div>
+                <label class="switch">
+                    <input class="drinkCheckbox" formControlName="isDrink" type="checkbox">
+                    <span class="slider"></span>
+                </label>
             </div>
             <div class="pic padding">
                 <div class="label">Photo de l'article</div>
@@ -26,7 +33,7 @@
         </div>
         <div class="summary">
             <div class="summary-card">
-                <div class="summary-label-title">Résumé du article</div>
+                <div class="summary-label-title">Résumé de l'article</div>
                 <img [src]="selectedImage" class="image-card" />
                 <div>
                     <div class="summary-label">Nom :</div>
@@ -40,9 +47,12 @@
                         <div class="summary-label">Prix :</div>
                         <div class="summary-content-price">{{articleForm.get('price')?.value}}€</div>
                     </div>
+                    <div>
+                        <div *ngIf="articleForm.get('isDrink')?.value" class="summary-label">Boisson</div>
+                        <div *ngIf="!(articleForm.get('isDrink')?.value)" class="summary-label">Pas boisson</div>
+                    </div>
                 <button [disabled]="!articleForm.valid" class="confirm-article">
                     <div class="confirm-article-label">Ajouter l'article</div>
-                    <div class="confirm-article-logo">Logo</div>
                 </button>
             </div>
         </div>

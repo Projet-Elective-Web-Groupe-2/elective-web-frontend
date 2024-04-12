@@ -3,6 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { SessionStorageService } from 'src/app/core/services/session-storage.service';
 import { Chart, registerables } from 'node_modules/chart.js';
 import { forkJoin, of, tap } from 'rxjs';
+import { RestaurantService } from 'src/app/core/services/restaurant.service';
+import { HttpResponse } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 Chart.register(...registerables);
 
 @Component({
@@ -11,16 +14,25 @@ Chart.register(...registerables);
   styleUrls: ['./statistic.component.css']
 })
 export class StatisticComponent {
-  constructor(private sessionStorageService: SessionStorageService, private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private sessionStorageService: SessionStorageService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private restaurantService: RestaurantService,
+    private toastr: ToastrService
+  ) { }
   type!: string | null;
+  token!: any;
+  restaurantID!: any;
 
   ngOnInit() {
+    this.restaurantID = this.sessionStorageService.getItem('restaurantID');
+    this.token = this.sessionStorageService.getItem('token');
     this.type = this.sessionStorageService.getItem('type');
     if (this.type != 'restaurant') {
       this.router.navigate([`/error-page`], { relativeTo: this.route });
     }
     else {
-      this.type = "restaurant";
       this.fetchData();
     }
   }
@@ -51,27 +63,33 @@ export class StatisticComponent {
   }
 
   fetchData() {
-    /* const order$ = this.orderService.getOrderQuantity(this.dataValueSelected).pipe(
-       tap((datas) => {
-         this.orderTable = datas;
-         this.labelsChart.push(...datas.map((data) => data.dateCom));
-       })
-     );*/
+    this.restaurantService.getOrdersNumbers(this.token, this.restaurantID, this.dateValueSelected).subscribe({
+      next: (response: HttpResponse<any>) => {
+        console.log(response);
+        //this.orderTable = datas;
+        //this.labelsChart.push(...datas.map((data) => data.dateCom));
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la recupération des commandes ");
+      }
+    });
+
     this.orderTable = [11, 21, 58, 14, 41, 10, 2];
-    //forkJoin({ order$ }).subscribe(() => {
     if (this.dateValueSelected == 7) {
       this.labelsChart = [
-        "2024-04-01T00:00:00.000Z",
-        "2024-04-02T00:00:00.000Z",
-        "2024-04-03T00:00:00.000Z",
-        "2024-04-04T00:00:00.000Z",
-        "2024-04-05T00:00:00.000Z",
         "2024-04-06T00:00:00.000Z",
-        "2024-04-07T00:00:00.000Z"
+        "2024-04-07T00:00:00.000Z",
+        "2024-04-08T00:00:00.000Z",
+        "2024-04-09T00:00:00.000Z",
+        "2024-04-10T00:00:00.000Z",
+        "2024-04-11T00:00:00.000Z",
+        "2024-04-12T00:00:00.000Z"
       ];
     }
     else if (this.dateValueSelected == 14) {
       this.labelsChart = [
+        "2024-03-30T00:00:00.000Z",
+        "2024-03-31T00:00:00.000Z",
         "2024-04-01T00:00:00.000Z",
         "2024-04-02T00:00:00.000Z",
         "2024-04-03T00:00:00.000Z",
@@ -83,13 +101,30 @@ export class StatisticComponent {
         "2024-04-09T00:00:00.000Z",
         "2024-04-10T00:00:00.000Z",
         "2024-04-11T00:00:00.000Z",
-        "2024-04-12T00:00:00.000Z",
-        "2024-04-13T00:00:00.000Z",
-        "2024-04-14T00:00:00.000Z"
+        "2024-04-12T00:00:00.000Z"
       ];
     }
     else {
       this.labelsChart = [
+        "2024-03-13T00:00:00.000Z",
+        "2024-03-14T00:00:00.000Z",
+        "2024-03-15T00:00:00.000Z",
+        "2024-03-16T00:00:00.000Z",
+        "2024-03-17T00:00:00.000Z",
+        "2024-03-18T00:00:00.000Z",
+        "2024-03-19T00:00:00.000Z",
+        "2024-03-20T00:00:00.000Z",
+        "2024-03-21T00:00:00.000Z",
+        "2024-03-22T00:00:00.000Z",
+        "2024-03-23T00:00:00.000Z",
+        "2024-03-24T00:00:00.000Z",
+        "2024-03-25T00:00:00.000Z",
+        "2024-03-26T00:00:00.000Z",
+        "2024-03-27T00:00:00.000Z",
+        "2024-03-28T00:00:00.000Z",
+        "2024-03-29T00:00:00.000Z",
+        "2024-03-30T00:00:00.000Z",
+        "2024-03-31T00:00:00.000Z",
         "2024-04-01T00:00:00.000Z",
         "2024-04-02T00:00:00.000Z",
         "2024-04-03T00:00:00.000Z",
@@ -101,31 +136,12 @@ export class StatisticComponent {
         "2024-04-09T00:00:00.000Z",
         "2024-04-10T00:00:00.000Z",
         "2024-04-11T00:00:00.000Z",
-        "2024-04-12T00:00:00.000Z",
-        "2024-04-13T00:00:00.000Z",
-        "2024-04-14T00:00:00.000Z",
-        "2024-04-15T00:00:00.000Z",
-        "2024-04-16T00:00:00.000Z",
-        "2024-04-17T00:00:00.000Z",
-        "2024-04-18T00:00:00.000Z",
-        "2024-04-19T00:00:00.000Z",
-        "2024-04-20T00:00:00.000Z",
-        "2024-04-21T00:00:00.000Z",
-        "2024-04-22T00:00:00.000Z",
-        "2024-04-23T00:00:00.000Z",
-        "2024-04-24T00:00:00.000Z",
-        "2024-04-25T00:00:00.000Z",
-        "2024-04-26T00:00:00.000Z",
-        "2024-04-27T00:00:00.000Z",
-        "2024-04-28T00:00:00.000Z",
-        "2024-04-29T00:00:00.000Z",
-        "2024-04-30T00:00:00.000Z"];
+        "2024-04-12T00:00:00.000Z"];
     }
     //this.orderTable = this.addMissingPoint(this.orderTable, 'order');
     this.labelsChart = this.allDates(this.labelsChart);
     this.labelsChart = this.convertDateToFormat(this.labelsChart);
     this.updateChart(this.orderTable);
-    //});
   }
 
   updateChart(orderTable: Array<any>) {

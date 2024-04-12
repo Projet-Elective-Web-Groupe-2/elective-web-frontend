@@ -9,10 +9,11 @@
     <div class="divider"></div>
     <div class="panier-body">
         <div class="panier-article">
-            <app-card-panier [panier]="panierTest"></app-card-panier>
-            <app-card-panier [panier]="panierTest"></app-card-panier>
+            <div *ngFor="let panier of paniers" >
+                <app-card-panier [panier]="panier" ></app-card-panier>
+            </div>
         </div>
-        <div class="panier-recap">
+        <div class="panier-recap" *ngIf="paniers.length != 0">
             <div class="summary">
                 <div class="text-recap-title">Resumé de la commande</div>
                 <div class="line-recap">
@@ -21,23 +22,26 @@
                 </div>
                 <div class="line-recap">
                     <div class="text-recap-left">Livraison</div>
-                    <div class="text-recap-right">{{deliveryFee}}€</div> <!--NEED TO CHANGE-->
+                    <div class="text-recap-right">{{deliveryFee}}€</div> 
                 </div>
                 <div class="line-recap">
                     <div class="text-recap-left">Tax</div>
-                    <div class="text-recap-right">{{tax}}€</div> <!--NEED TO CHANGE-->
+                    <div class="text-recap-right">{{tax}}€</div> 
                 </div>
                 <div class="line-recap">
                     <div class="text-recap-left">Totale</div>
                     <div class="text-recap-right">{{totalPrice}}€</div>
                 </div>
                 <div class="recap-button">
-                    <button class="button-recap" onclick="location.href = '/client/payment';">
+                    <button class="button-recap" (click)="createOrder()">
                       <div class="text-recap-button">Passer au paiement</div>
                       <img src="" />
                     </button>
                 </div>
               </div>
+        </div>
+        <div class="panier-recap" *ngIf="paniers.length == 0">
+            <h1 class="empty"> PANIER VIDE </h1>
         </div>
     </div>
 </div>

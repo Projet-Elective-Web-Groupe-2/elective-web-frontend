@@ -31,26 +31,29 @@ export class HomepageRestaurantComponent implements OnInit {
   constructor(private router: Router,
     private sessionStorageService: SessionStorageService,
     private restaurantService: RestaurantService,
-    private notificationsService: NotificationsService, 
-    private toastr: ToastrService,
-
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
     this.userID = this.sessionStorageService.getItem('userID');
     this.token = this.sessionStorageService.getItem('token');
-    this.restaurantService.getRestaurantInfo(this.token, this.userID).subscribe((response: RestaurantModel) => {
-      let values = response.restaurant;
-      console.log(values);
-      this.restaurant = values.name;
-      this.address = values.address;
-      this.menuList = values.menus;
-      this.articleList = values.products;
-      this.sessionStorageService.setItem('articleList', JSON.stringify(this.articleList));
-      this.sessionStorageService.setItem('restaurantID', values.id); // restaurantID 
-      this.restaurantID=values.id;
-    })
-    this.startFetchingOrderCount()  }
+    this.restaurantService.getRestaurantInfo(this.token, this.userID).subscribe({
+      next: (response: RestaurantModel) => {
+        let values = response.restaurant;
+        console.log(values);
+        this.restaurant = values.name;
+        this.address = values.address;
+        this.menuList = values.menus;
+        this.articleList = values.products;
+        this.sessionStorageService.setItem('articleList', JSON.stringify(this.articleList));
+        this.sessionStorageService.setItem('restaurantID', values.id);
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la recupération des informations du restaurant ");
+      }
+    });
+  }
+
   onClickArticle(articleSelected: Menu): void {
     this.sessionStorageService.setItem("description", articleSelected.description);
     this.sessionStorageService.setItem("img", articleSelected.img);

@@ -89,41 +89,44 @@ export class ProfilPageComponent implements OnInit {
     this.userID = this.sessionStorageService.getItem('userID');
 
 
-    this.profilService.getUserInfo(this.token).subscribe((response: UserInfo) => {
-      this.firstname = response.user.firstName;
-      this.name = response.user.lastName;
-      this.address = response.user.address;
-      this.mail = response.user.email;
-      this.phone = response.user.phoneNumber;
-      this.sponsoring = response.user.referralCode;
+    this.profilService.getUserInfo(this.token).subscribe(
+      (response: UserInfo) => {
+        this.firstname = response.user.firstName;
+        this.name = response.user.lastName;
+        this.address = response.user.address;
+        this.mail = response.user.email;
+        this.phone = response.user.phoneNumber;
+        this.sponsoring = response.user.referralCode;
 
-      if (this.userType == 'client' || this.userType == 'delivery') {
-        this.editForm.patchValue({
-          firstName: this.firstname,
-          name: this.name,
-          address: this.address,
-          mail: this.mail,
-          phone: this.phone
-        });
+        if (this.userType == 'client' || this.userType == 'delivery') {
+          this.editForm.patchValue({
+            firstName: this.firstname,
+            name: this.name,
+            address: this.address,
+            mail: this.mail,
+            phone: this.phone
+          });
+        } else if (this.userType == 'developer') {
+          this.editFormDev.patchValue({
+            mail: this.mail,
+            phone: this.phone
+          });
+        } else if (this.userType == 'restaurant') {
+          this.editFormRestaurant.patchValue({
+            name: this.name,
+            address: this.address,
+            mail: this.mail,
+            phone: this.phone
+          });
+        } else {
+          this.toastr.error('ERROR IN ROUTING');
+        }
+      },
+      () => {
+        this.toastr.error("Erreur lors de la récupération des informations de l'utilisateur");
       }
-      else if (this.userType == 'developer') {
-        this.editFormDev.patchValue({
-          mail: this.mail,
-          phone: this.phone
-        });
-      }
-      else if (this.userType == 'restaurant') {
-        this.editFormRestaurant.patchValue({
-          name: this.name,
-          address:this.address,
-          mail: this.mail,
-          phone: this.phone
-        });
-      }
-      else {
-        this.toastr.error('ERROR IN ROUTING');
-      }
-    });
+    );
+
 
 
     this.route.params.subscribe(params => {
@@ -140,17 +143,21 @@ export class ProfilPageComponent implements OnInit {
     if (this.userType == 'client' || this.userType == 'delivery') {
       let editFormValue = this.editForm.value;
       if (editFormValue.password != '' && editFormValue.confirmPassword != '' && editFormValue.password == editFormValue.confirmPassword) {
-        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: MessageModel) => {
-          if (response.message == 'User edited') {
-            this.toastr.success("L'utilisateur a bien été édité");
-            setTimeout(() => {
-              location.reload();
-            }, 2000);
+        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe(
+          (response: MessageModel) => {
+            if (response.message == 'User edited') {
+              this.toastr.success("L'utilisateur a bien été édité");
+              setTimeout(() => {
+                location.reload();
+              }, 2000);
+            } else {
+              this.toastr.error('Une erreur est survenue');
+            }
+          },
+          () => {
+            this.toastr.error("Erreur lors de l'édition de l'utilisateur");
           }
-          else {
-            this.toastr.error('Une erreur est survenue');
-          }
-        })
+        );
       }
       else {
         this.toastr.error('Mots de passe incorrect');
@@ -159,17 +166,22 @@ export class ProfilPageComponent implements OnInit {
     else if (this.userType == 'developer') {
       let editFormValue = this.editFormDev.value;
       if (editFormValue.password != '' && editFormValue.confirmPassword != '' && editFormValue.password == editFormValue.confirmPassword) {
-        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: MessageModel) => {
-          if (response.message == 'User edited') {
-            this.toastr.success("L'utilisateur a bien été édité");
-            setTimeout(() => {
-              location.reload();
-            }, 2000);
+        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe({
+          next: (response: MessageModel) => {
+            if (response.message == 'User edited') {
+              this.toastr.success("L'utilisateur a bien été édité");
+              setTimeout(() => {
+                location.reload();
+              }, 2000);
+            } else {
+              this.toastr.error('Une erreur est survenue');
+            }
+          },
+          error: () => {
+            this.toastr.error("Erreur lors de l'édition de l'utilisateur");
           }
-          else {
-            this.toastr.error('Une erreur est survenue');
-          }
-        })
+        });
+
       }
       else {
         this.toastr.error('Mots de passe incorrect');
@@ -178,17 +190,21 @@ export class ProfilPageComponent implements OnInit {
     else if (this.userType == 'restaurant') {
       let editFormValue = this.editFormRestaurant.value;
       if (editFormValue.password != '' && editFormValue.confirmPassword != '' && editFormValue.password == editFormValue.confirmPassword) {
-        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe((response: MessageModel) => {
-          if (response.message == 'User edited') {
-            this.toastr.success("L'utilisateur a bien été édité");
-            setTimeout(() => {
-              location.reload();
-            }, 2000);
+        this.profilService.editUser(this.token, this.userID, editFormValue).subscribe({
+          next: (response: MessageModel) => {
+            if (response.message == 'User edited') {
+              this.toastr.success("L'utilisateur a bien été édité");
+              setTimeout(() => {
+                location.reload();
+              }, 2000);
+            } else {
+              this.toastr.error('Une erreur est survenue');
+            }
+          },
+          error: () => {
+            this.toastr.error("Erreur lors de l'édition de l'utilisateur");
           }
-          else {
-            this.toastr.error('Une erreur est survenue');
-          }
-        })
+        });
       }
       else {
         this.toastr.error('Mots de passe incorrect');
@@ -218,7 +234,21 @@ export class ProfilPageComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        console.log('Le profil sera désactiver.');
+        this.profilService.disableUser(this.token, this.userID).subscribe({
+          next: (response: MessageModel) => {
+            if (response.message == 'User suspended') {
+              this.toastr.success("L'utilisateur a bien été suspendu");
+              setTimeout(() => {
+                location.reload();
+              }, 2000);
+            } else {
+              this.toastr.error("Une erreur est survenue");
+            }
+          },
+          error: () => {
+            this.toastr.error("Erreur lors de la suspension de l'utilisateur");
+          }
+        });
       }
     });
   }
@@ -259,18 +289,22 @@ export class ProfilPageComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        this.profilService.deleteUser(this.token, this.userID).subscribe((response: MessageModel) => {
-          if (response.message == 'User deleted') {
-            this.toastr.success("L'utilisateur a bien été supprimé");
-            setTimeout(() => {
-              this.router.navigate(['/auth']);
-            }, 2000);
-          }
-          else {
-            this.toastr.error("Une erreur est survenue");
+        this.profilService.deleteUser(this.token, this.userID).subscribe({
+          next: (response: MessageModel) => {
+            if (response.message == 'User deleted') {
+              this.toastr.success("L'utilisateur a bien été supprimé");
+              setTimeout(() => {
+                this.router.navigate(['/auth']);
+              }, 2000);
+            } else {
+              this.toastr.error("Une erreur est survenue");
+            }
+          },
+          error: () => {
+            this.toastr.error("Erreur lors de la suppression de l'utilisateur");
           }
         });
-      }
+      };
     });
   }
 }

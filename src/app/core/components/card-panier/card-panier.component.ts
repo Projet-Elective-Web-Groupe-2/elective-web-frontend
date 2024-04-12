@@ -1,5 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Panier } from '../../models/panier.model';
+import { PanierModel } from '../../models/panier-create.model';
+import { RestaurantService } from '../../services/restaurant.service';
+import { SessionStorageService } from '../../services/session-storage.service';
+import { ToastrService } from 'ngx-toastr';
+import { DrinkModel, InfoDrink } from '../../models/drink.model';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-card-panier',
@@ -7,15 +13,40 @@ import { Panier } from '../../models/panier.model';
   styleUrls: ['./card-panier.component.css']
 })
 export class CardPanierComponent {
+  selectedValue: FormControl = new FormControl();
 
-  @Input() panier!:Panier;
+  @Input() panier!: PanierModel;
+  // @Output() selectedValueChanged = new EventEmitter<string>();
 
-  drinks:string[]=[];
-  ngOnInit():void{
-    this.drinks.push("Coca");
-    this.drinks.push("Fanta");
-    this.drinks.push("Ice-Tea");
-    this.drinks.push("Eau");
-    this.drinks.push("Perrier");
+
+  constructor(
+    private restaurantService: RestaurantService,
+    private sessionStorageService: SessionStorageService,
+    private toastr: ToastrService,
+  ) {
+    this.selectedValue.valueChanges.subscribe(value => {
+     // this.selectedValueChanged.emit(value);
+    });
+  }
+
+  drinks: string[] = [];
+  ngOnInit(): void {
+    let token = this.sessionStorageService.getItem('token');
+    console.log(this.panier);
+    this.restaurantService.getDrinks(token, this.panier.idRestaurantValue).subscribe({
+      next: (response: InfoDrink) => {
+        let values = response.drinks;
+        for (let i = 0; i < values.length; i++) {
+          this.drinks.push(values[i].name);
+        }
+      },
+      error: () => {
+        this.toastr.error("Erreur lors de la récupération du détail des restaurants ");
+      }
+    });
+  }
+
+  onValueChanged() {
+    // this.selectedValueChanged.emit(this.selectedValue.value);
   }
 }

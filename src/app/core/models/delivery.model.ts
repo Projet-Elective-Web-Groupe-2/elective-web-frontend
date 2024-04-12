@@ -3,4 +3,5 @@ export class Delivery{
     name!:string;
     link!:string;
     isAccepted!:boolean;
+    id!:any;
 }

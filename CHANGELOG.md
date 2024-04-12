@@ -1,3 +1,104 @@
+## [1.30.4](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.3...v1.30.4) (2024-04-12)
+
+
+### Bug Fixes
+
+* eau ([3b715d9](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3b715d93f6eb7e7cb42feb4c91d7517a48133951))
+
+## [1.30.3](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.2...v1.30.3) (2024-04-12)
+
+
+### Bug Fixes
+
+* change statut ([7420253](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/742025304935ef5a951644198cd26114321c2183))
+* **css:** fix css ([3ee8e7f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3ee8e7f606f0d61c8354e5d4553aec8b9be6f389))
+* get values from getAllCreatedOrdersFromRestaurant ([68864f2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/68864f2610f707003ae4ea76cb7e32cec9d7267a))
+* getOrders for restaurant ([5b7a815](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/5b7a8152c792e01c300b004d414886611a16716b))
+
+## [1.30.2](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.1...v1.30.2) (2024-04-12)
+
+
+### Bug Fixes
+
+* **plein de truc:** fix pein de truc ([3f11441](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3f11441b02f604f866d3202700f35995ec0c57d8))
+
+## [1.30.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.0...v1.30.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* fixed orthographe ([83b52d6](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/83b52d60cb2d558300aecb339f36bacd6e9cb6a1))
+
+## [1.30.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.29.0...v1.30.0) (2024-04-11)
+
+
+### Features
+
+* Added github links to download components ([7e50da1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/7e50da1012701ec56057b061aa652390acb7c697))
+
+## [1.29.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.28.0...v1.29.0) (2024-04-11)
+
+
+### Features
+
+* get order-list but only console.log() ([a725239](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a725239ab40f4d934caffcca6202d5c5def30432))
+* **test:** add some thing for order-list ([2bd4422](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/2bd442225fd142a3738bb9e3660214efbb2531ec))
+
+## [1.28.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.27.0...v1.28.0) (2024-04-11)
+
+
+### Features
+
+* createOrders ([d7fa40c](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/d7fa40c1b458176d3a7f6b88e3dd682e2e3f215b))
+
+
+### Bug Fixes
+
+* some test ([7a56d35](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/7a56d357541008dd7bd9d9a3670dd27547cee6c1))
+
+## [1.27.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.26.0...v1.27.0) (2024-04-11)
+
+
+### Features
+
+* getOrders ([fafb43f](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/fafb43faf6c3a24dc153ca42cdb518a38b045726))
+
+## [1.26.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.25.0...v1.26.0) (2024-04-11)
+
+
+### Features
+
+* error messages + create order ([ee5d871](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/ee5d8717b8ca474a99683f388342305664e6c00a))
+
+## [1.25.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.24.0...v1.25.0) (2024-04-11)
+
+
+### Features
+
+* **link:** DE LA MERDE ATTENTION MAIS JE VEUX PUSH CAR JE SUIS SEUL ICI ([2842523](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/2842523508c5a26b0129b74288a1026538b65005))
+* **panier:** j'ai fait des trucs un peu malsin ([552496e](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/552496eb44079cb7a5a7a4d9b1aadb1855192f6b))
+
+## [1.24.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.23.0...v1.24.0) (2024-04-11)
+
+
+### Features
+
+* **link:** add linik to back for component ([65769fe](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/65769fe3b53e789d3a028f5fcf3a729ce13416b9))
+
+## [1.23.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.22.0...v1.23.0) (2024-04-11)
+
+
+### Features
+
+* get stats for restaurant ([18967a1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/18967a1e23fb84e184e6ba522086d4ed6a46d145))
+
+
+### Bug Fixes
+
+* 'à la' to 'au' ([9a929c7](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/9a929c7d34abfbae339c06d1bb9979dec5e0edf8))
+* **error:** add error messages ([81f29b8](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/81f29b8b74ce0b93fa1e6c2c56ea23e2731daad0))
+* print price in menu ([143ec68](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/143ec68341e05ab1b68b3b0760275e71f6ea299e))
+
 ## [1.22.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.21.0...v1.22.0) (2024-04-10)
 
 
