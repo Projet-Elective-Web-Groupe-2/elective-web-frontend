@@ -2,12 +2,12 @@ import { Menu } from "./menu.model";
 
 
 export interface Orders {
-    adress: string;
+    address: string;
     clientID: number;
     date: string;
     id: string;
     menus: Menu[];
-    status: boolean;
+    status: string;
     products: Menu[];
     totalPrice: number; 
     refusedBy: any[];

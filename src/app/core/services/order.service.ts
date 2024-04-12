@@ -24,6 +24,21 @@ export class OrderService {
         return this.http.post(`${environment.urlOrder}${API.createOrder}`, body, httpOptions);
     }
 
+    updateOrder(token: any,restaurantID:any, orderID: any,statut:any): Observable<any> {
+        const body = {
+            restaurantID:restaurantID,
+            orderID:orderID,
+            statut:statut
+        }
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.post(`${environment.urlOrder}${API.updateOrder}`, body, httpOptions);
+    }
+
     getAllOrdersFromRestaurant(token: any, userID: any): Observable<any> {
         const httpOptions = {
             headers: new HttpHeaders({

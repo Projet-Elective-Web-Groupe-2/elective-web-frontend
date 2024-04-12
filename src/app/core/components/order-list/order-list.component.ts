@@ -35,9 +35,19 @@ export class OrderListComponent {
     }
     
     this.orderService.getAllCreatedOrdersFromRestaurant(token,restaurantID).subscribe({
-      next: (response: Orders) => {
-        console.log(response);
-        this.OrderValuesList.push(response);
+      next: (response: any) => {
+        const orders: Orders[] = response.orders.map((order: any) => ({
+          id: order._id,
+          clientID: order.clientID,
+          address: order.address,
+          date: order.date,
+          menus: order.menus,
+          status: order.status,
+          products: order.products,
+          totalPrice: order.totalPrice,
+          refusedBy: order.refusedBy
+        }));
+        this.OrderValuesList = orders;    
       },
       error: () => {
         this.toastr.error("Erreur lors de la récupération des commandes");
