@@ -11,7 +11,7 @@
                 <input class="nameInput" formControlName="name" type="text" required>
             </div>
             <div style="padding-bottom: 30px" class="compo">
-                <div class="label">Composition du menu </div>(Controle + Clique pour en selectionner plusieurs)
+                <div class="label">Composition du menu </div><div>(Controle + Clique pour en selectionner plusieurs)</div>
                 <select multiple formControlName="compo" type="select" class="selectArticle">
                     <option class="optionArticle" *ngFor="let article of articleList" value="{{article}}">{{article}}
                     </option>
