@@ -1,7 +1,8 @@
 <div *ngIf="!isDetailResto">
     <div class="card--client">
         <img *ngIf="isMenu" src="https://eu-images.contentstack.com/v3/assets/blt5004e64d3579c43f/blte345501c8bb2b551/649c47d5dfeeafb870a54af1/BO_MCFIRST.png?auto=webp" class="image-card"/>
-        <img *ngIf="!isMenu" src="https://eu-images.contentstack.com/v3/assets/blt5004e64d3579c43f/blt4e32a970bffd0792/61d866010f60435c58f20a0a/big-mac.png" class="image-card"/>
+        <img *ngIf="!isMenu && !menu.drink" src="https://eu-images.contentstack.com/v3/assets/blt5004e64d3579c43f/blt4e32a970bffd0792/61d866010f60435c58f20a0a/big-mac.png" class="image-card"/>
+        <img *ngIf="!isMenu && menu.drink" src="https://www.pngall.com/wp-content/uploads/2016/04/Water-Bottle-PNG-Picture.png" class="image-card"/>
         <div class="text-2">{{menu.name}}</div>
         <div class="text-3">{{menu.description}}</div>
         <div *ngIf="isClient">
