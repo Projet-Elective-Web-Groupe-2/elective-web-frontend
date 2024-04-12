@@ -6,6 +6,7 @@ import { SessionStorageService } from '../../services/session-storage.service';
 import { OrderService } from '../../services/order.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpResponse } from '@angular/common/http';
+import { Orders } from '../../models/infoOrders.model';
 
 @Component({
   selector: 'app-historic',
@@ -15,7 +16,7 @@ import { HttpResponse } from '@angular/common/http';
 export class HistoricComponent {
   userType!: string;
   histoTest = new Historic();
-  historics: Historic[] = [];
+  OrdersList: Orders[] = [];
 
   constructor(
     private sessionStorageService: SessionStorageService,
@@ -44,19 +45,29 @@ export class HistoricComponent {
 
 
 
-    this.orderService.getAllOrdersFromRestaurant(token, userID).subscribe({
-      next: (response: HttpResponse<any>) => {
+    this.orderService.getAllFromUser(token).subscribe({
+      next: (response: any) => {
+        const orders: Orders[] = response.orders.map((order: any) => ({
+          id: order._id,
+          clientID: order.clientID,
+          address: order.address,
+          date: this.getDate(order.date),
+          menus: order.menus,
+          status: order.status,
+          products: order.products,
+          totalPrice: order.totalPrice,
+          refusedBy: order.refusedBy
+        }));
+        this.OrdersList = orders;
       },
       error: () => {
         this.toastr.error("Erreur lors de la récupération des commandes");
       }
     });
+  }
 
-    this.historics.push(this.histoTest);
-    this.histoTest.img = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Pizza_Hut_international_logo_2014.svg/1087px-Pizza_Hut_international_logo_2014.svg.png";
-    this.histoTest.desc = "2 plats. 23.56 $ 30 Mars 2024.";
-    this.histoTest.statut = "Terminé";
-    this.histoTest.name = "Pizza hut"
-
+  getDate(date: string) {
+    let goodDate = date.split('T')[0] + ' ' + date.split('T')[1].slice(0, -5);
+    return goodDate;
   }
 }

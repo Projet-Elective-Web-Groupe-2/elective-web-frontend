@@ -8,6 +8,9 @@
     </div>
     <div class="divider"></div>
 
+    <div class="recap" *ngIf="OrderValuesList.length == 0">
+        <h1 class="empty"> PAS DE COMMANDE EN COURS </h1>
+    </div>
     <div *ngFor="let order of OrderValuesList">
         <app-card-command [OrderValues]="order"></app-card-command>
     </div>

@@ -48,6 +48,16 @@ export class OrderService {
         };
         return this.http.get(`${environment.urlOrder}${API.getAllOrdersFromRestaurant}`+ '?userID=' + userID, httpOptions);
     } 
+
+    getAllFromUser(token: any): Observable<any> {
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            })
+        };
+        return this.http.get(`${environment.urlOrder}${API.getAllFromUser}`, httpOptions);
+    } 
     
 
     getAllCreatedOrdersFromRestaurant(token: any, restaurantID : any): Observable<any> {

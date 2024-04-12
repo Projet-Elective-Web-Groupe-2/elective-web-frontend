@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core';
 import { Historic } from '../../models/historic.model';
+import { Orders } from '../../models/infoOrders.model';
 
 @Component({
   selector: 'app-card-historic',
@@ -9,5 +10,7 @@ import { Historic } from '../../models/historic.model';
 })
 export class CardHistoricComponent {
 
-  @Input() historic!:Historic;
+  @Input() historic!:Orders;
+
+  
 }
