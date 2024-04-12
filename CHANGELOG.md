@@ -1,3 +1,10 @@
+## [1.30.4](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.3...v1.30.4) (2024-04-12)
+
+
+### Bug Fixes
+
+* eau ([3b715d9](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/3b715d93f6eb7e7cb42feb4c91d7517a48133951))
+
 ## [1.30.3](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.2...v1.30.3) (2024-04-12)
 
 
