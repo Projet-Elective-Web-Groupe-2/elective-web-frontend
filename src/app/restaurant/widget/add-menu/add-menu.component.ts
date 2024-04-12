@@ -76,7 +76,7 @@ export class AddMenuComponent implements OnInit {
     this.restaurantService.createMenu(this.token, this.userID, this.menusForm.value, idList).subscribe({
       next: (response: MessageModel) => {
         if (response.message == "Menu added successfully") {
-          this.toastr.success("L'article a été ajouté avec succès");
+          this.toastr.success("Le menu a été ajouté avec succès");
           setTimeout(() => {
             this.router.navigate(['/restaurant']);
           }, 2000);
