@@ -34,7 +34,8 @@ export class CardCommandComponent  implements OnInit {
   acceptCommand(){
     this.token = this.sessionStorageService.getItem('token');
     this.restaurantID = this.sessionStorageService.getItem('restaurantID');
-    this.orderService.updateOrder(this.token,this.restaurantID,this.OrderValues.id,this.OrderValues.status).subscribe({
+    console.log(this.OrderValues.id);
+    this.orderService.updateOrder(this.token,this.restaurantID,this.OrderValues.id,"In preparation").subscribe({
       next: (response: MessageModel) => {
         if(response.message == "Order status updated"){
           this.toastr.success("Commande validée");
