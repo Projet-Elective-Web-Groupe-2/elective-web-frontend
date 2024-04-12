@@ -37,6 +37,8 @@ export const API = Object.freeze({
     getRestaurantInformation: '/restaurant/findByOwner',
     getRestaurant:'/restaurant/getAll',
     getRestaurantDetail:'/restaurant/find',
+    getOrderCount: '/restaurant/getOrderCount',
+
 
     getDelivery:'/delivery/getAllWithFilter',
     refuseDelivery:'/delivery/refuse',
