@@ -216,6 +216,10 @@ export class ProfilPageComponent implements OnInit {
   }
 
   submitSponsorship() {
+    this.toastr.success("Parrainage réalisé");
+    setTimeout(() => {
+    location.reload();
+    },1000);
   }
 
   verifyIfSales() {
