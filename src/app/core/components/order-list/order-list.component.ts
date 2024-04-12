@@ -40,7 +40,7 @@ export class OrderListComponent {
           id: order._id,
           clientID: order.clientID,
           address: order.address,
-          date: order.date,
+          date: this.getDate(order.date),
           menus: order.menus,
           status: order.status,
           products: order.products,
@@ -50,9 +50,14 @@ export class OrderListComponent {
         this.OrderValuesList = orders;    
       },
       error: () => {
-        this.toastr.error("Erreur lors de la récupération des commandes");
+        //this.toastr.error("Erreur lors de la récupération des commandes");
       }
     });
 
+  }
+
+  getDate(date:string){
+    let goodDate = date.split('T')[0]+ ' ' + date.split('T')[1].slice(0, -5);
+    return goodDate;
   }
 }

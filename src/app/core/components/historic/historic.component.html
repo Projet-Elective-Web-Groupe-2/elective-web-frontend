@@ -5,12 +5,12 @@
             Historique des commandes
         </label>
         <div class="text-commande-histo">
-            {{historics.length}} commande(s)
+            {{OrdersList.length}} commande(s)
         </div>
     </div>
     <div class="divider"></div>
 
-    <div *ngFor="let histo of historics" >
+    <div *ngFor="let histo of OrdersList" >
         <app-card-historic [historic]="histo"></app-card-historic>
     </div>
 </div>

@@ -22,6 +22,7 @@ export const API = Object.freeze({
     getOrders: '/order/getOrders',
     getAllOrders: '/order/getAllOrders',
     getAllOrdersFromRestaurant: '/order/getAllOrdersFromRestaurant',
+    getAllFromUser: '/order/getAllFromUser',
     getAllCreatedOrdersFromRestaurant: '/order/getAllCreatedOrdersFromRestaurant',
 
 
