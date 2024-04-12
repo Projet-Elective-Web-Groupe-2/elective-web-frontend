@@ -1,3 +1,3 @@
 export class LogModel{
-    logs!:any[];
+    logs!:string[];
 }
