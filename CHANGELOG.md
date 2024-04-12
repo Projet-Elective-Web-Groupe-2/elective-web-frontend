@@ -1,3 +1,15 @@
+## [1.32.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.31.0...v1.32.0) (2024-04-12)
+
+
+### Features
+
+* notification ([33a28d5](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/33a28d5a8c24399c9340bd370f57c606dc096e6f))
+
+
+### Bug Fixes
+
+* add notificationsServices ([27dc240](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/27dc240233a6c99b0a9847004cece06c0cd02fed))
+
 ## [1.31.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.30.4...v1.31.0) (2024-04-12)
 
 
