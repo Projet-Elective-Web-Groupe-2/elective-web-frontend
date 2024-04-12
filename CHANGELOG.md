@@ -1,3 +1,10 @@
+## [1.32.1](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.32.0...v1.32.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* **log:** delete console.log ([a755dfc](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/commit/a755dfcbf1495eee5789744913915a9e04ff6cbd))
+
 ## [1.32.0](https://github.com/Projet-Elective-Web-Groupe-2/elective-web-frontend/compare/v1.31.0...v1.32.0) (2024-04-12)
 
 
